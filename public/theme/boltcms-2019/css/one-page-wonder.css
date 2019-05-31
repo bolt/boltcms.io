@@ -89,6 +89,17 @@ header.masthead .masthead-content .masthead-subheading {
   text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.7);
 }
 
+header.masthead .masthead-content .masthead-subheading a {
+  color: #DDD;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: edges;
+  text-decoration-skip: edges;
+}
+
+header.masthead .masthead-content .masthead-subheading a:hover {
+  color: #9ac;
+}
+
 @media (min-width: 992px) {
   header.masthead {
     padding-top: calc(10rem + 55px);

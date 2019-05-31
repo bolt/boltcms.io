@@ -8,24 +8,27 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>One Page Wonder - Start Bootstrap Template</title>
+  <title>
+    {%- if record|default and record.title -%}
+      {{- record.title ~ ' | ' -}}
+    {%- endif -%}
+    {{- config.get('general/sitename') -}}
+    {%- if record|default == null and config.has('general/payoff') -%}
+      {{- ' | ' ~ config.get('general/payoff') -}}
+    {%- endif -%}
+  </title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
+  <link href="{{ asset('theme/boltcms-2019/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700,700i|Merriweather:300,300i,700,700i&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="{{ asset('theme/boltcms-2019/css/one-page-wonder.min.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="#">Bolt 4 - Open Source CMS</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,8 +49,8 @@
     <div class="masthead-content">
       <div class="container">
         <!-- https://twitter.com/heydonworks/status/669796961839656960 -->
-        <h1 class="masthead-heading mb-4">Bolt 4 <span class="badge badge-primary">Almost beta!</span></h1>
-        <p class="masthead-subheading mb-0">Bolt is a fully open source, adaptable platform for building and running modern websites. It's built on Symfony, Doctrine, Twig, API-Platform and more, and can be used as a traditional CMS or Headless/Decoupled.</p>
+        <h1 class="masthead-heading mb-4">{{ config.get('general/sitename') }} <span class="badge badge-primary">Almost beta!</span></h1>
+        <p class="masthead-subheading mb-0">{{ config.get('general/payoff')|raw }}</p>
       </div>
     </div>
   </header>
@@ -57,7 +60,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/01.jpg" alt="">
+            <img class="img-fluid rounded-circle" src="{{ asset('theme/boltcms-2019/img/01.jpg') }}" alt="">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
@@ -75,7 +78,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+            <img class="img-fluid rounded-circle" src="{{ asset('theme/boltcms-2019/img/02.jpg') }}" alt="">
           </div>
         </div>
         <div class="col-lg-6">
@@ -93,7 +96,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+            <img class="img-fluid rounded-circle" src="{{ asset('theme/boltcms-2019/img/03.jpg') }}" alt="">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
@@ -115,8 +118,8 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('theme/boltcms-2019/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('theme/boltcms-2019/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 
