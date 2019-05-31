@@ -1,5 +1,5 @@
 composer.phar
-config/bolt/config_local.yaml
+config/bolt/*_local.yaml
 
 ### Built Assets and uploads ###
 /public/assets/
