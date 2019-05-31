@@ -1,0 +1,4 @@
+# php_translation
+translation:
+    symfony_profiler:
+        enabled: true

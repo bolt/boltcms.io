@@ -1,0 +1,8 @@
+@mixin heading-font {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+}
+
+@mixin body-font {
+  font-family: 'Merriweather', serif;
+}
