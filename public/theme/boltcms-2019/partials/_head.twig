@@ -1,0 +1,37 @@
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    {%- if record|default and record.title -%}
+        {{- record.title ~ ' | ' -}}
+    {%- endif -%}
+    {{- config.get('general/sitename') -}}
+    {%- if record|default == null and config.has('general/payoff') -%}
+        {{- ' | ' ~ config.get('general/payoff') -}}
+    {%- endif -%}
+</title>
+
+<link href="{{ asset('theme/boltcms-2019/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700,700i|Merriweather:300,300i,700,700i&display=swap" rel="stylesheet">
+<link href="{{ asset('theme/boltcms-2019/css/one-page-wonder.min.css') }}" rel="stylesheet">
+
+
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//stats.bolt.cm/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '6']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<noscript><p><img src="//stats.bolt.cm/matomo.php?idsite=6&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->

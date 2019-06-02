@@ -278,7 +278,6 @@ blocks:
         slug:
             type: slug
             uses: [ title ]
-
 #        selectfield:
 #            type: select
 #            values: [ foo, bar, baz ]
@@ -301,17 +300,16 @@ blocks:
 #            required: true
 #            postfix: "Select your favourite turtle(s)."
         content:
-            type: html
-            height: 150px
+            type: markdown
 #        contentlink:
 #            type: text
 #            label: Link
 #            placeholder: 'contenttype/slug or http://example.org/'
 #            postfix: "Use this to add a link for this Block. This could either be an 'internal' link like <tt>page/about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
-#        image:
-#            type: image
-#            attrib: title
-#            extensions: [ gif, jpg, png ]
+        image:
+            type: image
+            attrib: title
+            extensions: [ gif, jpg, png ]
     show_on_dashboard: true
     viewless: true
     default_status: published
@@ -320,29 +318,6 @@ blocks:
     icon_one: "fa:cube"
 
 
-dummies:
-    name: Dummies
-    singular_name: Dummy
-    fields:
-        title:
-            type: text
-            class: large
-            group: content
-        slug:
-            type: slug
-            uses: title
-        selectfield:
-            type: select
-            values:
-                foo: Foooo
-                bar: Bario
-                baz: BAzzazza
-        multiselect:
-            type: select
-            values: [ A-tuin, Donatello, Rafael, Leonardo, Michelangelo, Koopa, Squirtle ]
-            multiple: true
-            postfix: "Select your favourite turtle(s)."
-    taxonomy: [ groups, categories, tags, foobars ]
     
 # Possible field types:
 #

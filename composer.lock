@@ -195,12 +195,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/four.git",
-                "reference": "2c448131ff0aa0263fc4141c96bf4f79a783d316"
+                "reference": "78aade578c22b8921278d229855d5731bcecd527"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/four/zipball/2c448131ff0aa0263fc4141c96bf4f79a783d316",
-                "reference": "2c448131ff0aa0263fc4141c96bf4f79a783d316",
+                "url": "https://api.github.com/repos/bolt/four/zipball/78aade578c22b8921278d229855d5731bcecd527",
+                "reference": "78aade578c22b8921278d229855d5731bcecd527",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +225,7 @@
                 "league/glide-symfony": "^1.0",
                 "miljar/php-exif": "^0.6.4",
                 "nelmio/cors-bundle": "^1.5",
-                "nesbot/carbon": "^1.37",
+                "nesbot/carbon": "^1.38 || ^2.19",
                 "php": ">=7.1.3",
                 "php-translation/symfony-bundle": "^0.8",
                 "phpdocumentor/reflection-docblock": "^4.3",
@@ -338,7 +338,7 @@
                 "source": "https://github.com/bolt/four/tree/master",
                 "issues": "https://github.com/bolt/four/issues"
             },
-            "time": "2019-05-31T09:57:13+00:00"
+            "time": "2019-06-01T07:05:41+00:00"
         },
         {
             "name": "bolt/common",
@@ -2424,51 +2424,6 @@
             "time": "2017-12-24T16:32:39+00:00"
         },
         {
-            "name": "kylekatarnls/update-helper",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kylekatarnls/update-helper.git",
-                "reference": "fbfa94c0f196d4718ce3c1032e9c4b34140e69d3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kylekatarnls/update-helper/zipball/fbfa94c0f196d4718ce3c1032e9c4b34140e69d3",
-                "reference": "fbfa94c0f196d4718ce3c1032e9c4b34140e69d3",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.1.0",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
-                "composer/composer": "^2.0.x-dev",
-                "phpunit/phpunit": ">=4.8.35 <6.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "UpdateHelper\\ComposerPlugin"
-            },
-            "autoload": {
-                "psr-0": {
-                    "UpdateHelper\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle",
-                    "email": "kylekatarnls@gmail.com"
-                }
-            ],
-            "description": "Update helper",
-            "time": "2019-05-30T21:26:08+00:00"
-        },
-        {
             "name": "league/flysystem",
             "version": "1.0.52",
             "source": {
@@ -2849,34 +2804,33 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.38.2",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "7621621f76c99f01318313f576baea22edd86367"
+                "reference": "c3545b39197d314205226ac3c33cb4db99aa54ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7621621f76c99f01318313f576baea22edd86367",
-                "reference": "7621621f76c99f01318313f576baea22edd86367",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/c3545b39197d314205226ac3c33cb4db99aa54ab",
+                "reference": "c3545b39197d314205226ac3c33cb4db99aa54ab",
                 "shasum": ""
             },
             "require": {
-                "kylekatarnls/update-helper": "^1.1",
-                "php": ">=5.3.9",
-                "symfony/translation": "~2.6 || ~3.0 || ~4.0"
+                "ext-json": "*",
+                "php": "^7.1.8 || ^8.0",
+                "symfony/translation": "^3.4 || ^4.0"
             },
             "require-dev": {
-                "composer/composer": "^1.2",
-                "friendsofphp/php-cs-fixer": "~2",
-                "phpunit/phpunit": "^4.8.35 || ^5.7"
+                "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
+                "kylekatarnls/multi-tester": "^1.1",
+                "phpmd/phpmd": "^2.6",
+                "phpstan/phpstan": "^0.11",
+                "phpunit/phpunit": "^7.5 || ^8.0",
+                "squizlabs/php_codesniffer": "^3.4"
             },
-            "bin": [
-                "bin/upgrade-carbon"
-            ],
             "type": "library",
             "extra": {
-                "update-helper": "Carbon\\Upgrade",
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -2885,7 +2839,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "Carbon\\": "src/Carbon/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2906,7 +2860,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-05-30T22:56:55+00:00"
+            "time": "2019-05-30T10:15:05+00:00"
         },
         {
             "name": "nikic/php-parser",
