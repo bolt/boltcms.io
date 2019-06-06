@@ -57,7 +57,11 @@ function modules() {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, jquery);
+  var prism = gulp.src([
+      './node_modules/prismjs/**'
+    ])
+    .pipe(gulp.dest('./vendor/prismjs'));
+  return merge(bootstrap, jquery, prism);
 }
 
 // CSS task
@@ -95,7 +99,8 @@ function watchFiles() {
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
 const build = gulp.series(vendor, css);
-const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+const server = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+const watch = gulp.series(build, gulp.parallel(watchFiles));
 
 // Export tasks
 exports.css = css;

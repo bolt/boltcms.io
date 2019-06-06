@@ -301,6 +301,8 @@ blocks:
 #            postfix: "Select your favourite turtle(s)."
         content:
             type: markdown
+        markdown:
+            type: markdown
 #        contentlink:
 #            type: text
 #            label: Link
@@ -318,7 +320,7 @@ blocks:
     icon_one: "fa:cube"
 
 
-    
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.

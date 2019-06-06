@@ -4,8 +4,6 @@ database:
     username: root
     password: ''
 
-sitename: Bolt Four Website
-
 debug: true
 debug_show_loggedoff: false
 debug_error_level: -1               # equivalent to E_ALL

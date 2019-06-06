@@ -3,7 +3,8 @@
     "name": "startbootstrap-one-page-wonder",
     "version": "5.0.5",
     "scripts": {
-        "start": "gulp watch"
+        "start": "gulp watch",
+        "gulp": "gulp"
     },
     "description": "A one page HTML template built with Bootstrap",
     "keywords": [
@@ -30,7 +31,8 @@
     },
     "dependencies": {
         "bootstrap": "4.3.1",
-        "jquery": "3.4.1"
+        "jquery": "3.4.1",
+        "prismjs": "^1.16.0"
     },
     "devDependencies": {
         "browser-sync": "2.26.5",
