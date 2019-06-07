@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61d0feabd28fae9ca2029e8fefbe20ce",
+    "content-hash": "d25c06819c7b1f3160873be31305c0c7",
     "packages": [
         {
             "name": "api-platform/core",
@@ -195,12 +195,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/four.git",
-                "reference": "33244d0acbe19f207998d98ba07a8423021f41f0"
+                "reference": "9bbe4c9deb53f2bac29d89bd3179070e22b809c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/four/zipball/33244d0acbe19f207998d98ba07a8423021f41f0",
-                "reference": "33244d0acbe19f207998d98ba07a8423021f41f0",
+                "url": "https://api.github.com/repos/bolt/four/zipball/9bbe4c9deb53f2bac29d89bd3179070e22b809c3",
+                "reference": "9bbe4c9deb53f2bac29d89bd3179070e22b809c3",
                 "shasum": ""
             },
             "require": {
@@ -338,7 +338,7 @@
                 "source": "https://github.com/bolt/four/tree/master",
                 "issues": "https://github.com/bolt/four/issues"
             },
-            "time": "2019-06-06T13:39:33+00:00"
+            "time": "2019-06-06T15:08:38+00:00"
         },
         {
             "name": "bolt/common",
@@ -1921,13 +1921,13 @@
             "version": "v2.4.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "e586c2483ae17c0ab29490e594b293e4baadab87"
+                "url": "https://github.com/bobdenotter/DoctrineExtensions",
+                "reference": "7e835754b5e652f933e43e3dc7126f193eaf9f67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/e586c2483ae17c0ab29490e594b293e4baadab87",
-                "reference": "e586c2483ae17c0ab29490e594b293e4baadab87",
+                "url": "https://api.github.com/repos/bobdenotter/DoctrineExtensions/zipball/7e835754b5e652f933e43e3dc7126f193eaf9f67",
+                "reference": "7e835754b5e652f933e43e3dc7126f193eaf9f67",
                 "shasum": ""
             },
             "require": {
@@ -1960,15 +1960,10 @@
                     "Gedmo\\": "lib/Gedmo"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
-                {
-                    "name": "David Buchmann",
-                    "email": "david@liip.ch"
-                },
                 {
                     "name": "Gediminas Morkevicius",
                     "email": "gediminas.morkevicius@gmail.com"
@@ -1976,13 +1971,17 @@
                 {
                     "name": "Gustavo Falco",
                     "email": "comfortablynumb84@gmail.com"
+                },
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
                 }
             ],
             "description": "Doctrine2 behavioral extensions",
             "homepage": "http://gediminasm.org/",
             "keywords": [
-                "Blameable",
                 "behaviors",
+                "blameable",
                 "doctrine2",
                 "extensions",
                 "gedmo",
@@ -1995,7 +1994,11 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2019-04-17T18:53:57+00:00"
+            "support": {
+                "email": "gediminas.morkevicius@gmail.com",
+                "wiki": "https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc"
+            },
+            "time": "2019-05-22T14:50:44+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -7675,16 +7678,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.19",
+            "version": "v5.8.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "f57c898282e03ccf898271c7253528899c203506"
+                "reference": "1acfa2e6829e3db6fe9aaa27373efff11ba23c1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/f57c898282e03ccf898271c7253528899c203506",
-                "reference": "f57c898282e03ccf898271c7253528899c203506",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/1acfa2e6829e3db6fe9aaa27373efff11ba23c1e",
+                "reference": "1acfa2e6829e3db6fe9aaa27373efff11ba23c1e",
                 "shasum": ""
             },
             "require": {
@@ -7721,7 +7724,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2019-05-29T00:23:01+00:00"
+            "time": "2019-06-06T14:01:55+00:00"
         },
         {
             "name": "twig/extensions",
@@ -8168,34 +8171,35 @@
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
-            "version": "3.1.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "f016565b251c2dfa32a8d6da44d1650dc9ec1498"
+                "reference": "13b2e8e1af099bc06f8611497fe079a4e0b4e497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/f016565b251c2dfa32a8d6da44d1650dc9ec1498",
-                "reference": "f016565b251c2dfa32a8d6da44d1650dc9ec1498",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/13b2e8e1af099bc06f8611497fe079a4e0b4e497",
+                "reference": "13b2e8e1af099bc06f8611497fe079a4e0b4e497",
                 "shasum": ""
             },
             "require": {
                 "doctrine/data-fixtures": "^1.3",
                 "doctrine/doctrine-bundle": "^1.6",
+                "doctrine/orm": "^2.6.0",
                 "php": "^7.1",
                 "symfony/doctrine-bridge": "~3.4|^4.1",
                 "symfony/framework-bundle": "^3.4|^4.1"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^5.0",
+                "doctrine/coding-standard": "^6.0",
                 "phpunit/phpunit": "^7.4",
                 "symfony/phpunit-bridge": "^4.1"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -8227,7 +8231,7 @@
                 "Fixture",
                 "persistence"
             ],
-            "time": "2018-12-21T10:10:51+00:00"
+            "time": "2019-06-07T11:21:53+00:00"
         },
         {
             "name": "symfony/debug-bundle",

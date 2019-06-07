@@ -2,69 +2,16 @@
 
 {% block content %}
 
+{% setcontent blocks = "blocks" %}
 
-<pre><code class="language-css">p { color: red }</code></pre>
+{% for block in blocks %}
 
+  {% include 'partials/_section_' ~ block.variant|default('plain') ~ '.twig' %}
 
-  {% setcontent blocks = "blocks" limit 1 %}
+  {% if user %}
+    <span class="edit-link"><a href="{{ block|edit_link }}"><strong>{{ __('general.phrase.edit') }}</strong></a></span> -
+  {% endif %}
 
-  {% for block in blocks %}
-
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="{{ asset('theme/boltcms-2019/img/dashboard.png') }}" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">{{ block.title }}</h2>
-              {{ block.content }}
-
-              {{ dump(block.content) }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endfor %}
-
-  <section>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="{{ asset('theme/boltcms-2019/img/02.jpg') }}" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="p-5">
-            <h2 class="display-4">We salute you!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="{{ asset('theme/boltcms-2019/img/03.jpg') }}" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-            <h2 class="display-4">Let there be rock!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+{% endfor %}
 
 {% endblock content %}

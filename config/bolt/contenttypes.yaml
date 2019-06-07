@@ -301,8 +301,6 @@ blocks:
 #            postfix: "Select your favourite turtle(s)."
         content:
             type: markdown
-        markdown:
-            type: markdown
 #        contentlink:
 #            type: text
 #            label: Link
