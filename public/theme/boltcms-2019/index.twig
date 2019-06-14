@@ -2,7 +2,8 @@
 
 {% block content %}
 
-{% setcontent blocks = "blocks" %}
+{#  {% setcontent blocks = "blocks" orderby "-title"  %}#}
+  {% setcontent blocks = "blocks" limit 100 %}
 
 {% for block in blocks %}
 
