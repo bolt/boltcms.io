@@ -3,15 +3,11 @@
 {% block content %}
 
 {#  {% setcontent blocks = "blocks" orderby "-title"  %}#}
-  {% setcontent blocks = "blocks" limit 100 %}
+  {% setcontent blocks = "blocks" orderby "order" limit 100 %}
 
 {% for block in blocks %}
 
   {% include 'partials/_section_' ~ block.variant|default('plain') ~ '.twig' %}
-
-  {% if user %}
-    <span class="edit-link"><a href="{{ block|edit_link }}"><strong>{{ __('general.phrase.edit') }}</strong></a></span> -
-  {% endif %}
 
 {% endfor %}
 
