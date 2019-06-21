@@ -1,8 +1,7 @@
 composer.phar
 config/bolt/*_local.yaml
 
-### Built Assets and uploads ###
-/public/assets/
+### Uploads ###
 /public/files/*
 
 ### NPM and frontend assets building cruft
