@@ -2,12 +2,11 @@
 
 {% block content %}
 
-{#  {% setcontent blocks = "blocks" orderby "-title"  %}#}
-  {% setcontent blocks = "blocks" orderby "order" limit 100 %}
+{% setcontent blocks = "blocks" orderby "order" limit 100 %}
 
 {% for block in blocks %}
 
-  {% include 'partials/_section_' ~ block.variant|default('plain') ~ '.twig' %}
+  {% include 'partials/_section_' ~ block.variant|default('default') ~ '.twig' %}
 
 {% endfor %}
 

@@ -1,0 +1,22 @@
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-2">
+                <div class="p-3">
+                    <img class="img-fluid" src="{{ asset('theme/boltcms-2019/img/aintnobody.gif') }}" alt="Ain't nobody got time for that!">
+                </div>
+            </div>
+            <div class="col-lg-8 order-lg-1">
+                <div class="p-5">
+                    <h2>{{ block.title }} {% if user %}<small>
+                            {{ block.order }} -
+                            <a href="{{ block|edit_link }}">{{ __('general.phrase.edit') }}</a>
+
+                            </small>{% endif %}</h2>
+                    {{ block.content }}
+{# {{ dump(block.content) }} #}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

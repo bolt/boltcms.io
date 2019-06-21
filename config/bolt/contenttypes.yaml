@@ -177,6 +177,13 @@ blocks:
             type: image
             attrib: title
             extensions: [ gif, jpg, png ]
+        variant:
+            type: select
+            values:
+                'default': "Default"
+                'image-left': "Image left"
+                'image-right': "Image right"
+                'install': "Installation"
 
     show_on_dashboard: true
     viewless: true
