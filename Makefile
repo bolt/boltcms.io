@@ -1,14 +1,18 @@
-start:
-	make install
-	make db-create
-	make server
-
 install:
 	cp -n .env.dist .env || true
 	composer install
+	make db-create
+
+build-assets:
 	cd vendor/bolt/bolt && npm install && npm run build
-	cp -rf vendor/bolt/bolt/public/assets public/
-	cp -rf vendor/bolt/bolt/translations/* translations/
+	rm -rf public/assets translations
+	cp -rf vendor/bolt/bolt/public/assets public/assets
+	cp -rf vendor/bolt/bolt/translations translations
+
+copy-assets:
+	rm -rf ../bolt-assets/assets ../bolt-assets/translations
+	cp -rf vendor/bolt/bolt/public/assets ../bolt-assets/
+	cp -rf translations ../bolt-assets/
 
 server:
 	bin/console server:start 127.0.0.1:8088 || true
@@ -64,7 +68,6 @@ full-test:
 	npm test
 	make behat
 	make e2e
-
 
 db-create:
 	bin/console doctrine:database:create

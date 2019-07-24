@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d25c06819c7b1f3160873be31305c0c7",
+    "content-hash": "cf6bfa3677103a00239ae1c6bad7e000",
     "packages": [
         {
             "name": "api-platform/core",
@@ -196,7 +196,7 @@
         },
         {
             "name": "bolt/bolt",
-            "version": "dev-master",
+            "version": "4.0.0-beta.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/four.git",
@@ -345,6 +345,34 @@
                 "issues": "https://github.com/bolt/four/issues"
             },
             "time": "2019-07-22T12:43:20+00:00"
+        },
+        {
+            "name": "bolt/bolt-assets",
+            "version": "4.0.0-beta.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/bolt-assets.git",
+                "reference": "460cef6ef4687dbf960fb2d598af3ec3c8141d18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/bolt-assets/zipball/460cef6ef4687dbf960fb2d598af3ec3c8141d18",
+                "reference": "460cef6ef4687dbf960fb2d598af3ec3c8141d18",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "Assets used in Bolt's backend. Don't use directly.",
+            "time": "2019-07-21T14:41:24+00:00"
         },
         {
             "name": "bolt/common",
@@ -8557,7 +8585,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bolt/bolt": 20
+        "bolt/bolt-assets": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

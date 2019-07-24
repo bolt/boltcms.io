@@ -52,6 +52,7 @@
         effectively creating a working link to that contenttpye's listing page. #}
 
     {% for ct in config.get('contenttypes') if not ct.viewless|default(false) %}
+
         {% setcontent records = ct.slug ~ "/latest/3" %}
 
         <h5>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.name}) }}</h5>
