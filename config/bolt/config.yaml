@@ -11,11 +11,11 @@ database:
 # The name of the website
 sitename: Bolt 4
 payoff: >
-    Bolt is a fully open source, adaptable platform in PHP for building and running modern websites.
-    It's built on <a href='https://symfony.com/'>Symfony</a>,
+    Bolt is a fully open source, adaptable platform for building and running modern websites.
+    It's built on PHP, <a href='https://symfony.com/'>Symfony</a>,
     <a href='https://www.doctrine-project.org/'>Doctrine</a>, <a href='https://twig.symfony.com/'>
     Twig</a>, <a href='https://api-platform.com/'>API-Platform</a> and <a href='#built-on'>more</a>,
-    and can be used as a traditional CMS or Headless/Decoupled.
+    and can be used as a traditional CMS or headless/decoupled.
 
 # note: ENV vars do not get parsed, yet!
 secret: '%env(APP_SECRET)%'

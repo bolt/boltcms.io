@@ -65,52 +65,66 @@ header.masthead h1 span.badge {
 header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
-  padding-bottom: 7rem;
+  -webkit-transform: skew(0deg, 4deg);
+  transform: skew(0deg, 4deg);
+  margin-top: -4rem;
+  background-color: #5F5B5C;
+}
+
+header.masthead .masthead-content {
   background: url("../img/juan-davila-153912-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-}
-
-header.masthead .masthead-content {
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 11rem;
+  -webkit-transform: skew(0deg, -4deg);
+  transform: skew(0deg, -4deg);
   z-index: 1;
   position: relative;
 }
 
-header.masthead .masthead-content .masthead-heading {
+header.masthead .container {
+  -webkit-transform: skew(0deg, -2deg);
+  transform: skew(0deg, -2deg);
+}
+
+header.masthead .masthead-heading {
   font-size: 4rem;
-  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 4px 4px 15px black;
 }
 
-header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem;
-  text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.7);
+header.masthead .masthead-subheading {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-shadow: 1px 1px 49px black;
 }
 
-header.masthead .masthead-content .masthead-subheading a {
+header.masthead .masthead-subheading a {
   color: #DDD;
   text-decoration: underline;
   -webkit-text-decoration-skip: edges;
   text-decoration-skip: edges;
 }
 
-header.masthead .masthead-content .masthead-subheading a:hover {
+header.masthead .masthead-subheading a:hover {
   color: #9ac;
 }
 
 @media (min-width: 992px) {
-  header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
+  header.masthead .masthead-content {
+    padding-top: calc(14rem + 55px);
+    padding-bottom: 15rem;
+    margin-bottom: -4rem;
+    margin-top: 4rem;
   }
-  header.masthead .masthead-content .masthead-heading {
+  header.masthead .masthead-heading {
     font-size: 6rem;
     line-height: 6rem;
     text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   }
-  header.masthead .masthead-content .masthead-subheading {
+  header.masthead .masthead-subheading {
     font-size: 1.7rem;
     line-height: 3rem;
     font-style: italic;

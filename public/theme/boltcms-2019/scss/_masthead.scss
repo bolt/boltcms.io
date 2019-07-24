@@ -1,56 +1,76 @@
 header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
-  padding-bottom: 7rem;
-  background: url('../img/juan-davila-153912-unsplash.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-  background-size: cover;
+  transform: skew(0deg, 4deg);
+  margin-top: -4rem;
+  background-color: #5F5B5C;
+
   .masthead-content {
+    background: url('../img/juan-davila-153912-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 11rem;
+    //margin-bottom: -1rem;
+
+    transform: skew(0deg, -4deg);
+
     z-index: 1;
     position: relative;
-    .masthead-heading {
-      font-size: 4rem;
-      text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-
-    }
-    .masthead-subheading {
-      font-size: 2rem;
-      text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.7);
-
-      a {
-        color: #DDD;
-        text-decoration: underline;
-        text-decoration-skip: edges;
-      }
-      a:hover {
-        color: #9ac;
-      }
-    }
   }
 
+  .container {
+    transform: skew(0deg, -2deg);
+
+  }
+
+  .masthead-heading {
+    font-size: 4rem;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 1);
+  }
+
+  .masthead-subheading {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-shadow: 1px 1px 49px rgba(0, 0, 0, 1);
+
+    a {
+      color: #DDD;
+      text-decoration: underline;
+      text-decoration-skip: edges;
+    }
+
+    a:hover {
+      color: #9ac;
+    }
+  }
 }
 
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
+
     .masthead-content {
-      .masthead-heading {
-        font-size: 6rem;
-        line-height: 6rem;
-        text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-      }
-      .masthead-subheading {
-        font-size: 1.7rem;
-        line-height: 3rem;
-        font-style: italic;
-        font-weight: 300;
-        letter-spacing: 0.8px;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
-      }
+      padding-top: calc(14rem + 55px);
+      padding-bottom: 15rem;
+      margin-bottom: -4rem;
+      margin-top: 4rem;
+    }
+
+    .masthead-heading {
+      font-size: 6rem;
+      line-height: 6rem;
+      text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .masthead-subheading {
+      font-size: 1.7rem;
+      line-height: 3rem;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
     }
   }
 }

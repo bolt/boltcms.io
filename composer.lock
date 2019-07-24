@@ -200,12 +200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/four.git",
-                "reference": "0c308e357f803e2f5fa132b82c1d632dd18eacac"
+                "reference": "b5732c74d726dbe5da663884ce946be4f65b66c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/four/zipball/0c308e357f803e2f5fa132b82c1d632dd18eacac",
-                "reference": "0c308e357f803e2f5fa132b82c1d632dd18eacac",
+                "url": "https://api.github.com/repos/bolt/four/zipball/b5732c74d726dbe5da663884ce946be4f65b66c1",
+                "reference": "b5732c74d726dbe5da663884ce946be4f65b66c1",
                 "shasum": ""
             },
             "require": {
@@ -344,7 +344,7 @@
                 "source": "https://github.com/bolt/four/tree/4.0.0-beta.1.2",
                 "issues": "https://github.com/bolt/four/issues"
             },
-            "time": "2019-07-22T12:43:20+00:00"
+            "time": "2019-07-22T20:28:44+00:00"
         },
         {
             "name": "bolt/bolt-assets",
