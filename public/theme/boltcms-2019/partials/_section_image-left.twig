@@ -1,13 +1,14 @@
-<section>
+<section id="{{ block.slug }}">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="{{ asset('img/dashboard.png') }}" alt="">
+                    <img class="img-fluid {{ block.image.title|default() }}" src="{{ thumbnail(block.image, 450, 450) }}" alt="">
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="p-5">
+            <div class="col-lg-7">
+                <div class="p-6">
+                    {{ dump(block.image) }}
                     <h2>{{ block.title }}</h2>
                     {{ block.content }}
                     {#              {{ dump(block.content) }}#}

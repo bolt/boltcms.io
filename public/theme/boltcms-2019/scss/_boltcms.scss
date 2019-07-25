@@ -1,0 +1,13 @@
+section {
+  margin-top: 2rem;
+}
+section#pretty-fast {
+  padding: 2rem 0;
+
+  transform: skew(0deg, -2deg);
+  background: #D1DBDD;
+
+  .container {
+    transform:  skew(0deg, 2deg);
+  }
+}

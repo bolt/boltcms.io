@@ -27,7 +27,7 @@ secret: '%env(APP_SECRET)%'
 # change the name here accordingly.
 theme: boltcms-2019
 
-# The locale thatll be used by the application. If no locale is set the
+# The locale that'll be used by the application. If no locale is set the
 # fallback locale is en_GB. For available options, see:
 # https://docs.bolt.cm/other/locales
 #
