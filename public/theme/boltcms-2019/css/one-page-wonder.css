@@ -169,17 +169,37 @@ header.masthead .masthead-subheading a:hover {
 }
 
 section {
-  margin-top: 2rem;
+  margin: 4rem 0;
 }
 
-section#pretty-fast {
-  padding: 2rem 0;
+section:nth-of-type(2),
+section:nth-of-type(6),
+section:nth-of-type(10) {
+  padding: 4rem 0;
   -webkit-transform: skew(0deg, -2deg);
   transform: skew(0deg, -2deg);
   background: #D1DBDD;
 }
 
-section#pretty-fast .container {
+section:nth-of-type(2) .container,
+section:nth-of-type(6) .container,
+section:nth-of-type(10) .container {
   -webkit-transform: skew(0deg, 2deg);
   transform: skew(0deg, 2deg);
+}
+
+section:nth-of-type(4),
+section:nth-of-type(8),
+section:nth-of-type(12) {
+  padding: 4rem 0;
+  -webkit-transform: skew(0deg, 1.5deg);
+  transform: skew(0deg, 1.5deg);
+  background: #D8C2B4;
+}
+
+section:nth-of-type(4) .container,
+section:nth-of-type(8) .container,
+section:nth-of-type(12) .container {
+  -webkit-transform: skew(0deg, -1.5deg);
+  transform: skew(0deg, -1.5deg);
 }

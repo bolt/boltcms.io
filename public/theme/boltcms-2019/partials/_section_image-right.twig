@@ -1,14 +1,18 @@
 <section id="{{ block.slug }}">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5 order-lg-2">
+            <div class="col-lg-4 order-lg-2">
                 <div class="p-5">
                     <img class="img-fluid {{ block.image.title|default() }}" src="{{ thumbnail(block.image, 450, 450) }}" alt="">
                 </div>
             </div>
-            <div class="col-lg-7 order-lg-1">
+            <div class="col-lg-8 order-lg-1">
                 <div class="p-6">
-                    <h2>{{ block.title }}</h2>
+                    <h2>{{ block.title|raw }}{% if user %}<small>
+                            {{ block.order }} -
+                            <a href="{{ block|edit_link }}">{{ __('general.phrase.edit') }}</a>
+
+                            </small>{% endif %}</h2>
                     {{ block.content }}
                     {#              {{ dump(block.content) }}#}
                 </div>

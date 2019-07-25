@@ -9,7 +9,7 @@ database:
     url: '%env(resolve:DATABASE_URL)%'
 
 # The name of the website
-sitename: Bolt 4
+sitename: Boltcms.io
 payoff: >
     Bolt is a fully open source, adaptable platform for building and running modern websites.
     It's built on PHP, <a href='https://symfony.com/'>Symfony</a>,
