@@ -18,6 +18,14 @@ h6 {
   font-weight: 700;
 }
 
+p {
+  line-height: 1.8rem;
+}
+
+ul li, ol li {
+  line-height: 1.8rem;
+}
+
 .btn-xl {
   text-transform: uppercase;
   padding: 1.5rem 3rem;
