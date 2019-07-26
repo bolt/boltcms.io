@@ -1,8 +1,9 @@
 composer.phar
 config/bolt/*_local.yaml
+var/data/bolt.sqlite
 
 ### Uploads ###
-/public/files/*
+#/public/files/*
 
 ### NPM and frontend assets building cruft
 node_modules/
