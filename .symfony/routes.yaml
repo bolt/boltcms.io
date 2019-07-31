@@ -1,2 +1,0 @@
-"https://{default}/": { type: upstream, upstream: "boltcms-io:http" }
-"http://{default}/": { type: redirect, to: "https://{default}/" }
