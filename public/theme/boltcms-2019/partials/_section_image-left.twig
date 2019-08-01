@@ -8,10 +8,8 @@
             </div>
             <div class="col-lg-7">
                 <div class="p-6">
-                    {{ dump(block.image) }}
-                    <h2>{{ block.title }}</h2>
+                    {% include 'partials/_title.twig' %}
                     {{ block.content }}
-                    {#              {{ dump(block.content) }}#}
                 </div>
             </div>
         </div>

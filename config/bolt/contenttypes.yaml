@@ -184,7 +184,7 @@ blocks:
                 'image-left': "Image left"
                 'image-right': "Image right"
                 'install': "Installation"
-
+                'screenshots': "Screenshots"
     show_on_dashboard: true
     viewless: true
     sort: order

@@ -1,0 +1,7 @@
+{% spaceless %}
+<h2>{{ block.title|raw }} {% if user %}<small>
+{{ block.order }} -
+<a href="{{ block|edit_link }}">{{ __('general.phrase.edit') }}</a>
+</small>{% endif %}
+</h2>
+{% endspaceless %}

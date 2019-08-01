@@ -1,0 +1,35 @@
+<section id="{{ block.slug }}">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-10 p-5">
+                    {% include 'partials/_title.twig' %}
+
+                    {% set slides = block.content|striptags|split('\n') %}
+
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        {% for slide in slides %}
+                        <li data-target="#carousel" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for slide in slides %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img class="d-block w-100" src="{{ asset(slide, 'files') }}" alt="">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
