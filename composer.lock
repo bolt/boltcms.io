@@ -196,16 +196,16 @@
         },
         {
             "name": "bobdenotter/weatherwidget",
-            "version": "1.0.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/weatherwidget.git",
-                "reference": "f069a14acf3afc1251f6db5680f992d6eb935497"
+                "reference": "a31ba7bae44582b018c762f20c0a958cad749faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/weatherwidget/zipball/f069a14acf3afc1251f6db5680f992d6eb935497",
-                "reference": "f069a14acf3afc1251f6db5680f992d6eb935497",
+                "url": "https://api.github.com/repos/bobdenotter/weatherwidget/zipball/a31ba7bae44582b018c762f20c0a958cad749faa",
+                "reference": "a31ba7bae44582b018c762f20c0a958cad749faa",
                 "shasum": ""
             },
             "require-dev": {
@@ -231,7 +231,7 @@
                 }
             ],
             "description": "A simple Dashboard Widget that displays the current weather. So you don't actually need to go outside or open the curtains.",
-            "time": "2019-08-03T16:56:34+00:00"
+            "time": "2019-08-05T15:53:14+00:00"
         },
         {
             "name": "bolt/bolt-assets",
@@ -315,16 +315,16 @@
         },
         {
             "name": "bolt/core",
-            "version": "4.0.0-beta.1.6",
+            "version": "4.0.0-beta.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/core.git",
-                "reference": "185f522a4916a3d827c6ffa50b9e1cd8f40e3fb2"
+                "reference": "789414eeec5af593fedfc9545a33eb073939534b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/core/zipball/185f522a4916a3d827c6ffa50b9e1cd8f40e3fb2",
-                "reference": "185f522a4916a3d827c6ffa50b9e1cd8f40e3fb2",
+                "url": "https://api.github.com/repos/bolt/core/zipball/789414eeec5af593fedfc9545a33eb073939534b",
+                "reference": "789414eeec5af593fedfc9545a33eb073939534b",
                 "shasum": ""
             },
             "require": {
@@ -388,13 +388,14 @@
                 "symfony/symfony": "*"
             },
             "require-dev": {
+                "acmecorp/reference-extension": "^1.0",
                 "behat/behat": "^3.5",
                 "behat/mink": "dev-master@dev",
                 "behat/mink-extension": "^2.3",
                 "behat/mink-goutte-driver": "^1.2",
                 "behatch/contexts": "^3.2",
-                "bobdenotter/weatherwidget": "dev-master",
-                "bolt/newswidget": "^1.0.1",
+                "bobdenotter/weatherwidget": "^1.0",
+                "bolt/newswidget": "^1.0",
                 "coduo/php-matcher": "^3.2",
                 "dama/doctrine-test-bundle": "^5.0",
                 "doctrine/doctrine-fixtures-bundle": "^3.1",
@@ -440,20 +441,20 @@
                 "MIT"
             ],
             "description": "Bolt 4 Core",
-            "time": "2019-08-03T16:19:52+00:00"
+            "time": "2019-08-05T16:31:14+00:00"
         },
         {
             "name": "bolt/newswidget",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/newswidget.git",
-                "reference": "2c7e7dcd5b98af83f92b907d9b32172f05315c5a"
+                "reference": "822837d5bf498a2ab98708a0bb237994006a4b29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/newswidget/zipball/2c7e7dcd5b98af83f92b907d9b32172f05315c5a",
-                "reference": "2c7e7dcd5b98af83f92b907d9b32172f05315c5a",
+                "url": "https://api.github.com/repos/bolt/newswidget/zipball/822837d5bf498a2ab98708a0bb237994006a4b29",
+                "reference": "822837d5bf498a2ab98708a0bb237994006a4b29",
                 "shasum": ""
             },
             "require-dev": {
@@ -479,7 +480,7 @@
                 }
             ],
             "description": "📰 A simple Widget Extension to display the latest Bolt news on the dashboard.",
-            "time": "2019-08-03T16:50:34+00:00"
+            "time": "2019-08-05T15:04:08+00:00"
         },
         {
             "name": "bolt/themes",
@@ -1942,16 +1943,16 @@
         },
         {
             "name": "drupol/composer-packages",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupol/composer-packages.git",
-                "reference": "e4c895b001c65442c8e9f43bbd47eb578b94bc89"
+                "reference": "ab63535427c94ae9c58ad78004655f36e93b4207"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupol/composer-packages/zipball/e4c895b001c65442c8e9f43bbd47eb578b94bc89",
-                "reference": "e4c895b001c65442c8e9f43bbd47eb578b94bc89",
+                "url": "https://api.github.com/repos/drupol/composer-packages/zipball/ab63535427c94ae9c58ad78004655f36e93b4207",
+                "reference": "ab63535427c94ae9c58ad78004655f36e93b4207",
                 "shasum": ""
             },
             "require": {
@@ -1988,7 +1989,7 @@
                 }
             ],
             "description": "Composer Packages is a Composer plugin for getting information about installed packages in your project.",
-            "time": "2019-08-02T09:26:05+00:00"
+            "time": "2019-08-05T12:53:41+00:00"
         },
         {
             "name": "egulias/email-validator",
