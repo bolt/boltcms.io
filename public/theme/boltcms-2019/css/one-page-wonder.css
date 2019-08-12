@@ -18,6 +18,10 @@ h6 {
   font-weight: 700;
 }
 
+h2 {
+  line-height: 2;
+}
+
 p {
   line-height: 1.8rem;
 }
@@ -139,6 +143,8 @@ header.masthead .masthead-subheading a:hover {
     font-weight: 300;
     letter-spacing: 0.8px;
     text-shadow: 1px 1px 5px black;
+    max-width: 55rem;
+    margin: auto;
   }
 }
 
@@ -210,4 +216,11 @@ section:nth-of-type(8) .container,
 section:nth-of-type(12) .container {
   -webkit-transform: skew(0deg, -1.5deg);
   transform: skew(0deg, -1.5deg);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators li {
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }

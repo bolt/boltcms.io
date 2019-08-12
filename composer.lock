@@ -196,16 +196,16 @@
         },
         {
             "name": "bobdenotter/weatherwidget",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/weatherwidget.git",
-                "reference": "a31ba7bae44582b018c762f20c0a958cad749faa"
+                "reference": "6b2dcec3d2143c668fe86ec19f5cb5cfddf37e10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/weatherwidget/zipball/a31ba7bae44582b018c762f20c0a958cad749faa",
-                "reference": "a31ba7bae44582b018c762f20c0a958cad749faa",
+                "url": "https://api.github.com/repos/bobdenotter/weatherwidget/zipball/6b2dcec3d2143c668fe86ec19f5cb5cfddf37e10",
+                "reference": "6b2dcec3d2143c668fe86ec19f5cb5cfddf37e10",
                 "shasum": ""
             },
             "require-dev": {
@@ -231,20 +231,20 @@
                 }
             ],
             "description": "A simple Dashboard Widget that displays the current weather. So you don't actually need to go outside or open the curtains.",
-            "time": "2019-08-05T15:53:14+00:00"
+            "time": "2019-08-05T18:06:24+00:00"
         },
         {
             "name": "bolt/bolt-assets",
-            "version": "4.0.0-beta.1.1",
+            "version": "4.0.0-beta.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt-assets.git",
-                "reference": "43837f8e0b9d491cabfe0be3f89de4e52c386a55"
+                "reference": "42939d7fca05f58f4636afca417dbff12ce628e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt-assets/zipball/43837f8e0b9d491cabfe0be3f89de4e52c386a55",
-                "reference": "43837f8e0b9d491cabfe0be3f89de4e52c386a55",
+                "url": "https://api.github.com/repos/bolt/bolt-assets/zipball/42939d7fca05f58f4636afca417dbff12ce628e5",
+                "reference": "42939d7fca05f58f4636afca417dbff12ce628e5",
                 "shasum": ""
             },
             "type": "library",
@@ -259,7 +259,7 @@
                 }
             ],
             "description": "Assets used in Bolt's backend. Don't use directly.",
-            "time": "2019-07-31T17:44:35+00:00"
+            "time": "2019-08-11T18:18:34+00:00"
         },
         {
             "name": "bolt/common",
@@ -315,16 +315,16 @@
         },
         {
             "name": "bolt/core",
-            "version": "4.0.0-beta.1.7",
+            "version": "4.0.0-beta.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/core.git",
-                "reference": "789414eeec5af593fedfc9545a33eb073939534b"
+                "reference": "9ecf73b00cb3dc41bf7139675a4de5e53fb5d638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/core/zipball/789414eeec5af593fedfc9545a33eb073939534b",
-                "reference": "789414eeec5af593fedfc9545a33eb073939534b",
+                "url": "https://api.github.com/repos/bolt/core/zipball/9ecf73b00cb3dc41bf7139675a4de5e53fb5d638",
+                "reference": "9ecf73b00cb3dc41bf7139675a4de5e53fb5d638",
                 "shasum": ""
             },
             "require": {
@@ -441,7 +441,7 @@
                 "MIT"
             ],
             "description": "Bolt 4 Core",
-            "time": "2019-08-05T16:31:14+00:00"
+            "time": "2019-08-11T18:11:46+00:00"
         },
         {
             "name": "bolt/newswidget",
@@ -484,41 +484,36 @@
         },
         {
             "name": "bolt/themes",
-            "version": "3.0.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/themes.git",
-                "reference": "bdb865889573a630258532b59146d22b021cf51f"
+                "reference": "7b97c3711b26ea0e8b1e151f51d7bfaa591464df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/themes/zipball/bdb865889573a630258532b59146d22b021cf51f",
-                "reference": "bdb865889573a630258532b59146d22b021cf51f",
+                "url": "https://api.github.com/repos/bolt/themes/zipball/7b97c3711b26ea0e8b1e151f51d7bfaa591464df",
+                "reference": "7b97c3711b26ea0e8b1e151f51d7bfaa591464df",
                 "shasum": ""
             },
             "require": {
-                "twig/twig": "^1.32 || ^2.0"
+                "twig/twig": "^2.0"
             },
             "conflict": {
-                "bolt/bolt": "< 3.5"
+                "bolt/bolt": "< 3.999"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Starter themes for Bolt",
-            "homepage": "http://bolt.cm",
+            "homepage": "http://boltcms.io",
             "keywords": [
                 "cms",
                 "twig"
             ],
-            "time": "2019-07-26T14:30:00+00:00"
+            "time": "2019-08-11T17:59:35+00:00"
         },
         {
             "name": "cocur/slugify",
@@ -889,16 +884,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.6.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24"
+                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/53120e0eb10355388d6ccbe462f1fea34ddadb24",
-                "reference": "53120e0eb10355388d6ccbe462f1fea34ddadb24",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
+                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
                 "shasum": ""
             },
             "require": {
@@ -907,12 +902,12 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^6.4"
+                "phpunit/phpunit": "^7.5@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -926,16 +921,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -953,7 +948,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2019-03-25T19:12:02+00:00"
+            "time": "2019-08-08T18:11:40+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1943,16 +1938,16 @@
         },
         {
             "name": "drupol/composer-packages",
-            "version": "1.0.1",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupol/composer-packages.git",
-                "reference": "ab63535427c94ae9c58ad78004655f36e93b4207"
+                "reference": "131c6d3b9f899b67b38b8d7770fc7940a4eb54f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupol/composer-packages/zipball/ab63535427c94ae9c58ad78004655f36e93b4207",
-                "reference": "ab63535427c94ae9c58ad78004655f36e93b4207",
+                "url": "https://api.github.com/repos/drupol/composer-packages/zipball/131c6d3b9f899b67b38b8d7770fc7940a4eb54f4",
+                "reference": "131c6d3b9f899b67b38b8d7770fc7940a4eb54f4",
                 "shasum": ""
             },
             "require": {
@@ -1989,7 +1984,15 @@
                 }
             ],
             "description": "Composer Packages is a Composer plugin for getting information about installed packages in your project.",
-            "time": "2019-08-05T12:53:41+00:00"
+            "keywords": [
+                "Composer Helper",
+                "Directories discovery",
+                "Packages discovery",
+                "Types discovery",
+                "composer plugin",
+                "extension"
+            ],
+            "time": "2019-08-08T09:14:58+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -3262,16 +3265,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.22.0",
+            "version": "2.22.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "1a0e48b5f656065ba3c265b058b25d36c2162a5e"
+                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/1a0e48b5f656065ba3c265b058b25d36c2162a5e",
-                "reference": "1a0e48b5f656065ba3c265b058b25d36c2162a5e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
+                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
                 "shasum": ""
             },
             "require": {
@@ -3325,7 +3328,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-07-28T09:02:12+00:00"
+            "time": "2019-08-07T12:36:44+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4447,23 +4450,23 @@
         },
         {
             "name": "siriusphp/validation",
-            "version": "2.2.3",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/siriusphp/validation.git",
-                "reference": "3c601f2f1bd3997fc6f5695f1564ce6e6c077c25"
+                "reference": "fa93b302802616b1dcf7e38244a70e324c121fb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/siriusphp/validation/zipball/3c601f2f1bd3997fc6f5695f1564ce6e6c077c25",
-                "reference": "3c601f2f1bd3997fc6f5695f1564ce6e6c077c25",
+                "url": "https://api.github.com/repos/siriusphp/validation/zipball/fa93b302802616b1dcf7e38244a70e324c121fb4",
+                "reference": "fa93b302802616b1dcf7e38244a70e324c121fb4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^3.7"
+                "phpunit/phpunit": "^4.8"
             },
             "type": "library",
             "autoload": {
@@ -4489,7 +4492,7 @@
                 "security",
                 "validation"
             ],
-            "time": "2019-04-03T08:57:10+00:00"
+            "time": "2019-08-11T13:55:53+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -6226,16 +6229,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "82ebae02209c21113908c229e9883c419720738a"
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
-                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
                 "shasum": ""
             },
             "require": {
@@ -6247,7 +6250,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6264,12 +6267,12 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
                 },
                 {
-                    "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -6280,20 +6283,20 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7"
+                "reference": "685968b11e61a347c18bf25db32effa478be610f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
-                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/685968b11e61a347c18bf25db32effa478be610f",
+                "reference": "685968b11e61a347c18bf25db32effa478be610f",
                 "shasum": ""
             },
             "require": {
@@ -6305,7 +6308,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6339,25 +6342,25 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-intl-icu",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-icu.git",
-                "reference": "999878a3a09d73cae157b0cf89bb6fb2cc073057"
+                "reference": "66810b9d6eb4af54d543867909d65ab9af654d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/999878a3a09d73cae157b0cf89bb6fb2cc073057",
-                "reference": "999878a3a09d73cae157b0cf89bb6fb2cc073057",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/66810b9d6eb4af54d543867909d65ab9af654d7e",
+                "reference": "66810b9d6eb4af54d543867909d65ab9af654d7e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "symfony/intl": "~2.3|~3.0|~4.0"
+                "symfony/intl": "~2.3|~3.0|~4.0|~5.0"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -6365,7 +6368,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6397,20 +6400,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-01-07T19:39:47+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "c766e95bec706cdd89903b1eda8afab7d7a6b7af"
+                "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/c766e95bec706cdd89903b1eda8afab7d7a6b7af",
-                "reference": "c766e95bec706cdd89903b1eda8afab7d7a6b7af",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
+                "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
                 "shasum": ""
             },
             "require": {
@@ -6424,7 +6427,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6441,12 +6444,12 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                },
-                {
                     "name": "Laurent Bassin",
                     "email": "laurent@bassin.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
@@ -6459,20 +6462,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-03-04T13:44:35+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/b42a2f66e8f1b15ccf25652c3424265923eb4f17",
+                "reference": "b42a2f66e8f1b15ccf25652c3424265923eb4f17",
                 "shasum": ""
             },
             "require": {
@@ -6484,7 +6487,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6518,20 +6521,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c"
+                "reference": "04ce3335667451138df4307d6a9b61565560199e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/ab50dcf166d5f577978419edd37aa2bb8eabce0c",
-                "reference": "ab50dcf166d5f577978419edd37aa2bb8eabce0c",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/04ce3335667451138df4307d6a9b61565560199e",
+                "reference": "04ce3335667451138df4307d6a9b61565560199e",
                 "shasum": ""
             },
             "require": {
@@ -6540,7 +6543,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6573,20 +6576,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd"
+                "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
-                "reference": "d1fb4abcc0c47be136208ad9d68bf59f1ee17abd",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/2ceb49eaccb9352bff54d22570276bb75ba4a188",
+                "reference": "2ceb49eaccb9352bff54d22570276bb75ba4a188",
                 "shasum": ""
             },
             "require": {
@@ -6595,7 +6598,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -6631,7 +6634,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/process",
@@ -8165,7 +8168,7 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.30",
+            "version": "v5.8.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
@@ -8434,16 +8437,16 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v0.13.5",
+            "version": "v0.13.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "cdcf5b44737ee743358f5ed25b19a39ad7daf777"
+                "reference": "123af49e46d26b0cd2e7a71a387253aa01ea9a6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/cdcf5b44737ee743358f5ed25b19a39ad7daf777",
-                "reference": "cdcf5b44737ee743358f5ed25b19a39ad7daf777",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/123af49e46d26b0cd2e7a71a387253aa01ea9a6b",
+                "reference": "123af49e46d26b0cd2e7a71a387253aa01ea9a6b",
                 "shasum": ""
             },
             "require": {
@@ -8482,7 +8485,7 @@
                 "api",
                 "graphql"
             ],
-            "time": "2019-06-12T07:16:37+00:00"
+            "time": "2019-08-07T08:16:55+00:00"
         },
         {
             "name": "white-october/pagerfanta-bundle",

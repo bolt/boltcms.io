@@ -3,7 +3,7 @@ section {
 }
 section:nth-of-type(2),
 section:nth-of-type(6),
-section:nth-of-type(10),  {
+section:nth-of-type(10)  {
   padding: 4rem 0;
 
   transform: skew(0deg, -2deg);
@@ -25,4 +25,11 @@ section:nth-of-type(12) {
   .container {
     transform:  skew(0deg, -1.5deg);
   }
+}
+
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-indicators li {
+  filter: invert(1);
 }
