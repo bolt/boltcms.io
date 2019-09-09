@@ -1,8 +1,14 @@
 @mixin heading-font {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 700;
+  line-height: 2.2;
 }
 
 @mixin body-font {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  // font-family: 'Merriweather', serif;
+}
+
+@mixin caption-font {
   font-family: 'Merriweather', serif;
 }
