@@ -2,6 +2,8 @@
 # details: https://docs.bolt.cm/configuration/menus
 
 main:
+  - label: Documentation
+    link: https://docs.bolt.cm/4.0
   - label: Community [Slack/Forum]
     link: https://bolt.cm/community
   - label: Code on Github
