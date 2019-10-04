@@ -8,22 +8,11 @@
            are on this page. It can be used for overview pages like 'all entries', or
            'all records tagged with kittens'. #}
 
-        {# If used for listing a taxonomy, we add a heading.: #}
-        {% if taxonomy|default %}
+        {# If used for listing a taxonomy, we add a heading #}
+        {% if taxonomy is defined %}
             <h1>
-                {{ __('general.phrase.overview-for') }}
-                {% if taxonomy.options[slug] is defined %}
-                    {{ taxonomy.options[slug] }}
-                {% else %}
-                    {{ slug }}
-                {% endif %}
+                {{ __('general.phrase.overview-for', {'%slug%': taxonomy.options[slug]|default(slug) }) }}
             </h1>
-            {# Taxonomies are fetched unordered by design except if 'has_sortorder'
-               is set to true. This way we keep 'grouping' intact in the listing. #}
-            {% if not taxonomy.has_sortorder %}
-                {# If we specified an order in config.yml, sort them here, accordingly: #}
-                {% set records = records|order(config.get('general/listing_sort')) %}
-            {% endif %}
         {% endif %}
 
         {% for record in records %}
@@ -31,7 +20,7 @@
 
                 <h2><a href="{{ record|link }}">{{ record|title }}</a></h2>
 
-                {% if record|image is not empty %}
+                {% if record|image %}
                     <a href="{{ image(record|image) }}">
                         <img src="{{ thumbnail(record|image, 400, 260) }}" alt="{{ (record|image).alt|default(record|title) }}">
                     </a>
@@ -60,6 +49,6 @@
         {% endfor %}
 
         {# If there are more records than will fit on one page, the pager is shown. #}
-        {{ pager(records, template = 'partials/_sub_pager.twig') }}
+        {{ pager(records, template = 'helpers/_pager_basic.html.twig') }}
 
 {% endblock main %}

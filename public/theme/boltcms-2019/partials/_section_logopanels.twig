@@ -1,0 +1,19 @@
+<section id="{{ block.slug }}">
+    <div class="container">
+        <div class="row align-items-center">
+                <div class="logo-wrapper">
+
+                    {% set logos = block.content|striptags|split('\n') %}
+
+                    {% include 'partials/_title.twig' %}
+
+                    {% for logo in logos %}
+                        {#{{ block.content }}#}
+                        <div class="logo">
+                            <img src="{{ asset(logo, 'files') }}" alt="">
+                        </div>
+                    {% endfor %}
+                </div>
+        </div>
+    </div>
+</section>

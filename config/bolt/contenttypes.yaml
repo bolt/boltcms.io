@@ -186,6 +186,7 @@ blocks:
                 'image-right': "Image right"
                 'install': "Installation"
                 'screenshots': "Screenshots"
+                'logopanels': "Logo panels"
     show_on_dashboard: true
     viewless: true
     sort: order

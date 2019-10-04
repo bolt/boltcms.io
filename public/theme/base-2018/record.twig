@@ -1,0 +1,43 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+
+<section class="section section-record">
+    <div class="container">
+        {% if record|image  %}
+        <figure class="image is-2by1">
+            <img src="{{ record|image|thumbnail(1080, 540, fit='crop') }}" alt="{{ record|image.alt|default() }}" />
+            <figcaption>
+                {{ record|image.title|default() }}
+            </figcaption>
+        </figure>
+        {% endif %}
+
+        <div class="columns is-centered">
+            <div class="column is-two-thirds">
+                <article role="article" class="content">
+                    <h1 class="title is-size-1 is-size-3-mobile">{{ record|title }}</h1>
+
+                    {% include 'partials/_record_meta.twig' %}
+
+                    {# Output all fields, in the order as defined in the contenttype.
+                    To change the generated html and configure the options, see:
+                    https://docs.bolt.cm/templating #}
+                    {% with { 'record': record, 'extended': true, 'repeaters': true, 'blocks': true, 'exclude': ['title', record|image.fieldname] } %}
+                        {{ block('sub_fields', 'helpers/_fields.twig') }}
+                    {% endwith %}
+
+                    {# Uncomment this if you wish to dump the entire record to the client, for debugging purposes.
+                    {{ dump(record) }}
+                    #}
+
+                    {{ include('partials/_recordfooter.twig', { 'record': record, 'extended': true }) }}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "partials/_sub_recent_records.twig" %}
+
+{% endblock main %}

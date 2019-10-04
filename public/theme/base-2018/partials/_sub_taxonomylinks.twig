@@ -1,0 +1,16 @@
+<div class="tags">
+    {% for type, taxonomies in record|taxonomies %}
+        <span class="label">
+            {% if taxonomies|length < 2 %}
+                {{ config.get('taxonomies')[type].singular_name }}:
+            {% else %}
+                {{ config.get('taxonomies')[type].name }}:
+            {% endif %}
+        </span>
+        {% for taxonomy in taxonomies %}
+            <a href="{{ taxonomy.link }}" class="tag is-dark">{{ taxonomy.name }}</a>
+        {% else %}
+            {{ __('general.phrase.none') }}
+        {% endfor %}
+    {% endfor %}
+</div>
