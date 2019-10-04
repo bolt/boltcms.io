@@ -23,7 +23,11 @@
         "version": "1.0.0"
     },
     "bolt/assets": {
+<<<<<<< HEAD
         "version": "4.0.0-beta.2.6"
+=======
+        "version": "4.0.0-beta.3.4"
+>>>>>>> Updating assets
     },
     "bolt/common": {
         "version": "2.0.5"
