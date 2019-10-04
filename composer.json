@@ -35,13 +35,13 @@
             "rm public/.gitignore"
         ],
         "post-install-cmd": [
-            "bin/console bolt:copy-themes",
+            "php bin/console bolt:copy-themes",
             "@auto-scripts",
-            "bin/console bolt:info"
+            "php bin/console bolt:info"
         ],
         "post-update-cmd": [
             "@auto-scripts",
-            "bin/console bolt:info"
+            "php bin/console bolt:info"
         ]
     },
     "conflict": {
