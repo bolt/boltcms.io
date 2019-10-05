@@ -1308,7 +1308,7 @@
     <unit id="jXAelLe" name="admin_sidebar_toggler.toggle">
       <segment>
         <source>admin_sidebar_toggler.toggle</source>
-        <target>Toggle menu</target>
+        <target><![CDATA[<span class="sr-only">Toggle </span>menu]]></target>
       </segment>
     </unit>
     <unit id="BINgtmK" name="editor_date.toggle">
@@ -1909,6 +1909,12 @@
       <segment>
         <source>field.cropZoomPostfix</source>
         <target>Zoom-level of crop, range 1-10. </target>
+      </segment>
+    </unit>
+    <unit id="n.3JZvX" name="title.contentType">
+      <segment>
+        <source>title.contentType</source>
+        <target>Content Type</target>
       </segment>
     </unit>
   </file>
