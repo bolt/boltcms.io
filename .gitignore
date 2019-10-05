@@ -1,6 +1,9 @@
 composer.phar
 config/bolt/*_local.yaml
 var/data/bolt.sqlite
+public/theme/skeleton/
+public/theme/base-2018/
+
 
 ### Uploads ###
 #/public/files/*
