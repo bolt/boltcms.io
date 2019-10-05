@@ -76,21 +76,10 @@ pages:
         teaser:
             type: html
             height: 150px
-        marky:
-            type: markdown
         body:
             type: html
             height: 300px
             allowtwig: true
-        textarea:
-            type: textarea
-            postfix: "This is a plain text area. the contents will <em><strong>not</em></strong> be processed."
-        checkbox:
-            type: checkbox
-            label: "This is a checkbox"
-        template:
-            type: templateselect
-            filter: '*.twig'
     taxonomy: [ groups ]
     recordsperpage: 5
 
