@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "8924f0a374cc975575cc1e6d3da51b38",
-=======
-    "content-hash": "efd6c2f666815e8783fffe503a991645",
->>>>>>> Updating composer deps
+    "content-hash": "dfe3bb33a56b9d0d887a953e346aea86",
     "packages": [
         {
             "name": "antishov/doctrine-extensions-bundle",
@@ -316,16 +312,16 @@
         },
         {
             "name": "bolt/assets",
-            "version": "4.0.0-beta.3.4",
+            "version": "4.0.0-beta.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/assets.git",
-                "reference": "e962913dcf9ac52a0490aad9d163e249e30e1b79"
+                "reference": "0aa23d1253be0c4750d593788a8b998d9df6eb5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/assets/zipball/e962913dcf9ac52a0490aad9d163e249e30e1b79",
-                "reference": "e962913dcf9ac52a0490aad9d163e249e30e1b79",
+                "url": "https://api.github.com/repos/bolt/assets/zipball/0aa23d1253be0c4750d593788a8b998d9df6eb5e",
+                "reference": "0aa23d1253be0c4750d593788a8b998d9df6eb5e",
                 "shasum": ""
             },
             "require-dev": {
@@ -343,7 +339,7 @@
                 }
             ],
             "description": "🛠 Assets used in Bolt's backend. Do not use directly.",
-            "time": "2019-09-26T11:54:10+00:00"
+            "time": "2019-10-04T10:54:26+00:00"
         },
         {
             "name": "bolt/common",
@@ -399,18 +395,6 @@
         },
         {
             "name": "bolt/core",
-<<<<<<< HEAD
-            "version": "4.0.0-beta.3.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bolt/core.git",
-                "reference": "2e10c76adcface1045167403cb89aaa567c64a8f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bolt/core/zipball/2e10c76adcface1045167403cb89aaa567c64a8f",
-                "reference": "2e10c76adcface1045167403cb89aaa567c64a8f",
-=======
             "version": "4.0.0-beta.3.6",
             "source": {
                 "type": "git",
@@ -421,7 +405,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bolt/core/zipball/6abaec8d7efa00796d7b1047c3cfe02358a64903",
                 "reference": "6abaec8d7efa00796d7b1047c3cfe02358a64903",
->>>>>>> Updating composer deps
                 "shasum": ""
             },
             "require": {
@@ -540,9 +523,6 @@
                 "MIT"
             ],
             "description": "🧿 Bolt 4 Core",
-<<<<<<< HEAD
-            "time": "2019-09-26T11:37:35+00:00"
-=======
             "time": "2019-10-04T06:38:48+00:00"
         },
         {
@@ -587,7 +567,6 @@
             ],
             "description": "📰 A simple Widget Extension to display the latest Bolt news on the dashboard.",
             "time": "2019-09-27T09:39:56+00:00"
->>>>>>> Updating composer deps
         },
         {
             "name": "bolt/themes",
@@ -3529,15 +3508,9 @@
             "authors": [
                 {
                     "name": "Peter Kahl",
-<<<<<<< HEAD
                     "role": "Developer",
                     "email": "peter.kahl@colossalmind.com",
                     "homepage": "https://www.colossalmind.com/"
-=======
-                    "email": "peter.kahl@colossalmind.com",
-                    "homepage": "https://www.colossalmind.com/",
-                    "role": "Developer"
->>>>>>> Updating composer deps
                 }
             ],
             "description": "Converts string of country codes into string of emoji flags.",
