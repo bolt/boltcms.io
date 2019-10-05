@@ -8,10 +8,10 @@
                     {% include 'partials/_title.twig' %}
 
                     {% for logo in logos %}
-                        {#{{ block.content }}#}
-                        <div class="logo">
-                            <img src="{{ asset(logo, 'files') }}" alt="">
-                        </div>
+                        {% set logo = logo|split('#') %}
+                        <a class="logo" href="{{ logo[1] }}">
+                            <img src="{{ asset(logo[0], 'files') }}" alt="">
+                        </a>
                     {% endfor %}
                 </div>
         </div>

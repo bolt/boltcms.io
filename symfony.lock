@@ -23,13 +23,16 @@
         "version": "1.0.0"
     },
     "bolt/assets": {
-        "version": "4.0.0-beta.2.6"
+        "version": "4.0.0-beta.3.4"
     },
     "bolt/common": {
         "version": "2.0.5"
     },
     "bolt/core": {
         "version": "4.0.0-beta.1.6"
+    },
+    "bolt/newswidget": {
+        "version": "1.0.7"
     },
     "bolt/themes": {
         "version": "3.0.0"

@@ -6,7 +6,8 @@
         "bolt/assets": "^4.0@beta",
         "bolt/themes": "^3.0",
         "symfony/flex": "^1.2",
-        "bobdenotter/weatherwidget": "^1.0"
+        "bobdenotter/weatherwidget": "^1.0",
+        "bolt/newswidget": "^1.0"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.1",
@@ -35,13 +36,13 @@
             "rm public/.gitignore"
         ],
         "post-install-cmd": [
-            "bin/console bolt:copy-themes",
+            "php bin/console bolt:copy-themes",
             "@auto-scripts",
-            "bin/console bolt:info"
+            "php bin/console bolt:info"
         ],
         "post-update-cmd": [
             "@auto-scripts",
-            "bin/console bolt:info"
+            "php bin/console bolt:info"
         ]
     },
     "conflict": {
