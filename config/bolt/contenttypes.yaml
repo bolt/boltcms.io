@@ -94,59 +94,6 @@ pages:
     taxonomy: [ groups ]
     recordsperpage: 5
 
-
-# Entries can be used for things like 'news' or 'blogpostings'. They have a
-# 'teaser', which can be used for a short blurb on listing-pages, allowing
-# visitors to click-through to the rest of the entry. It also has fields for an
-# image and an optional video.
-# A relation is defined to the pages ContentType. This way you can refer to a
-# page from your news-item.
-# This ContentType defines 'categories' and 'tags' as taxonomies, allowing the
-# editor to use both to categorize a specific entry.
-# The 'sort' is set to '-datepublish', which means that newer entries will be
-# shown above older entries.
-
-entries:
-    name: Entries
-    singular_name: Entry
-    fields:
-        title:
-            type: text
-            class: large
-            group: content
-        slug:
-            type: slug
-            uses: title
-        teaser:
-            type: html
-            height: 150px
-        body:
-            type: html
-            height: 300px
-        image:
-            type: image
-            group: media
-            upload: entries
-        video:
-            type: video
-    relations:
-        pages:
-          multiple: false
-          order: title
-          label: Select a page
-    taxonomy: [ categories, tags, groups ]
-    record_template: entry.twig
-    listing_template: listing.twig
-    listing_records: 10
-    default_status: published
-    sort: -publishedAt
-    recordsperpage: 20
-    icon_many: "fa:file-alt"
-    icon_one: "fa:file-alt"
-
-
-
-
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
 # text, an 'our address' in the footer, or similar short blurbs of text.
