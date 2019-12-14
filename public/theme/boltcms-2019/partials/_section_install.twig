@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-4 order-lg-2">
                 <div class="p-3">
-                    <img class="img-fluid {{ block.image.title|default() }}" src="{{ image(block.image) }}" alt="{{ block.image.alt|e }}">
+                    <img class="img-fluid {{ block.image.title|default() }}" src="{{ block|image }}" alt="{{ block.image.alt|e }}">
                 </div>
             </div>
             <div class="col-lg-8 order-lg-1">
