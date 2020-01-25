@@ -1,6 +1,6 @@
-{% spaceless %}
+{% apply spaceless %}
 <h2>{{ block.title|raw }} {% if user %}
 <a href="{{ block|edit_link }}" class="btn btn-secondary btn-sm">{{ __('general.phrase.edit') }} {{ block.order }}</a>
 {% endif %}
 </h2>
-{% endspaceless %}
+{% endapply %}

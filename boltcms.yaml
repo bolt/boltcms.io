@@ -1,0 +1,383 @@
+__bolt_export_meta:
+    date: '2020-01-25T21:32:52+01:00'
+    version: '4.0.0 beta 5'
+    platform:
+        client_version: 3.30.1
+        driver_name: sqlite
+        connection_status: ''
+        server_version: 3.30.1
+__users:
+    -
+        id: 1
+        displayName: Admin
+        username: admin
+        email: admin@example.org
+        password: $2y$13$LMywByFvJmwDoIBlgqhEsOwG1Vbpg7L3/dtikdpG8FPOffUYdC3TK
+        roles:
+            - ROLE_ADMIN
+        lastseenAt: 2020-01-25T21:18:10+01:00
+        lastIp: 127.0.0.1
+        locale: en
+        backendTheme: default
+        disabled: false
+        userAuthToken: null
+    -
+        id: 2
+        displayName: 'Gekke Henkie'
+        username: henkie
+        email: henkie@example.org
+        password: $2y$13$rOhhrzcoy9in/Fp6Eyr2uuxLxGmI8H/w.44tW/x6CkoyVjFDihXo6
+        roles:
+            - ROLE_EDITOR
+        lastseenAt: null
+        lastIp: null
+        locale: en
+        backendTheme: default
+        disabled: false
+        userAuthToken: null
+    -
+        id: 3
+        displayName: 'Jane Doe'
+        username: jane_admin
+        email: jane_admin@example.org
+        password: $2y$13$sf9zLBAy0lRaJraFsQRfjuaIJ9FEWmW21i/HiXVnz8vJdKJYZCLzG
+        roles:
+            - ROLE_ADMIN
+        lastseenAt: null
+        lastIp: null
+        locale: en
+        backendTheme: default
+        disabled: false
+        userAuthToken: null
+    -
+        id: 4
+        displayName: 'Tom Doe'
+        username: tom_admin
+        email: tom_admin@example.org
+        password: $2y$13$juZ18di.q7bJ/O2SB1/kROzrv8Hyi9jhYZQPMbBZTZYj491ASfDQy
+        roles:
+            - ROLE_ADMIN
+        lastseenAt: null
+        lastIp: null
+        locale: en
+        backendTheme: default
+        disabled: false
+        userAuthToken: null
+    -
+        id: 5
+        displayName: 'John Doe'
+        username: john_user
+        email: john_user@example.org
+        password: $2y$13$EE2LvFzpsX2TQ.iIFUVAI.fPRAhsqJGNJED1s7HSLTZfaNENMYXNW
+        roles:
+            - ROLE_USER
+        lastseenAt: null
+        lastIp: null
+        locale: en
+        backendTheme: default
+        disabled: false
+        userAuthToken: null
+content:
+    -
+        id: 1
+        contentType: homepage
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2018-07-13T19:18:23+02:00
+        modifiedAt: 2019-01-26T14:28:51+01:00
+        publishedAt: 2019-05-19T07:50:48+02:00
+        depublishedAt: 2019-08-12T10:35:05+02:00
+        fields:
+            title: 'Bolt 4 - An open source, adaptable platform for building and running modern websites. Built on PHP, Symfony and more'
+            image: { media: '', filename: stock/image_48032.jpg, alt: 'Impedit in dolore.', title: 'In quas sint occaecati voluptates quos omnis.', path: /files/stock/image_48032.jpg, url: 'http://:/files/stock/image_48032.jpg', thumbnail: '/thumbs/stock/image_48032.jpg?w=400&h=400&fit=crop', fieldname: image }
+            teaser: "Nihil quisquam voluptatem perferendis nulla est odit. Autem repellendus provident consectetur quis aut deleniti commodi. Quas unde quam eveniet sed et mollitia.\r\n\r\nInventore laboriosam tempore nihil eum excepturi. Vel asperiores nobis sit est quos culpa ea reiciendis. Voluptatibus consequatur qui qui sed excepturi nemo dolores. Est aut quaerat laborum voluptatem.\r\n\r\nQui aut nulla consequatur. Fuga explicabo at unde possimus vel qui esse."
+            content: "Aut cumque temporibus nihil ipsum nisi repellendus non iste. Consequatur aut ut aut voluptas rerum velit. Recusandae incidunt minima quia dolor.\r\n\r\nMinus consectetur est est sint ad. Ut temporibus quia neque est consequatur cumque illo doloribus. Voluptatem unde sint dolorem rerum quis consequatur harum.\r\n\r\nTempora ratione qui quasi voluptas. Molestias quidem ratione et consequatur eum est. Porro dolorem impedit aut commodi corporis."
+            contentlink: 'Ut dolorum enim porro ut.'
+            slug: ut-similique-dolorum-aut-quam-quasi-maiores
+        taxonomies:
+            categories: { news: News, life: Life }
+            tags: { cooking: cooking, love: love, medicine: medicine, teen: teen }
+        relations: {  }
+    -
+        id: 56
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-03-21T04:57:15+01:00
+        modifiedAt: 2018-08-27T14:01:49+02:00
+        publishedAt: 2018-08-31T04:01:03+02:00
+        depublishedAt: 2019-08-13T12:40:10+02:00
+        fields:
+            image: { media: '', filename: handcraft.jpg, alt: 'A person crafting silver ornaments', title: xrounded-circle, path: /files/handcraft.jpg, url: 'http://:/files/handcraft.jpg', thumbnail: '/thumbs/handcraft.jpg?w=400&h=400&fit=crop', fieldname: image }
+            markdown: "<p><strong>Commodi</strong> quisquam in ducimus <em>expedita commodi</em> qui et. Aut nemo cumque rerum est sed eum. Veritatis odio sapiente et quaerat est dolore.</p>\n<p>Voluptatem ad ex sed mollitia earum rerum consectetur. Dolore aut veritatis vitae est quos. Illum itaque et sit vel.</p>\n<pre><code class=\"language-css\">body {\n  font-family: 'Merriweather', serif;\n}</code></pre>"
+            order: '25'
+            variant: image-right
+            title: 'Editors, Developers & Implementors 👩‍🔧👨‍🎨👨🏽‍💻'
+            slug: search
+            content: "<p>Every CMS solution has three types of users: </p>\n<ul>\n<li>Backend developers: People skilled in PHP and Symfony, who build custom applications or bespoke websites</li>\n<li>Implementors: Frontend designers and developers, who build websites for clients by implementing content structure, design and carefully crafting the HTML, CSS and Javascript for the theme.</li>\n<li>Editors: The people who actually <em>use</em> the system to publish content, write articles, and make sure a website conveys the message it needs to.</li>\n</ul>\n<p>Catering to the needs and wishes of these three audiences is one of the core principles of Bolt. You’ll notice this in all aspects of the system: No needless bells and whistles, if it detracts from focus. No dumbing down of Errors and exceptions to maintain a fake sense of robustness. Finding a balance between hiding clutter and not overexposing features.</p>"
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 57
+        contentType: blocks
+        author:
+            id: 5
+            username: john_user
+        status: published
+        createdAt: 2019-05-18T02:07:07+02:00
+        modifiedAt: 2018-07-12T11:57:25+02:00
+        publishedAt: 2018-12-14T08:42:09+01:00
+        depublishedAt: 2019-09-15T15:00:18+02:00
+        fields:
+            content: "<p>Don't have time or patience to read about all the features on this page, but just want to install it? We’ve got you covered! By the time Bolt 4 will be a stable release, there will be various ways to install the CMS, but for now, the easiest way is by using the <code>composer create-project</code> command. </p>\n<pre><code class=\"language-bash\">composer create-project bolt/project myprojectname</code></pre>\n<p>Navigate into the new folder, and run the installation script to set up the first user, and load the fixtures (dummy content):</p>\n<pre><code class=\"language-bash\">bin/console bolt:setup</code></pre>\n<p>Next, start running Bolt using the built-in webserver, Docker or your own preferred webserver:</p>\n<ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">\n  <li class=\"nav-item\">\n    <a class=\"nav-link active\" id=\"home-tab\" data-toggle=\"tab\" href=\"#home\" role=\"tab\" aria-controls=\"home\" aria-selected=\"true\">Built-in</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" id=\"profile-tab\" data-toggle=\"tab\" href=\"#profile\" role=\"tab\" aria-controls=\"profile\" aria-selected=\"false\">Symfony CLI</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" id=\"contact-tab\" data-toggle=\"tab\" href=\"#contact\" role=\"tab\" aria-controls=\"contact\" aria-selected=\"false\">Docker</a>\n  </li>\n</ul>\n<div class=\"tab-content\" id=\"myTabContent\">\n  <div class=\"tab-pane fade show active\" id=\"home\" role=\"tabpanel\" aria-labelledby=\"home-tab\">\n\n<pre class=\" language-bash\"><code class=\" language-bash\">bin/console server:start\n</code></pre>\n\n        Finally, open the new installation in a browser. You can find the control panel, by appending <code>/bolt</code> to the URL.\n\n    </div>\n  <div class=\"tab-pane fade\" id=\"profile\" role=\"tabpanel\" aria-labelledby=\"profile-tab\">\n\n<pre class=\" language-bash\"><code class=\" language-bash\">symfony server:start -d\n</code></pre>\n\n        Finally, open the new installation in a browser, using <code>symfony open:local</code>. You can find the control panel, by appending <code>/bolt</code> to the URL.\n\n    </div>\n  <div class=\"tab-pane fade\" id=\"contact\" role=\"tabpanel\" aria-labelledby=\"contact-tab\">\n\n<pre class=\" language-bash\"><code class=\" language-bash\">docker-compose up -d\n</code></pre>\n\nFinally, open the new installation in a browser. You can find the control panel, by appending <code>/bolt</code> to the URL.\n\n    </div>\n</div>\n<p><br>More detailed instructions can be found in <a href=\"https://docs.bolt.cm/4.0/installation/installation\">the documentation</a>. </p>"
+            image: { media: '', filename: aintnobody.gif, alt: 'Sweet Brown singing "Ain''t nobody got time for that"', title: '', path: /files/aintnobody.gif, url: 'http://:/files/aintnobody.gif', thumbnail: '/thumbs/aintnobody.gif?w=400&h=400&fit=crop', fieldname: image }
+            order: '10'
+            variant: install
+            title: 'TL;DR - Installation 🛠⚙️'
+            slug: installation
+        taxonomies:
+            groups: { main: 'The main group' }
+        relations: {  }
+    -
+        id: 105
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-06-08T14:23:03+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T14:23:03+02:00
+        depublishedAt: 2019-06-08T14:23:03+02:00
+        fields:
+            content: "<p>You can use Bolt 4 either as a Headless / Decoupled CMS, or as a traditional CMS where pages get rendered to HTML by the powerful Twig template layer.</p>\n<p>If you wish to have a standalone frontend, you can use Bolt as your CMS and use the built-in JSON API to fetch the content. You can then use this content however you like. Either by integrating into whatever site you’re happening to be building, or by using it as a source for a static site using Gatsby or Gridsome. You can then publish it on Netlify or Github Pages.</p>\n<p>If you prefer to build on one platform, Bolt has got your back as well: We’re using Twig as a fast, secure and semantic templating layer, that allows maximum flexibility in your dynamic frontend. Don’t be fooled, though: Just because Bolt’s backend uses Vue and Bootstrap, that doesn’t mean your frontend has to do the same. The frontend theme is completely agnostic from what happens in the backend.</p>"
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '30'
+            slug: headless-or-traditional
+            title: 'Headless or Traditional'
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 106
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-06-08T14:23:29+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T14:23:29+02:00
+        depublishedAt: 2019-08-13T12:40:48+02:00
+        fields:
+            content: "<p>Bolt structures content in so-called Contenttypes: A contenttype is a definition of what the structure of a specific piece of content is. For example, a “News” contenttype might contain fields for a title, introduction, body text and accompanying image, while a Gallery contenttype would contain a number of different fields to facilitate slideshows, galleries and portfolio items. By structuring your content like this, it helps users to maintain context in all aspects of their work. It’s almost like labeling cans in your cupboard, or using strict typehints in your code. Almost.</p>\n<p>Fieldsets put this concept into overdrive. By defining “groups of fields”, you give the editor the freedom to duplicate these sets as needed. You can use this to allow for blocks of content that both free-form as well as structured. </p>"
+            image: { media: '', filename: sven-mieke-fteR0e2BzKo-unsplash.jpg, alt: '', title: '', path: /files/sven-mieke-fteR0e2BzKo-unsplash.jpg, url: 'http://:/files/sven-mieke-fteR0e2BzKo-unsplash.jpg', thumbnail: '/thumbs/sven-mieke-fteR0e2BzKo-unsplash.jpg?w=400&h=400&fit=crop', fieldname: image }
+            order: '50'
+            slug: contenttypes-fields-fieldsets
+            title: 'Contenttypes, Fields & Fieldsets'
+            variant: image-left
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 107
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: held
+        createdAt: 2019-06-08T14:23:45+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T14:23:45+02:00
+        depublishedAt: 2019-08-12T10:16:35+02:00
+        fields:
+            content: '<p>Since it’s 2019, this almost goes without saying: Bolt’s backend works on any modern device, regardless of screen-size. As mentioned before, the frontend is completely agnostic (or even fully detached), so it fits in nicely with your preferred mobile-first workflow.</p>'
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '60'
+            slug: mobile
+            title: 'Mobile 🖥📱'
+            variant: default
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 108
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-06-08T14:24:06+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T08:24:06+02:00
+        depublishedAt: 2019-08-13T12:33:55+02:00
+        fields:
+            content: "<p>Bolt is built on Symfony 4, and it is pretty fast! Of course, you can use Bolt to build static websites or shove it behind a proxy, but for most usecases, you really don’t <em>have</em> to. It’s fairly easy to get response times of less than 20 milliseconds.</p>\n<ul>\n<li>Highly performant Symfony 4 codebase</li>\n<li>Automatic caching of templates, widgets and images</li>\n</ul>"
+            image: { media: '', filename: responsetime.png, alt: 'Debug toolbar showing response time of 40ms', title: '', path: /files/responsetime.png, url: 'http://:/files/responsetime.png', thumbnail: '/thumbs/responsetime.png?w=400&h=400&fit=crop', fieldname: image }
+            order: '30'
+            slug: pretty-fast
+            title: 'Pretty Fast 🏃‍♀️💨'
+            variant: image-right
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 109
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-06-08T14:24:44+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T08:24:45+02:00
+        depublishedAt: 2019-08-12T10:26:36+02:00
+        fields:
+            content: "<p>Bolt is fully Open Source. It’s free, it has a permissive MIT License. No hidden “Premium” options or “Pro” versions. Open Source Software is better Software. </p>\n<p>Whether you're interested in joining up, or just want to take a peek around, you're always welcome. You can follow the progress of Bolt on: </p>\n<ul>\n<li>Our <a href=\"https://github.com/bolt\">Github page</a></li>\n<li>On the <a href=\"https://roadmap.boltcms.io\">Roadmap</a></li>\n<li>Or join our <a href=\"https://slack.bolt.cm\">Slack channel</a>.</li>\n</ul>"
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '80'
+            slug: open-source
+            title: 'Open Source 🍺📑'
+            variant: default
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 110
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: held
+        createdAt: 2019-06-08T14:30:57+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T14:30:57+02:00
+        depublishedAt: 2019-08-12T10:18:48+02:00
+        fields:
+            content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Sed finge non solum callidum eum, qui aliquid improbe faciat, verum etiam praepotentem, ut M. Non igitur de improbo, sed de callido improbo quaerimus, qualis Q. Non pugnem cum homine, cur tantum habeat in natura boni; Tantum dico, magis fuisse vestrum agere Epicuri diem natalem, quam illius testamento cavere ut ageretur. <b>Duo Reges: constructio interrete.</b> Sequitur disserendi ratio cognitioque naturae; </p>\n<p>An est aliquid, quod te sua sponte delectet? Itaque mihi non satis videmini considerare quod iter sit naturae quaeque progressio. <code>Hoc loco tenere se Triarius non potuit.</code> <mark>Immo alio genere;</mark> </p>\n<pre>Quod si ita est, sequitur id ipsum, quod te velle video,\nomnes semper beatos esse sapientes.\n\nModo etiam paulum ad dexteram de via declinavi, ut ad\nPericli sepulcrum accederem.\n</pre>\n<p><a href=\"http://loripsum.net/\" target=\"_blank\">Pugnant Stoici cum Peripateticis.</a> <i>Potius inflammat, ut coercendi magis quam dedocendi esse videantur.</i> <b>Quare attende, quaeso.</b> Sapientem locupletat ipsa natura, cuius divitias Epicurus parabiles esse docuit. <a href=\"http://loripsum.net/\" target=\"_blank\">Respondent extrema primis, media utrisque, omnia omnibus.</a> Quae iam oratio non a philosopho aliquo, sed a censore opprimenda est. </p>\n<blockquote cite=\"http://loripsum.net\">\n    Quare, quotienscumque dicetur male quis de se mereri sibique esse inimicus atque hostis, vitam denique fugere, intellegatur aliquam subesse eius modi causam, ut ex eo ipso intellegi possit sibi quemque esse carum.\n</blockquote>\n<ul>\n    <li>Eam si varietatem diceres, intellegerem, ut etiam non dicente te intellego;</li>\n    <li>Ergo opifex plus sibi proponet ad formarum quam civis excellens ad factorum pulchritudinem?</li>\n    <li>An tu me de L.</li>\n    <li>Quid igitur dubitamus in tota eius natura quaerere quid sit effectum?</li>\n</ul>"
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '50'
+            slug: secure
+            title: Secure
+            variant: default
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 111
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-06-08T14:39:00+02:00
+        modifiedAt: null
+        publishedAt: 2019-06-08T10:39:00+02:00
+        depublishedAt: 2019-10-05T10:58:27+02:00
+        fields:
+            content: "<p>Bolt 4 is a PHP application, built on Symfony, and it uses a number of its components and associated third party libraries. This means that any developer with experience in Symfony can hit the ground running with Bolt. </p>\n<ul>\n<li>Common debug tools on the CLI, using <code>bin/console</code></li>\n<li>The powerful Toolbar / Profiler</li>\n<li>We use the Composer ecosystem for extensions and third-party dependencies</li>\n<li>Autoloading &amp; Autowiring, also in your own projects</li>\n<li>The project structure (both of Bolt itself, as well as projects built <em>with</em> Bolt) will be familiar</li>\n</ul>\n<p>Bolt is self-hosted. You can develop locally, and then deploy to any production environment, anyway you like.</p>"
+            image: { media: '', filename: joel-filipe-g8OgQYKT9e4-unsplash.jpg, alt: '', title: '', path: /files/joel-filipe-g8OgQYKT9e4-unsplash.jpg, url: 'http://:/files/joel-filipe-g8OgQYKT9e4-unsplash.jpg', thumbnail: '/thumbs/joel-filipe-g8OgQYKT9e4-unsplash.jpg?w=400&h=400&fit=crop', fieldname: image }
+            order: '20'
+            slug: built-on-symfony
+            title: 'Built on Symfony'
+            variant: image-left
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 112
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-08-01T10:04:15+02:00
+        modifiedAt: null
+        publishedAt: 2019-08-01T10:04:15+02:00
+        depublishedAt: 2019-08-12T10:21:04+02:00
+        fields:
+            content: "<p>screenshot_2019-08_02.png\nscreenshot_2019-08_01.png\nscreenshot_2019-08_06.png\nscreenshot_2019-08_08.png\nscreenshot_2019-08_03.png\nscreenshot_2019-08_04.png\nscreenshot_2019-08_05.png\nscreenshot_2019-08_07.png</p>"
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '15'
+            slug: screenshots
+            title: 'Screenshots 🖼'
+            variant: screenshots
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 113
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-08-01T11:02:58+02:00
+        modifiedAt: null
+        publishedAt: 2019-08-01T11:02:58+02:00
+        depublishedAt: 2019-08-12T10:27:53+02:00
+        fields:
+            content: "<p>Using Bolt, you can make multilingual sites out of the box. Just configure the languages you need, and which contenttypes and fields are translatable, and you’re good to go. Affengeil!</p>\n<p>For the Bolt user interface itself, each user can select their preferred language in which to display the backend. As we get nearer to the Bolt 4.0 stable release, more languages will be added by our contributors.  </p>\n<h3>Mobile / Responsive  🖥📱</h3>\n<p>Since it’s 2019, this almost goes without saying: Bolt’s backend works on any modern device, regardless of screen-size. As mentioned before, the frontend is completely agnostic (or even fully detached), so it fits in nicely with your preferred mobile-first workflow.</p>"
+            image: { media: '', filename: multilingual.jpg, alt: 'A post with several smaller signs on it', title: '', path: /files/multilingual.jpg, url: 'http://:/files/multilingual.jpg', thumbnail: '/thumbs/multilingual.jpg?w=400&h=400&fit=crop', fieldname: image }
+            order: '27'
+            slug: internationalisation
+            title: 'Internationalisation 🇩🇪🇮🇸🇧🇷'
+            variant: image-left
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 114
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: held
+        createdAt: 2019-08-01T11:12:44+02:00
+        modifiedAt: null
+        publishedAt: 2019-08-01T11:12:44+02:00
+        depublishedAt: 2019-08-12T10:15:41+02:00
+        fields:
+            content: '<p>Bolt is self-hosted. You can develop locally, and then deploy to production how you like. </p>'
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '55'
+            slug: self-hosted
+            title: 'Self hosted'
+            variant: default
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 115
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-08-12T10:13:01+02:00
+        modifiedAt: null
+        publishedAt: 2019-08-12T10:13:01+02:00
+        depublishedAt: 2019-08-13T12:58:22+02:00
+        fields:
+            content: '<p>Bolt is a fully open source, adaptable platform for building and running modern websites. It''s built on PHP, Symfony, Doctrine, Twig, API-Platform and more. Bolt can be used as a traditional CMS or headless/decoupled. It is fully multilingual, and extensible using custom code in your projects, or through extensions installed from the Composer ecosystem.</p>'
+            image: { media: '', filename: bolt-logo-on-white.png, alt: '', title: '', path: /files/bolt-logo-on-white.png, url: 'http://:/files/bolt-logo-on-white.png', thumbnail: '/thumbs/bolt-logo-on-white.png?w=400&h=400&fit=crop', fieldname: image }
+            order: '05'
+            slug: bolt
+            title: Bolt
+            variant: image-left
+        taxonomies: {  }
+        relations: {  }
+    -
+        id: 116
+        contentType: blocks
+        author:
+            id: 1
+            username: admin
+        status: published
+        createdAt: 2019-10-04T11:11:44+02:00
+        modifiedAt: null
+        publishedAt: 2019-10-03T15:11:44+02:00
+        depublishedAt: 2019-10-05T10:57:39+02:00
+        fields:
+            content: "<p>sympfony.png#<a href=\"https://symfony.com\">https://symfony.com</a>\nphp.png#<a href=\"https://php.net\">https://php.net</a>\nlaravel.png#<a href=\"https://laravel.com\">https://laravel.com</a>\ndoctrine.png#<a href=\"https://doctrine-project.org\">https://doctrine-project.org</a>\napi-platform.png#<a href=\"https://api-platform.com\">https://api-platform.com</a>\ncomposer.png#<a href=\"https://getcomposer.org\">https://getcomposer.org</a>\ntwig.png#<a href=\"https://twig.symfony.com\">https://twig.symfony.com</a>\nleague.png#<a href=\"https://thephpleague.com\">https://thephpleague.com</a></p>"
+            image: { media: '', filename: '', alt: '', title: '', path: /files/, url: 'http://:/files/', thumbnail: '/thumbs/?w=400&h=400&fit=crop', fieldname: image }
+            order: '22'
+            slug: logos
+            title: 'Standing on the Shoulders of Giants'
+            variant: logopanels
+        taxonomies: {  }
+        relations: {  }

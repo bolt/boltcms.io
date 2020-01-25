@@ -7,7 +7,8 @@
         "bolt/themes": "^3.0",
         "symfony/flex": "^1.2",
         "bobdenotter/weatherwidget": "^1.0",
-        "bolt/newswidget": "^1.0"
+        "bolt/newswidget": "^1.0",
+        "bobdenotter/conimex": "^1.0"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.1",
