@@ -7,6 +7,7 @@ public/theme/base-2018/
 
 ### Uploads ###
 #/public/files/*
+/public/thumbs/*
 
 ### NPM and frontend assets building cruft
 node_modules/
@@ -50,6 +51,7 @@ appveyor.yml
 ###Local config
 /config/packages/local
 /config/routes/local
+.php-version
 
 ###> symfony/framework-bundle ###
 /.env
