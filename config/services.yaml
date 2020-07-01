@@ -18,6 +18,7 @@ services:
                             # The best practice is to be explicit about your dependencies anyway.
         bind:               # defines the scalar arguments once and apply them to any service defined/created in this file
             $locales: '%app_locales%'
+            $defaultLocale: '%locale%'
             $emailSender: '%app.notifications.email_sender%'
             $projectDir: '%kernel.project_dir%'
             $publicFolder: '%bolt.public_folder%'
@@ -41,12 +42,6 @@ services:
         resource: '../vendor/bolt/core/src/Controller'
         tags: ['controller.service_arguments']
 
-    # Override Symfony's error pages (so we can show custom 404's)
-    Bolt\Controller\ExceptionController:
-        public: true
-        arguments:
-            $debug: '%kernel.debug%'
-
     Bolt\Doctrine\TablePrefix:
         tags:
             - { name: doctrine.event_listener, event: loadClassMetadata, lazy: true }
@@ -55,6 +50,10 @@ services:
         tags:
             - { name: doctrine.event_listener, event: postLoad }
             - { name: doctrine.event_listener, event: prePersist }
+
+    Bolt\Event\Listener\FieldFillListener:
+        tags:
+            - { name: doctrine.event_listener, event: postLoad }
 
     Bolt\Event\Listener\FieldDiscriminatorListener:
         tags:
@@ -91,6 +90,11 @@ services:
     Bolt\Twig\DumpExtension:
         arguments: ["%kernel.environment%"]
 
+    Bolt\Api\Extensions\ContentExtension:
+        tags:
+            - { name: api_platform.doctrine.orm.query_extension.collection }
+            - { name: api_platform.doctrine.orm.query_extension.item }
+
     Doctrine\ORM\Query\Expr: ~
 
     monolog.processor.request:
@@ -100,3 +104,6 @@ services:
 
     Twig\Extension\StringLoaderExtension: ~
 
+    Symfony\Component\ErrorHandler\ErrorRenderer\ErrorRendererInterface: '@error_handler.error_renderer.html'
+
+    Squirrel\TwigPhpSyntax\PhpSyntaxExtension: ~

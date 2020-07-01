@@ -98,7 +98,7 @@ blocks:
             group: "Block"
             label: De Titel
         order:
-            type: integer
+            type: number
         slug:
             type: slug
             uses: [ title ]
