@@ -3,8 +3,8 @@
     "name": "startbootstrap-one-page-wonder",
     "version": "5.0.5",
     "scripts": {
-        "start": "gulp watch",
-        "gulp": "gulp"
+        "start": "node_modules/.bin/gulp watch",
+        "gulp": "node_modules/.bin/gulp"
     },
     "description": "A one page HTML template built with Bootstrap",
     "keywords": [
@@ -30,20 +30,20 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-one-page-wonder.git"
     },
     "dependencies": {
-        "bootstrap": "4.3.1",
-        "jquery": "3.4.1",
+        "bootstrap": "4.5.0",
+        "jquery": "3.5.1",
         "prismjs": "^1.17.1"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.7",
-        "del": "5.0.0",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^6.1.0",
-        "gulp-clean-css": "^4.2.0",
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.1",
+        "gulp-clean-css": "4.3.0",
         "gulp-header": "2.0.9",
         "gulp-plumber": "^1.2.1",
-        "gulp-rename": "1.4.0",
-        "gulp-sass": "4.0.2",
+        "gulp-rename": "2.0.0",
+        "gulp-sass": "4.1.0",
         "merge-stream": "2.0.0"
     },
     "browserslist": [

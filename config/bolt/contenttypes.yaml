@@ -83,6 +83,22 @@ pages:
     taxonomy: [ groups ]
     recordsperpage: 5
 
+news:
+    name: News
+    singular_name: Newsitem
+    recordsperpage: 5
+    fields:
+        title:
+            type: text
+            class: large
+        image:
+            type: image
+        content:
+            type: redactor
+        slug:
+            type: slug
+            uses: title
+
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
 # text, an 'our address' in the footer, or similar short blurbs of text.

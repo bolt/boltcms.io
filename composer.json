@@ -10,7 +10,8 @@
         "bolt/newswidget": "^1.1",
         "bolt/themes": "^3.1",
         "symfony/flex": "^1.6",
-        "bobdenotter/configuration-notices": "^1.0"
+        "bobdenotter/configuration-notices": "^1.0",
+        "bolt/redactor": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -22,26 +23,26 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear --no-warmup": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
             "bolt:copy-assets": "symfony-cmd"
         },
         "post-create-project-cmd": [
-            "cp -n .env.dist .env || true",
-            "rm public/.gitignore .github/FUNDING.yml",
-            "mv README_project.md README.md"
+            "php bin/post-create-project.php",
+            "php bin/console bolt:copy-themes"
         ],
         "post-install-cmd": [
-            "php bin/console bolt:copy-themes",
             "@auto-scripts",
+            "php bin/console extensions:configure --with-config",
             "php bin/console bolt:info"
         ],
         "post-update-cmd": [
             "@auto-scripts",
+            "php bin/console extensions:configure",
             "php bin/console bolt:info"
+        ],
+        "periodical-tasks": [
+            "security-checker security:check"
         ]
-    },
-    "conflict": {
-        "symfony/symfony": "*"
     },
     "extra": {
         "symfony": {

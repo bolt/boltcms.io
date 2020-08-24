@@ -13,3 +13,6 @@ services:
     Bolt\NewsWidget\:
         resource: '../vendor/bolt/newswidget/src/*'
         exclude: '../vendor/bolt/newswidget/src/{Entity,Exception}'
+    Bolt\Redactor\:
+        resource: '../vendor/bolt/redactor/src/*'
+        exclude: '../vendor/bolt/redactor/src/{Entity,Exception}'

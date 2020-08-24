@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - One Page Wonder v5.0.5 (https://startbootstrap.com/template-overviews/one-page-wonder)
- * Copyright 2013-2019 Start Bootstrap
+ * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 
@@ -29,6 +29,10 @@ p {
 
 ul li, ol li {
   line-height: 1.8rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 .btn-xl {

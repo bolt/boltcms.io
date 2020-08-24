@@ -3,8 +3,8 @@
 {% block content %}
 
 {% setcontent blocks = "blocks" orderby "order" limit 100 %}
-  
-{% for block in blocks %}
+
+  {% for block in blocks %}
 
   {% include 'partials/_section_' ~ block.variant|default('default') ~ '.twig' %}
 

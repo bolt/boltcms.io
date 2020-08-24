@@ -16,6 +16,9 @@
     "babdev/pagerfanta-bundle": {
         "version": "v2.4.3"
     },
+    "beberlei/doctrineextensions": {
+        "version": "v1.2.7"
+    },
     "bobdenotter/configuration-notices": {
         "version": "1.0.6"
     },
@@ -34,6 +37,9 @@
     "bolt/newswidget": {
         "version": "1.0.7"
     },
+    "bolt/redactor": {
+        "version": "1.0.10"
+    },
     "bolt/themes": {
         "version": "3.0.0"
     },
@@ -48,6 +54,9 @@
     },
     "composer/composer": {
         "version": "1.9.0"
+    },
+    "composer/package-versions-deprecated": {
+        "version": "1.10.99.1"
     },
     "composer/semver": {
         "version": "1.5.0"
@@ -200,6 +209,9 @@
     "league/glide-symfony": {
         "version": "1.0.3"
     },
+    "league/mime-type-detection": {
+        "version": "1.4.0"
+    },
     "miljar/php-exif": {
         "version": "v0.6.4"
     },
@@ -241,6 +253,9 @@
     },
     "pagerfanta/pagerfanta": {
         "version": "v2.0.1"
+    },
+    "paragonie/random_compat": {
+        "version": "v9.99.99"
     },
     "peterkahl/country-code-to-emoji-flag": {
         "version": "v0.9.1"
@@ -531,6 +546,9 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"
     },
+    "symfony/polyfill-php70": {
+        "version": "v1.18.1"
+    },
     "symfony/polyfill-php72": {
         "version": "v1.10.0"
     },
@@ -718,6 +736,9 @@
     },
     "willdurand/negotiation": {
         "version": "v2.3.1"
+    },
+    "xemlock/htmlpurifier-html5": {
+        "version": "v0.1.11"
     },
     "zendframework/zend-code": {
         "version": "3.3.1"

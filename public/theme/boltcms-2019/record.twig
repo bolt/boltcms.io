@@ -2,6 +2,22 @@
 
 {% block content %}
 
-    …
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 order-lg-1">
+                    <div class="p-5">
+
+                        <h1>{{ record|title }}</h1>
+
+                        <img src="{{ record|thumbnail(1200) }}">
+
+                        {% with { 'record': record, 'exclude': [record|image.fieldname|default()] } %}
+                            {{ block('sub_fields', 'helpers/_fields.twig') }}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 {% endblock content %}
