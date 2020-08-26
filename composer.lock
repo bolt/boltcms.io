@@ -462,16 +462,16 @@
         },
         {
             "name": "bolt/core",
-            "version": "4.0.0-rc.38",
+            "version": "4.0.0-rc.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/core.git",
-                "reference": "1257909e1f74695a8f0bd81cd7c423ea604943c7"
+                "reference": "ef7bda3e8ff9a54e812801314c864f8973510905"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/core/zipball/1257909e1f74695a8f0bd81cd7c423ea604943c7",
-                "reference": "1257909e1f74695a8f0bd81cd7c423ea604943c7",
+                "url": "https://api.github.com/repos/bolt/core/zipball/ef7bda3e8ff9a54e812801314c864f8973510905",
+                "reference": "ef7bda3e8ff9a54e812801314c864f8973510905",
                 "shasum": ""
             },
             "require": {
@@ -605,7 +605,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-26T12:31:15+00:00"
+            "time": "2020-08-26T15:41:40+00:00"
         },
         {
             "name": "bolt/newswidget",
@@ -11063,16 +11063,16 @@
         },
         {
             "name": "symplify/package-builder",
-            "version": "v8.2.13",
+            "version": "v8.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/package-builder.git",
-                "reference": "900dc34654b0788d4763f05aa138c97d4fb0151b"
+                "reference": "2c814200834c7ff72263e4382c8c931870609b47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/package-builder/zipball/900dc34654b0788d4763f05aa138c97d4fb0151b",
-                "reference": "900dc34654b0788d4763f05aa138c97d4fb0151b",
+                "url": "https://api.github.com/repos/symplify/package-builder/zipball/2c814200834c7ff72263e4382c8c931870609b47",
+                "reference": "2c814200834c7ff72263e4382c8c931870609b47",
                 "shasum": ""
             },
             "require": {
