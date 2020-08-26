@@ -4,12 +4,14 @@
 main:
   - label: Documentation
     link: https://docs.bolt.cm/4.0
-  - label: Community [Slack/Forum]
+  - label: Community [Slack]
     link: https://bolt.cm/community
   - label: Code on Github
     link: https://github.com/bolt
-  - label: Bolt 3 site
-    link: https://bolt.cm
-    class: bolt-site
-    title: Visit the excellent Bolt website!
+  - label: News
+    link: /news
+#  - label: Bolt 3 site
+#    link: https://bolt.cm
+#    class: bolt-site
+#    title: Visit the excellent Bolt website!
 
