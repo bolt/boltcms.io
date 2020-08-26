@@ -2,11 +2,10 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-lg-12">
-                    {% include 'partials/_title.twig' %}
+                {% include 'partials/_title.twig' %}
+                {% set slides = block.content|striptags|split('\n') %}
 
-                    {% set slides = block.content|striptags|split('\n') %}
-
-                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         {% for slide in slides %}
                         <li data-target="#carousel" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
@@ -27,8 +26,7 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                    </div>
-
+                </div>
             </div>
         </div>
     </div>

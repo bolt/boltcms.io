@@ -1,19 +1,19 @@
 <section id="{{ block.slug }}">
     <div class="container">
         <div class="row align-items-center">
-                <div class="logo-wrapper">
+            <div class="logo-wrapper">
 
-                    {% set logos = block.content|striptags|split('\n') %}
+                {% set logos = block.content|striptags|split('\n') %}
 
-                    {% include 'partials/_title.twig' %}
+                {% include 'partials/_title.twig' %}
 
-                    {% for logo in logos %}
-                        {% set logo = logo|split('#') %}
-                        <a class="logo" href="{{ logo[1] }}">
-                            <img src="{{ asset(logo[0], 'files') }}" alt="">
-                        </a>
-                    {% endfor %}
-                </div>
+                {% for logo in logos %}
+                    {% set logo = logo|split('#') %}
+                    <a class="logo" href="{{ logo[1] }}">
+                        <img src="{{ asset(logo[0], 'files') }}" alt="">
+                    </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>

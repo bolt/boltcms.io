@@ -4,23 +4,19 @@
 
         <div class="container">
             <div class="row align-items-center justify-content-md-center">
-                <div class="col-lg-10 order-lg-1">
-                    <div class="p-5">
-                        <h1>{{ record|title }}</h1>
-                    </div>
+                <div class="col-lg-10 order-lg-1 pt-5 pb-3">
+                    <h1>{{ record|title }}</h1>
+                    {% include "partials/_record_footer.twig" %}
                 </div>
                 <div class="col-lg-12 order-lg-1">
                     <img src="{{ record|thumbnail(1200) }}">
                 </div>
-                <div class=" col-lg-10 order-lg-1">
-                    <div class="p-5">
-                        {% with { 'record': record, 'exclude': [record|image.fieldname|default()] } %}
-                            {{ block('sub_fields', 'helpers/_fields.twig') }}
-                        {% endwith %}
-                    </div>
+                <div class="col-lg-10 order-lg-1 p-5">
+                    {% with { 'record': record, 'exclude': [record|image.fieldname|default()] } %}
+                        {{ block('sub_fields', 'helpers/_fields.twig') }}
+                    {% endwith %}
                 </div>
             </div>
         </div>
-
 
 {% endblock content %}

@@ -6,8 +6,11 @@
 
   {% for block in blocks %}
 
-  {% include ['partials/_section_' ~ block.variant|default('default') ~ '.twig', 'partials/_section_default.twig'] %}
+    {% include [
+        'partials/_section_' ~ block.variant|default('default') ~ '.twig',
+        'partials/_section_default.twig'
+      ] %}
 
-{% endfor %}
+  {% endfor %}
 
 {% endblock content %}
