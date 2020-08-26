@@ -1,0 +1,37 @@
+{# This file is inserted as the 'footer' of each listed record. #}
+<p class="meta">
+    {% if user %}
+        <span class="edit-link"><a href="{{ record|edit_link }}"><strong>{{ __('general.phrase.edit') }}</strong></a></span> -
+    {% endif %}
+    {{ __('general.phrase.written-by-on', {
+        '%name%': record.author.displayName|default(__('Unknown')),
+        '%date%': record.publishedAt|localedatetime("%A %B %e, %Y")
+    }) }}
+</p>
+
+{% if extended|default %}
+    <p class="meta">
+        <a href="{{ record|link }}">{{ __('general.phrase.permalink') }}</a> -
+        {# include the 'default' links to taxonomies. Check the documentation for ways to modify and customize
+           what is output to the browser: https://docs.bolt.cm/contenttypes/taxonomies#displaying-taxonomies-in-templates #}
+        {{ include('partials/_sub_taxonomylinks.twig', { record: record }) }}
+    </p>
+
+    {% set previous = previous_record(record, byColumn='id') %}
+    {% set next = next_record(record, byColumn='id') %}
+
+    {% if previous or next %}
+        <p class="meta">
+            {% if previous %}
+                <a href="{{ previous|link }}">&laquo; {{ previous|title }}</a>
+            {% endif %}
+            {% if previous and next %}
+                -
+            {% endif %}
+            {% if next %}
+                <a href="{{ next|link }}">{{ next|title }} &raquo;</a>
+            {% endif %}
+        </p>
+    {% endif %}
+
+{% endif %}

@@ -38,3 +38,6 @@ doctrine:
         dql:
             string_functions:
                 JSON_EXTRACT: Bolt\Doctrine\Functions\JsonExtract
+                CAST: DoctrineExtensions\Query\Mysql\Cast
+            numeric_functions:
+                RAND: Bolt\Doctrine\Functions\Rand
