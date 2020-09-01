@@ -73,15 +73,9 @@ pages:
             type: image
             label: "Eén plaatje"
             placeholder: https://source.unsplash.com/1280x768/?business,workplace/__random__
-        teaser:
-            type: html
-            height: 150px
-        body:
-            type: html
-            height: 300px
-            allowtwig: true
-    taxonomy: [ groups ]
-    recordsperpage: 5
+        content:
+            type: redactor
+    recordsperpage: 15
 
 news:
     name: News

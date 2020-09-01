@@ -18,7 +18,7 @@
         {{ item|current ? ' active' }}">
 
             <a href="{{ item.uri }}" title='{{ item.title }}' class='nav-link {{ item.class }}'>
-                {{- item.label -}}
+                {{- item.label|raw -}}
             </a>
 
             {% if with_submenu %}

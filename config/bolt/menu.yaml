@@ -4,8 +4,8 @@
 main:
   - label: Documentation
     link: https://docs.bolt.cm/4.0
-  - label: Community [Slack]
-    link: https://bolt.cm/community
+  - label: Community <small>(Slack)</small>
+    link: /page/community
   - label: Code on Github
     link: https://github.com/bolt
   - label: News

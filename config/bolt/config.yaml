@@ -28,29 +28,6 @@ theme: boltcms-2019
 # locales, ensure the first is a standard locale.
 locale: en
 
-# Set the timezone to be used on the website. For a list of valid timezone
-# settings, see: http://php.net/manual/en/timezones.php
-# timezone: UTC
-
-# Set maintenance mode on or off.
-#
-# While in maintenance mode, only users of level editor or higher can access the
-# site.
-#
-# All other visitors are presented with a notice that the site is currently
-# offline.
-#
-# The default template file can be found in /app/theme_defaults/ and overridden
-# with this option using your own theme.
-#
-# Note: If you've changed the filename, and your changes do not show up on the
-#       website, be sure to check for a config.yaml file in your themes folder.
-#       If a template is set there, it will override the setting here.
-maintenance_mode: false
-maintenance_template: maintenance_default.twig
-
-
-
 # If your site is reachable under different urls (say, both blog.example.org/
 # as well as example.org/), its a good idea to set one of these as the
 # canonical, so its clear which is the primary address of the site.
@@ -75,11 +52,22 @@ maintenance_template: maintenance_default.twig
 homepage: homepage/1
 homepage_template: index.twig
 
-# The default content for the 404 page. Can be an (array of) template names or
-# identifiers for records, which will be tried until a match is found.
-#
-# Note: The record specified in this parameter must be set to published.
-notfound: [ not-found.twig, block/404-not-found ]
+
+# The default content for the "Not Found" (404) page. Can be an (array of) template
+# names or identifiers for records, which will be tried until a match is found.
+notfound: [ page/404-not-found, 'helpers/page_404.html.twig' ]
+
+# Toggle maintenance mode on or off. Note: If you're logged in, you'll still see
+# the website as usual. Use an incognito window to see the "maintenance" page.
+maintenance_mode: false
+
+# The default for the "Maintenance mode" (503) page. Can be an (array of) template
+# names or identifiers for records, which will be tried until a match is found.
+maintenance: [ page/503-maintenance-mode, 'helpers/page_503.html.twig' ]
+
+# The default content for the "Forbidden" (403) page. Can be an (array of) template
+# names or identifiers for records, which will be tried until a match is found.
+forbidden: [ page/403-forbidden, 'helpers/page_403.html.twig' ]
 
 # The default template and amount of records to use for listing-pages on the
 # site.
