@@ -1,5 +1,9 @@
 {% extends 'partials/_master.twig' %}
 
+{% block header %}
+{% include 'partials/_header.twig' with {'compact': false } %}
+{% endblock %}
+
 {% block content %}
 
 {% setcontent blocks = "blocks" orderby "order" limit 100 %}

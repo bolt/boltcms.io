@@ -12,11 +12,11 @@
 </nav>
 
 <header class="masthead text-center text-white">
-    <div class="masthead-content">
+    <div class="{% if compact %}masthead-content{% else %}masthead-frontpage{% endif %}">
         <div class="container">
             <!-- https://twitter.com/heydonworks/status/669796961839656960 -->
-            <h1 class="masthead-heading mb-4">Bolt 4 <span class="badge badge-primary">beta!</span></h1>
-            <p class="masthead-subheading">{{ config.get('general/payoff')|raw }}</p>
+            <h1 class="masthead-heading mb-4">Bolt 4 <span class="badge badge-primary">new!</span></h1>
+                <p class="masthead-subheading">{{ config.get('general/payoff')|raw }}</p>
         </div>
     </div>
 </header>

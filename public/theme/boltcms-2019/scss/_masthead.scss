@@ -8,11 +8,33 @@ header.masthead {
   .masthead-content {
     background: url('../img/juan-davila-153912-unsplash.jpg');
     background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-top: calc(6rem + 72px);
+    padding-bottom: 2rem;
+    //margin-bottom: -1rem;
+
+    transform: skew(0deg, -4deg);
+
+    z-index: 1;
+    position: relative;
+
+    .masthead-subheading {
+      font-size: 1.0rem;
+      line-height: 1.5rem;
+      max-width: 40rem;
+    }
+  }
+
+  .masthead-frontpage {
+    background: url('../img/juan-davila-153912-unsplash.jpg');
+    background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
     padding-top: calc(7rem + 72px);
-    padding-bottom: 11rem;
+    padding-bottom: 5rem;
     //margin-bottom: -1rem;
 
     transform: skew(0deg, -4deg);
@@ -23,7 +45,6 @@ header.masthead {
 
   .container {
     transform: skew(0deg, -2deg);
-
   }
 
   .masthead-heading {
@@ -32,7 +53,7 @@ header.masthead {
   }
 
   .masthead-subheading {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2rem;
     text-shadow: 1px 1px 49px rgba(0, 0, 0, 1);
     @include caption-font;
@@ -47,17 +68,39 @@ header.masthead {
       color: #9ac;
     }
   }
+
+  h1 span.badge {
+    font-size: 20%;
+    transform: rotate(10deg);
+    position: absolute;
+    margin-left: -0.5rem;
+    margin-top: -1rem;
+  }
 }
 
 @media (min-width: 992px) {
   header.masthead {
 
     .masthead-content {
+      padding-top: calc(7rem + 55px);
+      padding-bottom: 8rem;
+      margin-bottom: -4rem;
+      margin-top: 4rem;
+
+      .masthead-subheading {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        max-width: 40rem;
+      }
+    }
+
+    .masthead-frontpage {
       padding-top: calc(14rem + 55px);
       padding-bottom: 15rem;
       margin-bottom: -4rem;
       margin-top: 4rem;
     }
+
 
     .masthead-heading {
       font-size: 6rem;
@@ -74,6 +117,14 @@ header.masthead {
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
       max-width: 55rem;
       margin: auto;
+    }
+
+    h1 span.badge {
+      font-size: 20%;
+      transform: rotate(10deg);
+      position: absolute;
+      margin-left: -1rem;
+      margin-top: 0;
     }
   }
 }

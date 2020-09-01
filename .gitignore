@@ -6,7 +6,7 @@ public/theme/base-2018/
 
 
 ### Uploads ###
-#/public/files/*
+/public/files/*
 /public/thumbs/*
 
 ### NPM and frontend assets building cruft

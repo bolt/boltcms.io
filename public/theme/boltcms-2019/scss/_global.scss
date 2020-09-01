@@ -9,10 +9,15 @@ h4,
 h5,
 h6 {
   @include heading-font;
+
+  @media (max-width: 992px) {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
 }
 
 h2 {
-  line-height: 2;
+  line-height: 1.6;
 }
 
 p {
@@ -42,13 +47,6 @@ img {
 
 .rounded-pill {
   border-radius: 5rem;
-}
-
-header.masthead h1 span.badge {
-  font-size: 20%;
-  transform: rotate(10deg);
-  position: absolute;
-  margin-left: -2rem;
 }
 
 .logo-wrapper {

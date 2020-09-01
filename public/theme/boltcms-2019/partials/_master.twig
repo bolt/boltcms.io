@@ -5,7 +5,9 @@
 </head>
 <body>
 
-    {% include 'partials/_header.twig' %}
+    {% block header %}
+    {% include 'partials/_header.twig' with {'compact': true } %}
+    {% endblock %}
 
     {% block content %}
     {% endblock %}

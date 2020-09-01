@@ -19,8 +19,20 @@ h6 {
   line-height: 2.2;
 }
 
+@media (max-width: 992px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+}
+
 h2 {
-  line-height: 2;
+  line-height: 1.6;
 }
 
 p {
@@ -50,14 +62,6 @@ img {
 
 .rounded-pill {
   border-radius: 5rem;
-}
-
-header.masthead h1 span.badge {
-  font-size: 20%;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  position: absolute;
-  margin-left: -2rem;
 }
 
 .logo-wrapper {
@@ -124,11 +128,31 @@ header.masthead {
 header.masthead .masthead-content {
   background: url("../img/juan-davila-153912-unsplash.jpg");
   background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  background-size: cover;
+  padding-top: calc(6rem + 72px);
+  padding-bottom: 2rem;
+  -webkit-transform: skew(0deg, -4deg);
+          transform: skew(0deg, -4deg);
+  z-index: 1;
+  position: relative;
+}
+
+header.masthead .masthead-content .masthead-subheading {
+  font-size: 1.0rem;
+  line-height: 1.5rem;
+  max-width: 40rem;
+}
+
+header.masthead .masthead-frontpage {
+  background: url("../img/juan-davila-153912-unsplash.jpg");
+  background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
   padding-top: calc(7rem + 72px);
-  padding-bottom: 11rem;
+  padding-bottom: 5rem;
   -webkit-transform: skew(0deg, -4deg);
           transform: skew(0deg, -4deg);
   z-index: 1;
@@ -146,7 +170,7 @@ header.masthead .masthead-heading {
 }
 
 header.masthead .masthead-subheading {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 2rem;
   text-shadow: 1px 1px 49px black;
   font-family: 'Merriweather', serif;
@@ -163,8 +187,28 @@ header.masthead .masthead-subheading a:hover {
   color: #9ac;
 }
 
+header.masthead h1 span.badge {
+  font-size: 20%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  position: absolute;
+  margin-left: -0.5rem;
+  margin-top: -1rem;
+}
+
 @media (min-width: 992px) {
   header.masthead .masthead-content {
+    padding-top: calc(7rem + 55px);
+    padding-bottom: 8rem;
+    margin-bottom: -4rem;
+    margin-top: 4rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    max-width: 40rem;
+  }
+  header.masthead .masthead-frontpage {
     padding-top: calc(14rem + 55px);
     padding-bottom: 15rem;
     margin-bottom: -4rem;
@@ -184,6 +228,14 @@ header.masthead .masthead-subheading a:hover {
     text-shadow: 1px 1px 5px black;
     max-width: 55rem;
     margin: auto;
+  }
+  header.masthead h1 span.badge {
+    font-size: 20%;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    position: absolute;
+    margin-left: -1rem;
+    margin-top: 0;
   }
 }
 
@@ -220,7 +272,13 @@ header.masthead .masthead-subheading a:hover {
 }
 
 section {
-  margin: 4rem 0;
+  margin: 2rem 0;
+}
+
+@media (min-width: 992px) {
+  section {
+    margin: 4rem 0;
+  }
 }
 
 section:nth-of-type(2),
@@ -260,4 +318,8 @@ section:nth-of-type(12) .container {
 .carousel-indicators li {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+a[name=built-on] {
+  scroll-margin-top: 6rem;
 }
