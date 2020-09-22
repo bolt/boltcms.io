@@ -1,390 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'partials/_master.twig' %}
 
-<head>
-  <meta charset="utf-8" />
-  <title>BOLT 4</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css', 'theme') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-</head>
-<body>
-  <header>
-    <div
-      class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <img class="d-inline" src="theme/boltcms-2020/images/logo.svg" />
-      <nav class="ml-auto">
-        <ul class="nav justify-content-end">
-          <li class="nav-item"><a class="nav-link active" href="#">Feautures</a></li>
-          <li class="nav-item"><a class="nav-link active"
-              href="https://docs.bolt.cm/3.7/getting-started/introduction">Documentation</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Extensions</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Community</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">News</a></li>
-          <li><button class="btn btn-primary">Get started for free</button></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      {# This is the "Hero" section #}
-      <div id="hero">
-        <div class="row">
-          <h1>The starting point of your new website</h1>
-        </div>
-        <div class="row">
-          <div class="col row1">
-            <figure>
-              <img class="image" src="theme/boltcms-2020/images/opensource.svg" />
-              <caption>Open source</caption>
-            </figure>
-          </div>
-          <div class="col row1">
-            <figure>
-              <img class="image" src="theme/boltcms-2020/images/content.svg" />
-              <caption>Easy content creation</caption>
-            </figure>
-          </div>
-          <div class="col row1">
-            <figure>
-              <img class="image" src="theme/boltcms-2020/images/development.svg" />
-              <caption>Simple development</caption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-    {# End of "Hero" section #}
-
-    {# Start of "Carousel" section #}
-    <div class="slider">
-      <div><img src="theme/boltcms-2020/images/Bitmap2.png" /></div>
-      <div><img src="theme/boltcms-2020/images/Bitmap2.png" /></div>
-      <div><img src="theme/boltcms-2020/images/Bitmap2.png" /></div>
-      <div><img src="theme/boltcms-2020/images/Bitmap2.png" /></div>
-      <div><img src="theme/boltcms-2020/images/Bitmap2.png" /></div>
-      <div><img src="theme/boltcms-2020/images/Bitmap2.png" /></div>
-    </div>
-
-    <script>
-      var slider = tns({
-        container: '.slider',
-        controlsPosition: 'bottom',
-        navPosition: 'bottom',
-        edgePadding: 20,
-        gutter: 20,
-        items: 1,
-        edgePadding: 300,
-      });      
-    </script>
-
-    {# End of "Carousel" section #}
-
-    {# Start of "Features" section #}
-    <div class="container">
-      <div id="features">
-        <div class="row background">
-          <div class="col-12">
-            <div class="row justify-content-center">
-              <div class="col-auto">
-                <h3 class="details">It's al in the details</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-4 blok">
-            <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg" />
-            <p class="paragraph"><strong>Extensions<p></strong>
-              <p>et disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                Epicuro loqui discimus.</p>
-          </div>
-          <div class="col-4 blok">
-            <img class="imagedetails2" src="theme/boltcms-2020/images/locatie.svg" />
-            <p class="paragraph"><strong>Localization<p></strong>
-              <p>et disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                Epicuro loqui discimus.</p>
-          </div>
-          <div class="col-4 blok">
-            <img class="imagedetails3" src="theme/boltcms-2020/images/autors.svg" />
-            <p class="paragraph"><strong>For authors<p></strong>
-              <p>et disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                Epicuro loqui discimus.</p>
-          </div>
-          <div class="col-4 blok">
-            <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg" />
-            <p class="paragraph"><strong>Extensions<p></strong>
-              <p>et disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                Epicuro loqui discimus.</p>
-          </div>
-          <div class="col-4 blok">
-            <img class="imagedetails2" src="theme/boltcms-2020/images/locatie.svg" />
-            <p class="paragraph"><strong>Localization<p></strong>
-              <p>et disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                Epicuro loqui discimus.</p>
-          </div>
-          <div class="col-4 blok">
-            <img class="imagedetails3" src="theme/boltcms-2020/images/autors.svg" />
-            <p class="paragraph"><strong>For authors<p></strong>
-              <p>et disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                Epicuro loqui discimus.</p>
-          </div>
-        </div>
-        
-        <div class="col-12">
-          <div class="row justify-content-center background1">
-            <div class="col text-center">
-              <button class="btn btn-outline-primary">View features for content creators</button>
-              <button class="btn btn-outline-primary">View features for developers</button>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      {# End of "Features" section #}
-
-      {# Start of "Powered by / community" section #}
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <h3 class="titel">Powered by open source</h3>
-            <p class="text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-              been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-              type.</p>
-            <div class="d-flex justify-content-around">
-              <div class="my-auto">
-                <img src="theme/boltcms-2020/images/1.png" />
-              </div>
-              <div class="my-auto">
-                <img src="theme/boltcms-2020/images/twig.png" />
-              </div>
-              <div class="my-auto">
-                <img src="theme/boltcms-2020/images/symfony.png" />
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <h3 class="titel">For and by the community</h3>
-            <p class="tekst">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-              been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-              type.</p>
-            <div class="d-flex justify-content-around">
-              <div class="my-auto">
-                <img src="theme/boltcms-2020/images/slack.png" />
-              </div>
-              <div class="my-auto">
-                <img src="theme/boltcms-2020/images/github.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-        {# End of "Powered by / community" section #}
-
-        {# Start of "CTA" section #}
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <div class="row cta">
-              <div class="col-12">
-                <h1 class="titel1">Let's get started</h1>
-              </div>
-              <div class="col-12">
-                <div class="row justify-content-center">
-                  <div class="col-auto">
-                    <button class="btn btn-primary button">Install Bolt</button>
-                  </div>
-                  <div class="col-auto">
-                    <button class="btn btn-primary button">View Bolt</button>
-                  </div>
+{% block main %}
+    <main>
+        <div class="container">
+            {# This is the "Hero" section #}
+            <div id="hero">
+                <div class="row">
+                    <h1>{{ record.title }}</h1>
                 </div>
-              </div>
+                <div class="row">
+                    <div class="col row1">
+                        <figure>
+                            <img class="image" src="theme/boltcms-2020/images/opensource.svg" alt="Open source" />
+                            <caption>Open source</caption>
+                        </figure>
+                    </div>
+                    <div class="col row1">
+                        <figure>
+                            <img class="image" src="theme/boltcms-2020/images/content.svg" alt="Easy content creation"/>
+                            <caption>Easy content creation</caption>
+                        </figure>
+                    </div>
+                    <div class="col row1">
+                        <figure>
+                            <img class="image" src="theme/boltcms-2020/images/development.svg" alt="Simple development" />
+                            <caption>Simple development</caption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# End of "Hero" section #}
+
+        {# Start of "Carousel" section #}
+        {% if record.carousel is not empty %}
+            <div class="slider">
+                {% for image in record.carousel %}
+                    <div><img src="{{ image|thumbnail(1200, 760) }}" alt="{{ image.alt|default }}"/></div>
+                {% endfor %}
+            </div>
+            <script>
+                var slider = tns({
+                    container: '.slider',
+                    controlsPosition: 'bottom',
+                    navPosition: 'bottom',
+                    gutter: 20,
+                    items: 1,
+                    edgePadding: 50,
+                    responsive: {
+                        "576": { // bootstrap sm breakpoint
+                            "items": 2,
+                        },
+                        "1200": { // bootstrap xl breakpoint
+                            "items": 3,
+                        }
+                    },
+                });
+            </script>
+        {% endif %}
+        {# End of "Carousel" section #}
+
+        {# Start of "Features" section #}
+        {% if record.features is not empty %}
+            <div class="container">
+                <div id="features">
+                    <div class="row background">
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <h3 class="details">{{ record.features_title }}</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% for feature in record.features %}
+                            <div class="col-4 blok">
+                                <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
+                                <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
+                                <p>{{ feature.description }}</p>
+                            </div>
+                        {% endfor %}
+
+                        {% for feature in record.features %}
+                            <div class="col-4 blok">
+                                <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
+                                <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
+                                <p>{{ feature.description }}</p>
+                            </div>
+                        {% endfor %}
+
+                        {% for feature in record.features %}
+                            <div class="col-4 blok">
+                                <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
+                                <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
+                                <p>{{ feature.description }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row justify-content-center background1">
+                            <div class="col text-center">
+                                <button class="btn btn-outline-primary">For content creators</button>
+                                <button class="btn btn-outline-primary">For developers</button>
+                                <button class="btn btn-outline-primary">For designers</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        {% endif %}
+        {# End of "Features" section #}
+
+        <div class="container">
+            {# Start of "Powered by / community" section #}
+            <div class="row">
+                <div class="col">
+                    <h3 class="titel">Powered by open source</h3>
+                    <p class="text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of
+                        type.</p>
+                    <div class="d-flex justify-content-around">
+                        <div class="my-auto">
+                            <img src="theme/boltcms-2020/images/1.png"/>
+                        </div>
+                        <div class="my-auto">
+                            <img src="theme/boltcms-2020/images/twig.png"/>
+                        </div>
+                        <div class="my-auto">
+                            <img src="theme/boltcms-2020/images/symfony.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="titel">For and by the community</h3>
+                    <p class="tekst">Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of
+                        type.</p>
+                    <div class="d-flex justify-content-around">
+                        <div class="my-auto">
+                            <img src="theme/boltcms-2020/images/slack.png"/>
+                        </div>
+                        <div class="my-auto">
+                            <img src="theme/boltcms-2020/images/github.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# End of "Powered by / community" section #}
+        </div>
+
+        <div class="container">
+            {# Start of "CTA" section #}
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="row cta">
+                        <div class="col-12">
+                            <h1 class="titel1">Let's get started</h1>
+                        </div>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <button class="btn btn-primary button">Install Bolt</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary button">View Bolt</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             {# End of "CTA" section #}
-
-            {# Start of "feautres1" #}
-            <div>
-              <div class="row justify-content-center row1">
-                <div class="col-8">
-                  <div class="d-flex justify-content-center">
-                    <img class="imagedetails4" src="theme/boltcms-2020/images/autors.svg" />
-                  </div>
-                  <h3 class="titel2">Complete control over the layout</h3>
-                  <p class="text1">Bona autem corporis huic sunt, quod posterius posui, similiora. Ipse Epicurus
-                    fortasse redderet, ut Sextus Peducaeus, Sex. A quibus propter discendi cupiditatem videmus ultimas
-                    terras esse peragratas. Graccho, eius fere, aequalí? Quid est igitur, cur ita semper deum appellet
-                    Epicurus beatum et aeternum? Neminem videbis ita laudatum, ut artifex callidus comparandarum
-                    voluptatum diceretur.</p>
-                </div>
-              </div>
-            </div>
-            {# End of "feautres1" #}
-
-            {# Start of "contributors" #}
-            <div id="features">
-              <div class="row contributors">
-                <div class="col-12">
-                  <div class="row justify-content-center">
-                    <div class="col-auto">
-                      <h3 class="contributors1">Contributors</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar1.jpeg" />
-                  <p class="name">Fabien Potencier</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar2.jpeg" />
-                  <p class="name">Nicolas Grekas</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar3.png" />
-                  <p class="name">Christian Flothmann</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar4.jpeg" />
-                  <p class="name">Bernhard Schussek</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar5.png" />
-                  <p class="name">Tobias Schultze</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar6.jpeg" />
-                  <p class="name">Robin Chalas</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar7.jpeg" />
-                  <p class="name">Christophe Coevoet</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" vsrc="theme/boltcms-2020/images/avatar8.png" />
-                  <p class="name">Kévin Dunglas</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar9.png" />
-                  <p class="name">Javier Eguiluz</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar10.png" />
-                  <p class="name">Ryan Weaver</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar11.jpeg" />
-                  <p class="name">Christian Flothmann</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar12.png" />
-                  <p class="name">Wouter de Jong</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar1.jpeg" />
-                  <p class="name">Fabien Potencier</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar2.jpeg" />
-                  <p class="name">Nicolas Grekas</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar3.png" />
-                  <p class="name">Christian Flothmann</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar4.jpeg" />
-                  <p class="name">Bernhard Schussek</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar5.png" />
-                  <p class="name">Tobias Schultze</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar6.jpeg" />
-                  <p class="name">Robin Chalas</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar7.jpeg" />
-                  <p class="name">Christophe Coevoet</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" vsrc="theme/boltcms-2020/images/avatar8.png" />
-                  <p class="name">Kévin Dunglas</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar9.png" />
-                  <p class="name">Javier Eguiluz</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar10.png" />
-                  <p class="name">Ryan Weaver</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar11.jpeg" />
-                  <p class="name">Christian Flothmann</p>
-                </div>
-                <div class="col-1 blok">
-                  <img class="avatar" src="theme/boltcms-2020/images/avatar12.png" />
-                  <p class="name">Wouter de Jong</p>
-                </div>
-              </div>
-            </div>
-            {# End of "contributors" #}
-
-            {# Start of "sponsors" #}
-            <div>
-              <div class="row justify-content-center row1">
-                <div class="col-12">
-                  <h3 class="sponsors">Sponsors</h3>
-                  <p class="text2">Bona autem corporis huic sunt, quod posterius posui, similiora. Ipse Epicurus
-                    fortasse redderet, ut Sextus Peducaeus, Sex. A quibus propter discendi cupiditatem videmus ultimas.
-                  </p>
-                  <div class="d-flex justify-content-around">
-                    <div class="my-auto">
-                      <img src="theme/boltcms-2020/images/slack.png" />
-                    </div>
-                    <div class="my-auto">
-                      <img src="theme/boltcms-2020/images/github.png" />
-                    </div>
-                    <div class="my-auto">
-                      <img src="theme/boltcms-2020/images/twig.png" />
-                    </div>
-                    <div class="my-auto">
-                      <img src="theme/boltcms-2020/images/symfony.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {# End of "sponsors" #}
-  </main>
-  <br>
-  <br>
-  <br>
-  <br>
-  <footer>
-    <div class="row">
-      <div class="text-right col-12">
-        <div class="row justify-content-around">
-          <div class="my-auto">
-            <a href="https://twitter.com/boltcms">
-              <i class="fa fa-twitter"></i> Bolt on Twitter
-            </a>
-          </div>
-          <div class="my-auto">
-            <a href="https://github.com/bolt/boltcms.io.git">
-              <i class="fa fa-github"></i> Bolt on Github
-            </a>
-          </div>
-          <div class="my-auto">
-            Copyright © Bolt, 2020
-          </div>
         </div>
-      </div>
-    </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </main>
+{% endblock %}

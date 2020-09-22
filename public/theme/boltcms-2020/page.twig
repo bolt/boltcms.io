@@ -1,0 +1,11 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main_container %}
+    <h1>{{ record.title }}</h1>
+
+    {% if record.image is not empty %}
+        <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}">
+    {% endif %}
+
+    {{ record.content }}
+{% endblock main_container %}

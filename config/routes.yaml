@@ -16,6 +16,12 @@ frontend:
   prefix: /
   type: annotation
 
+
+content_seo:
+  path: /{slugOrId}
+  methods: [GET|POST]
+  defaults:
+    _controller: Bolt\Controller\Frontend\DetailController::record
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a LOWER priority than the default routes.
 
@@ -54,8 +60,4 @@ project:
 # Use this route to find content only by slug (Like, _very_ basic "SEO" routes)
 # before falling back to a 404 response
 #
-# content_seo:
-#   path: /{slugOrId}
-#   methods: [GET|POST]
-#   defaults:
-#     _controller: Bolt\Controller\Frontend\DetailController::record
+

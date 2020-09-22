@@ -1,0 +1,34 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main_container %}
+    <h1>{{ record.title }}</h1>
+
+    {{ record.content }}
+
+    {% set current = app.request.requestUri|split('/')|last %}
+
+    {% if current == 'features-developers' %}
+        {% setcontent features = 'features' where { audience: 'developers' } %}
+    {% elseif current == 'features-designers'%}
+        {% setcontent features = 'features' where { audience: 'designers' } %}
+    {% elseif current == 'features-editors' %}
+        {% setcontent features = 'features' where { audience: 'editors' } %}
+    {% else %}
+        {# Assume we want to show all #}
+        {% setcontent features = 'features' %}
+    {% endif %}
+
+    {% for feature in features %}
+        <div class="row flex align-items-center my-5">
+            {% if feature.image is not empty %}
+                <div class="col">
+                    <img class="img-fluid" src="{{ feature.image|thumbnail(1280, 720) }}" />
+                </div>
+            {% endif %}
+            <div class="col">
+                <h3 class="titel2">{{ feature.title }}</h3>
+                {{ feature.content }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock main_container %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ htmllang() }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css', 'theme') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    {# make sure we always display a proper title: The record's title if there is one, appended with the
+           sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
+    <title>
+        {%- if record|default and record.title -%}
+            {{- record.title ~ ' | ' -}}
+        {%- endif -%}
+        {{- config.get('general/sitename') -}}
+        {%- if record|default == null and config.has('general/payoff') -%}
+            {{- ' | ' ~ config.get('general/payoff') -}}
+        {%- endif -%}
+    </title>
+</head>
+<body>
+    {% block body %}
+        {{ include('partials/_header.twig') }}
+
+        {{ widgets('main_top') }}
+
+        {% block main %}
+            <div class="container">
+                {% block main_container %}
+                {% endblock main_container %}
+            </div>
+        {% endblock main %}
+
+        {{ widgets('main_bottom') }}
+    {% endblock body %}
+
+    {{ include('partials/_footer.twig') }}
+</body>
+</html>

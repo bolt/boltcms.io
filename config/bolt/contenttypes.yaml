@@ -4,7 +4,6 @@
 # The Homepage content type is a singleton: There can be only one record of this
 # content type.
 
-
 homepage:
     name: Homepage
     singular_name: Homepage
@@ -20,13 +19,30 @@ homepage:
                 shown on the homepage of the website, as the name implies. To change the
                 <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
                 in the webbrowser, edit <code>sitename:</code> in the configuration file.
-        image:
-            type: image
-            placeholder: https://source.unsplash.com/1920x640/?cityscape,landscape,nature/__random__
         teaser:
             type: html
             localize: true
             height: 150px
+        carousel:
+            type: imagelist
+            group: Carousel
+        features_title:
+            type: text
+            group: Features
+        features:
+            type: collection
+            fields:
+                feature:
+                    type: set
+                    fields:
+                        name:
+                            type: text
+                            variant: inline
+                        icon:
+                            type: text
+                            variant: inline
+                        description:
+                            type: redactor
         content:
             type: html
             height: 300px
@@ -71,11 +87,14 @@ pages:
             uses: title
         image:
             type: image
-            label: "Eén plaatje"
-            placeholder: https://source.unsplash.com/1280x768/?business,workplace/__random__
         content:
             type: article
+        template:
+            type: templateselect
+            filter: '*.twig'
+            default: 'page.twig'
     recordsperpage: 15
+    record_route: content_seo
 
 news:
     name: News
@@ -94,6 +113,7 @@ news:
             uses: title
     icon_many: "fa:newspaper"
     icon_one: "fa:newspaper"
+
 
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
@@ -117,6 +137,7 @@ features:
             postfix: "<small>Include the class associated with the icon.</small>"
         content:
             type: redactor
+    taxonomy: [ audience ]
     icon_many: "fa:bug"
     icon_one: "fa:bug"
 
