@@ -9,19 +9,19 @@
                     <h1>{{ record.title }}</h1>
                 </div>
                 <div class="row">
-                    <div class="col row1">
+                    <div class="col-md">
                         <figure>
                             <img class="image" src="theme/boltcms-2020/images/opensource.svg" alt="Open source" />
                             <caption>Open source</caption>
                         </figure>
                     </div>
-                    <div class="col row1">
+                    <div class="col-md">
                         <figure>
                             <img class="image" src="theme/boltcms-2020/images/content.svg" alt="Easy content creation"/>
                             <caption>Easy content creation</caption>
                         </figure>
                     </div>
-                    <div class="col row1">
+                    <div class="col-md">
                         <figure>
                             <img class="image" src="theme/boltcms-2020/images/development.svg" alt="Simple development" />
                             <caption>Simple development</caption>
@@ -64,7 +64,7 @@
         {% if record.features is not empty %}
             <div class="container">
                 <div id="features">
-                    <div class="row background">
+                    <div class="row background pb-4">
                         <div class="col-12">
                             <div class="row justify-content-center">
                                 <div class="col-auto">
@@ -74,7 +74,7 @@
                         </div>
 
                         {% for feature in record.features %}
-                            <div class="col-4 blok">
+                            <div class="col-md-4 blok">
                                 <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
                                 <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
                                 <p>{{ feature.description }}</p>
@@ -82,7 +82,7 @@
                         {% endfor %}
 
                         {% for feature in record.features %}
-                            <div class="col-4 blok">
+                            <div class="col-md-4 blok">
                                 <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
                                 <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
                                 <p>{{ feature.description }}</p>
@@ -90,24 +90,25 @@
                         {% endfor %}
 
                         {% for feature in record.features %}
-                            <div class="col-4 blok">
+                            <div class="col-md-4 blok">
                                 <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
                                 <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
                                 <p>{{ feature.description }}</p>
                             </div>
                         {% endfor %}
-                    </div>
 
-                    <div class="col-12">
-                        <div class="row justify-content-center background1">
-                            <div class="col text-center">
-                                <button class="btn btn-outline-primary">For content creators</button>
-                                <button class="btn btn-outline-primary">For developers</button>
-                                <button class="btn btn-outline-primary">For designers</button>
-                            </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-outline-primary feature-button">For content creators</button>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button class="btn btn-outline-primary feature-button">For designers</button>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button class="btn btn-outline-primary feature-button">For developers</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         {% endif %}

@@ -5,8 +5,9 @@ html, body {
 header {
     background: #fff;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-    height: 72px;
-    overflow: hidden;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
 }
 
 a {
@@ -31,7 +32,7 @@ a:hover {
 
 h1 {
     font-weight: bold;
-    font-size: 80px;
+    font-size: 5em;
     color: #222222;
     text-align: center;
     margin-top: 100px;
@@ -77,7 +78,7 @@ h1 {
 .details {
     font-size: 36px;
     color: #0278FC;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     margin-top: 50px;
 }
@@ -115,18 +116,11 @@ h1 {
     margin-top: 50px;
 }
 
-.background1 {
-    background-color: #EBF4FF;
-    height: 130px;
-}
-
 .btn-outline-primary {
     font-size: 18px;
     color: #0278FC;
     border: 1px solid #0278FC;
     border-radius: 30px;
-    width: 350px;
-    height: 40px;
 }
 
 .titel {
@@ -147,6 +141,7 @@ h1 {
 .cta {
     background: #0278FC;
     margin-top: 80px;
+    height: 200px ;
 }
 
 .titel1 {
@@ -196,6 +191,7 @@ h1 {
 .contributors {
     background-color: #EBF4FF;
     margin-top: 80px;
+    padding-top: 20px;
 }
 
 .contributors1 {
@@ -244,6 +240,22 @@ footer {
     background: #EBF4FF;
     width: 100%;
     font-size: 14px;
+}
+
+.background2 {
+    height: 45px;
+    padding-top: 17px;
+}
+
+.feature-button {
+    min-width: 75%;
+    margin-top: 1em;
+}
+
+#hero figure {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* div.row { 

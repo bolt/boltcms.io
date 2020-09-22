@@ -2,14 +2,17 @@
 # details: https://docs.bolt.cm/configuration/menus
 
 main:
+  - label: Features
+    link: /features
   - label: Documentation
-    link: https://docs.bolt.cm/4.0
-  - label: Community <small>(Slack)</small>
-    link: /page/community
-  - label: Code on Github
-    link: https://github.com/bolt
+    link: https://docs.bolt.cm
+  - label: Extensions
+    link: https://extensions.boltcms.io
   - label: News
     link: /news
+  - label: Get started now
+    link: /
+    class: btn btn-primary
 #  - label: Bolt 3 site
 #    link: https://bolt.cm
 #    class: bolt-site

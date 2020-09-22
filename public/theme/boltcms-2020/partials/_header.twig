@@ -1,15 +1,13 @@
 <header>
-    <div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <img class="d-inline" src="theme/boltcms-2020/images/logo.svg" alt="logo" />
+    <div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a href="/">
+            <img class="d-inline" src="/theme/boltcms-2020/images/logo.svg" alt="logo" />
+        </a>
         <nav class="ml-auto">
             <ul class="nav justify-content-end">
-                <li class="nav-item"><a class="nav-link active" href="{{ path('content_seo', {'slugOrId': 'features'}) }}">Feautures</a></li>
-                <li class="nav-item"><a class="nav-link active" href="https://docs.bolt.cm">Documentation</a></li>
-                <li class="nav-item"><a class="nav-link active" href="https://extensions.boltcms.io">Extensions</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Community</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{{ path('listing', {'contentTypeSlug': 'news'}) }}">News</a></li>
-                <li><button class="btn btn-primary">Get started for free</button></li>
+                {% for item in menu_array() %}
+                    <li class="nav-item"><a class="nav-link {{ item.class }} {% if item|current %}active{% endif %}" href="{{ item.link }}">{{ item.label }}</a></li>
+                {% endfor %}
             </ul>
         </nav>
     </div>

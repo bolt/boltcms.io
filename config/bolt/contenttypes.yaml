@@ -140,6 +140,7 @@ features:
     taxonomy: [ audience ]
     icon_many: "fa:bug"
     icon_one: "fa:bug"
+    viewless: true
 
 blocks:
     name: Blocks
