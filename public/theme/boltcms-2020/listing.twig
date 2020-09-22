@@ -10,6 +10,7 @@
                 <h2>{{ record|title }}</h2>
                 <p>Written by {{ record.author }} on {{ record.publishedAt|date }}</p>
                 <p>{{ record|excerpt }}</p>
+                <a class="btn btn-outline-primary" href="{{ record|link }}">Read more</a>
             </div>
             {% if record|image %}
                 <div class="col col-sm-auto">
