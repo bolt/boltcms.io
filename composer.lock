@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c2d78f50477a981d57f0140897666b2",
+    "content-hash": "c0ad74884a7de1df349b9bb65c1bf3c7",
     "packages": [
         {
             "name": "api-platform/core",
@@ -368,6 +368,52 @@
             ],
             "description": "🌤 A simple Dashboard Widget that displays the current weather. So you don't actually need to go outside or open the curtains.",
             "time": "2020-08-26T13:14:16+00:00"
+        },
+        {
+            "name": "bolt/article",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/article.git",
+                "reference": "35613a1549e93a0dfa921819c92c7eb6f80b4bba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/article/zipball/35613a1549e93a0dfa921819c92c7eb6f80b4bba",
+                "reference": "35613a1549e93a0dfa921819c92c7eb6f80b4bba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.9"
+            },
+            "require-dev": {
+                "bolt/core": "^4.0.0",
+                "symplify/easy-coding-standard": "^7.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "entrypoint": "Bolt\\Article\\Extension",
+                "screenshots": [
+                    "screenshots/article.png"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Article\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "📝 Bolt Extension to add the Article FieldType",
+            "time": "2020-09-18T13:35:28+00:00"
         },
         {
             "name": "bolt/assets",
@@ -10550,6 +10596,8 @@
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": []
 }
