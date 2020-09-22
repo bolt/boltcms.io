@@ -6,8 +6,12 @@ main:
     link: /features
   - label: Documentation
     link: https://docs.bolt.cm
+  - label: Community
+    link: /community
+  - label: Contribute
+    link: contribute
   - label: Extensions
-    link: https://extensions.boltcms.io
+    link: /extensions
   - label: News
     link: /news
   - label: Get started now

@@ -21,11 +21,11 @@
     {% for feature in features %}
         <div class="row flex align-items-center my-5">
             {% if feature.image is not empty %}
-                <div class="col">
+                <div class="col-md">
                     <img class="img-fluid" src="{{ feature.image|thumbnail(1280, 720) }}" />
                 </div>
             {% endif %}
-            <div class="col">
+            <div class="col-md">
                 <h3 class="titel2">{{ feature.title }}</h3>
                 {{ feature.content }}
             </div>

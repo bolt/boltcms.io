@@ -8,23 +8,23 @@
                 <div class="row">
                     <h1>{{ record.title }}</h1>
                 </div>
-                <div class="row">
+                <div class="row my-5">
                     <div class="col-md">
                         <figure>
                             <img class="image" src="theme/boltcms-2020/images/opensource.svg" alt="Open source" />
-                            <caption>Open source</caption>
+                            <caption>100% open source</caption>
                         </figure>
                     </div>
                     <div class="col-md">
                         <figure>
                             <img class="image" src="theme/boltcms-2020/images/content.svg" alt="Easy content creation"/>
-                            <caption>Easy content creation</caption>
+                            <caption>100% free</caption>
                         </figure>
                     </div>
                     <div class="col-md">
                         <figure>
                             <img class="image" src="theme/boltcms-2020/images/development.svg" alt="Simple development" />
-                            <caption>Simple development</caption>
+                            <caption>100% easy to use</caption>
                         </figure>
                     </div>
                 </div>
@@ -81,22 +81,6 @@
                             </div>
                         {% endfor %}
 
-                        {% for feature in record.features %}
-                            <div class="col-md-4 blok">
-                                <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
-                                <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
-                                <p>{{ feature.description }}</p>
-                            </div>
-                        {% endfor %}
-
-                        {% for feature in record.features %}
-                            <div class="col-md-4 blok">
-                                <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
-                                <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
-                                <p>{{ feature.description }}</p>
-                            </div>
-                        {% endfor %}
-
                         <div class="col-md-4">
                             <button class="btn btn-outline-primary feature-button">For content creators</button>
                         </div>
@@ -118,39 +102,22 @@
             {# Start of "Powered by / community" section #}
             <div class="row">
                 <div class="col">
-                    <h3 class="titel">Powered by open source</h3>
+                    <h3 class="titel">Want to help?</h3>
                     <p class="text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
                         Ipsum has
                         been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                         galley of
                         type.</p>
-                    <div class="d-flex justify-content-around">
-                        <div class="my-auto">
-                            <img src="theme/boltcms-2020/images/1.png"/>
-                        </div>
-                        <div class="my-auto">
-                            <img src="theme/boltcms-2020/images/twig.png"/>
-                        </div>
-                        <div class="my-auto">
-                            <img src="theme/boltcms-2020/images/symfony.png"/>
-                        </div>
-                    </div>
+                    <a class="btn btn-primary" href="/contribute">Contribute</a>
                 </div>
                 <div class="col">
-                    <h3 class="titel">For and by the community</h3>
+                    <h3 class="titel">Need help?</h3>
                     <p class="tekst">Lorem ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has
                         been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                         galley of
                         type.</p>
-                    <div class="d-flex justify-content-around">
-                        <div class="my-auto">
-                            <img src="theme/boltcms-2020/images/slack.png"/>
-                        </div>
-                        <div class="my-auto">
-                            <img src="theme/boltcms-2020/images/github.png"/>
-                        </div>
-                    </div>
+                    <a class="btn btn-primary" href="/community">Get help</a>
                 </div>
             </div>
             {# End of "Powered by / community" section #}
@@ -168,9 +135,6 @@
                             <div class="row justify-content-center">
                                 <div class="col-auto">
                                     <button class="btn btn-primary button">Install Bolt</button>
-                                </div>
-                                <div class="col-auto">
-                                    <button class="btn btn-primary button">View Bolt</button>
                                 </div>
                             </div>
                         </div>
