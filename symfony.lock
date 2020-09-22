@@ -179,6 +179,12 @@
     "fzaninotto/faker": {
         "version": "v1.8.0"
     },
+    "guzzlehttp/guzzle": {
+        "version": "7.0.1"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
     "guzzlehttp/psr7": {
         "version": "1.5.2"
     },
@@ -261,7 +267,7 @@
         "version": "v0.9.1"
     },
     "php": {
-        "version": "7.2"
+        "version": "7.3"
     },
     "php-translation/common": {
         "version": "1.0.0"
@@ -304,6 +310,9 @@
     },
     "psr/event-dispatcher": {
         "version": "1.0.0"
+    },
+    "psr/http-client": {
+        "version": "1.0.1"
     },
     "psr/http-message": {
         "version": "1.0.1"
