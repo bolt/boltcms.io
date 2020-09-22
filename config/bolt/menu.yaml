@@ -19,9 +19,11 @@ main:
     link: contribute
   - label: Extensions
     link: /extensions
+  - label: No costs
+    link: /no-costs
   - label: News
     link: /news
-  - label: Get started now
+  - label: Try it!
     link: /
     class: btn btn-primary
 
@@ -47,9 +49,11 @@ footer:
     submenu:
       - label: Extensions
         link: /extensions
+      - label: No costs
+        link: /no-costs
       - label: News
         link: /news
-      - label: Get started now
+      - label: Try it!
         link: /
 #  - label: Bolt 3 site
 #    link: https://bolt.cm

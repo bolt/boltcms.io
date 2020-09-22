@@ -74,7 +74,7 @@ pages:
             type: article
         template:
             type: templateselect
-            filter: '([^/]+).twig'
+            filter: '*.twig'
             default: 'page.twig'
     recordsperpage: 15
     record_route: content_seo
