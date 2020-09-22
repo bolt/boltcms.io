@@ -248,13 +248,17 @@ footer {
     font-size: 14px;
 }
 
+footer h6, footer h6 >a {
+    font-size: 1rem;
+}
+
 .background2 {
     height: 45px;
     padding-top: 17px;
 }
 
-.feature-button {
-    min-width: 75%;
+.wide-button {
+    min-width: 12em;
     margin-top: 1em;
 }
 

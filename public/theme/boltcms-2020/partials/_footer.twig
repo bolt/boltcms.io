@@ -1,19 +1,24 @@
-<footer>
-    <div class="text-right col-12">
-        <div class="row justify-content-around">
-            <div class="my-auto">
-                <a href="https://twitter.com/boltcms">
-                    <i class="fa fa-twitter"></i> Bolt on Twitter
-                </a>
-            </div>
-            <div class="my-auto">
-                <a href="https://github.com/bolt/boltcms.io.git">
-                    <i class="fa fa-github"></i> Bolt on Github
-                </a>
-            </div>
-            <div class="my-auto">
-                Copyright © Bolt, 2020
-            </div>
+<footer class="p-5 mt-5">
+    <div class="container row mx-auto">
+    {% for item in menu_array('footer') %}
+        <div class="col-md">
+            <h6>
+                {% if item.link is not empty %}
+                    <a href="{{ item.link }}">{{ item.label }}</a>
+                {% else %}
+                    {{ item.label }}
+                {% endif %}
+            </h6>
+            {% if item.submenu is defined %}
+                <ul class="list-unstyled">
+                {% for subitem in item.submenu %}
+                    <li>
+                        <a href="{{ subitem.link }}">{{ subitem.label }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
         </div>
+    {% endfor %}
     </div>
 </footer>

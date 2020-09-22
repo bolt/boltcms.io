@@ -4,6 +4,13 @@
 main:
   - label: Features
     link: /features
+    submenu:
+      - label: For developers
+        link: /features-developers
+      - label: For designers
+        link: /features-designers
+      - label: For editors
+        link: /features-editors
   - label: Documentation
     link: https://docs.bolt.cm
   - label: Community
@@ -17,6 +24,33 @@ main:
   - label: Get started now
     link: /
     class: btn btn-primary
+
+footer:
+  - label: Features
+    link: /features
+    submenu:
+      - label: For developers
+        link: /features-developers
+      - label: For designers
+        link: /features-designers
+      - label: For editors
+        link: /features-editors
+  - label: Documentation
+    link: https://docs.bolt.cm
+  - label: Community & Contribute
+    submenu:
+      - label: Community
+        link: /community
+      - label: Contribute
+        link: /contribute
+  - label: Explore more
+    submenu:
+      - label: Extensions
+        link: /extensions
+      - label: News
+        link: /news
+      - label: Get started now
+        link: /
 #  - label: Bolt 3 site
 #    link: https://bolt.cm
 #    class: bolt-site
