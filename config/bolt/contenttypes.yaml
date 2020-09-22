@@ -74,7 +74,7 @@ pages:
             label: "Eén plaatje"
             placeholder: https://source.unsplash.com/1280x768/?business,workplace/__random__
         content:
-            type: redactor
+            type: article
     recordsperpage: 15
 
 news:
@@ -92,11 +92,33 @@ news:
         slug:
             type: slug
             uses: title
+    icon_many: "fa:newspaper"
+    icon_one: "fa:newspaper"
 
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
 # text, an 'our address' in the footer, or similar short blurbs of text.
 # For more info, see: https://docs.bolt.cm/howto/resource-contenttype
+
+features:
+    name: Features
+    singular_name: Feature
+    fields:
+        title:
+            type: text
+        slug:
+            type: slug
+            uses: title
+        image:
+            type: image
+        icon:
+            type: text
+            variant: inline
+            postfix: "<small>Include the class associated with the icon.</small>"
+        content:
+            type: redactor
+    icon_many: "fa:bug"
+    icon_one: "fa:bug"
 
 blocks:
     name: Blocks
