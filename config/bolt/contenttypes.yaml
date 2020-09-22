@@ -12,16 +12,9 @@ homepage:
             type: text
             class: large
             group: content
-            localize: true
             label: Title
-            postfix: |
-                The 'Homepage' can contain basic information about the website. This title will be
-                shown on the homepage of the website, as the name implies. To change the
-                <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
-                in the webbrowser, edit <code>sitename:</code> in the configuration file.
         teaser:
             type: html
-            localize: true
             height: 150px
         carousel:
             type: imagelist
@@ -39,26 +32,16 @@ homepage:
                             type: text
                             variant: inline
                         icon:
-                            type: text
+                            type: image
                             variant: inline
                         description:
                             type: redactor
-        content:
-            type: html
-            height: 300px
-            localize: true
-        contentlink:
-            type: text
-            label: Link
-            placeholder: 'contentType/slug or http://example.org/'
-            postfix: "Use this to add a link for this Homepage. This could either be an 'internal' link like <tt>page//about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
         slug:
             type: slug
             uses: title
             group: meta
     viewless: true
     taxonomy: [ categories, tags, foobars ]
-    locales: ['en', 'nl', 'pt_BR', 'es']
     singleton: true
     default_status: published
     icon_many: "fa:home"
@@ -91,7 +74,7 @@ pages:
             type: article
         template:
             type: templateselect
-            filter: '*.twig'
+            filter: '([^/]+).twig'
             default: 'page.twig'
     recordsperpage: 15
     record_route: content_seo
@@ -132,9 +115,7 @@ features:
         image:
             type: image
         icon:
-            type: text
-            variant: inline
-            postfix: "<small>Include the class associated with the icon.</small>"
+            type: image
         content:
             type: redactor
     taxonomy: [ audience ]
