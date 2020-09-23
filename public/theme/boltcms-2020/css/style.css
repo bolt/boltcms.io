@@ -23,6 +23,10 @@ body > footer {
     margin-right: auto;
 }
 
+.max-80-characters {
+    max-width: 80ch;
+}
+
 header {
     background: #fff;
     position: sticky;
