@@ -1,21 +1,22 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main_container %}
-    <h1>{{ record.title }}</h1>
+    <div class="detail-page">
+        <h1>{{ record.title }}</h1>
 
-    {% if record.image is not empty %}
-        <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}">
-    {% endif %}
+        {% if record.image is not empty %}
+            <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}">
+        {% endif %}
 
-    {# Ugly fix because right now allow_twig does not work in article. #}
-    {% if '_include_github_contributors' in record.content|raw %}
-        {% set contributors %}
-           {% include 'partials/_contributors.twig'%}
-        {% endset %}
+        {# Ugly fix because right now allow_twig does not work in article. #}
+        {% if '_include_github_contributors' in record.content|raw %}
+            {% set contributors %}
+               {% include 'partials/_contributors.twig'%}
+            {% endset %}
 
-        {{ record.content|replace({'_include_github_contributors': contributors})|raw }}
-    {% else %}
-        {{ record.content }}
-    {% endif %}
-
+            {{ record.content|replace({'_include_github_contributors': contributors})|raw }}
+        {% else %}
+            {{ record.content }}
+        {% endif %}
+    </div>
 {% endblock main_container %}

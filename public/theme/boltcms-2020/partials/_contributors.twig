@@ -18,7 +18,7 @@
     {% for contributor in github_contributors(owner, repo) %}
         <div class="contributor blok m-2">
             <img class="avatar" src="{{ contributor.avatar_url }}" alt="{{ contributor.login }} profile image" />
-            <p class="name"><a href="{{ contributor.html_url }}">{{ contributor.login }}</a></p>
+            <p class="name mw-100"><a href="{{ contributor.html_url }}">{{ contributor.login }}</a></p>
         </div>
     {% endfor %}
     </div>
