@@ -35,6 +35,7 @@
             <div class="col-md p-4">
                 <h3 class="titel2 text-left">{{ feature.title }}</h3>
                 {{ feature.content }}
+                {% if feature|edit_link() %}<a href="{{ feature|edit_link() }}" class="btn btn-info btn-sm">edit</a>{% endif %}
             </div>
         </div>
     {% endfor %}

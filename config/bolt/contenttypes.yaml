@@ -42,7 +42,6 @@ homepage:
             uses: title
             group: meta
     viewless: true
-    taxonomy: [ categories, tags, foobars ]
     singleton: true
     default_status: published
     icon_many: "fa:home"
@@ -110,6 +109,7 @@ features:
     fields:
         title:
             type: text
+            class: large
         slug:
             type: slug
             uses: title
@@ -119,10 +119,15 @@ features:
             type: image
         content:
             type: redactor
+        order:
+            type: number
+            variant: inline
     taxonomy: [ audience ]
     icon_many: "fa:bug"
     icon_one: "fa:bug"
     viewless: true
+#    sort: order
+    records_per_page: 100
 
 blocks:
     name: Blocks
