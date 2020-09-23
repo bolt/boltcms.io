@@ -54,7 +54,7 @@ footer:
       - label: News
         link: /news
       - label: Try it!
-        link: /
+        link: https://docs.bolt.cm/installation/installation
 #  - label: Bolt 3 site
 #    link: https://bolt.cm
 #    class: bolt-site
