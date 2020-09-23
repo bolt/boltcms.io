@@ -24,8 +24,8 @@ main:
   - label: News
     link: /news
   - label: Try it!
-    link: /
-    class: btn btn-primary
+    link: https://docs.bolt.cm/
+    class: btn btn-primary px-4
 
 footer:
   - label: Features

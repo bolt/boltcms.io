@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/article/grid.css', 'public') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css', 'theme') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css', 'theme') }}">
     <script src="{{ asset('js/script.js', 'theme') }}"></script>
 
     {# make sure we always display a proper title: The record's title if there is one, appended with the
@@ -27,21 +29,22 @@
     </title>
 </head>
 <body>
-    {% block body %}
-        {{ include('partials/_header.twig') }}
+    <div>
+        {% block body %}
+            {{ include('partials/_header.twig') }}
 
-        {{ widgets('main_top') }}
+            {{ widgets('main_top') }}
 
-        {% block main %}
-            <div class="container">
-                {% block main_container %}
-                {% endblock main_container %}
-            </div>
-        {% endblock main %}
+            {% block main %}
+                <div class="container">
+                    {% block main_container %}
+                    {% endblock main_container %}
+                </div>
+            {% endblock main %}
 
-        {{ widgets('main_bottom') }}
-    {% endblock body %}
-
+            {{ widgets('main_bottom') }}
+        {% endblock body %}
+    </div>
     {{ include('partials/_footer.twig') }}
 </body>
 </html>

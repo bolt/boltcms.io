@@ -17,13 +17,13 @@
                     </div>
                     <div class="col-md">
                         <figure>
-                            <img class="image mr-2" src="theme/boltcms-2020/images/content.svg" alt="Easy content creation"/>
+                            <img class="image mr-2" src="theme/boltcms-2020/images/free.svg" alt="Easy content creation"/>
                             <caption>100% free</caption>
                         </figure>
                     </div>
                     <div class="col-md">
                         <figure>
-                            <img class="image mr-2" src="theme/boltcms-2020/images/development.svg" alt="Simple development" />
+                            <img class="image mr-2" src="theme/boltcms-2020/images/click.svg" alt="Simple development" />
                             <caption>100% easy to use</caption>
                         </figure>
                     </div>
@@ -31,6 +31,10 @@
             </div>
         </div>
         {# End of "Hero" section #}
+
+        <div class="container">
+            {{ record.teaser }}
+        </div>
 
         {# Start of "Carousel" section #}
         {% if record.carousel is not empty %}

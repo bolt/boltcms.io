@@ -19,14 +19,14 @@
     {% endif %}
 
     {% for feature in features %}
-        <div class="row flex align-items-center my-5">
+        <div class="row flex align-items-center my-5 {% if loop.index % 2 == 0 %}flex-row-reverse{% endif %}">
             {% if feature.image is not empty %}
                 <div class="col-md">
                     <img class="img-fluid" src="{{ feature.image|thumbnail(1280, 720) }}" />
                 </div>
             {% endif %}
             <div class="col-md">
-                <h3 class="titel2">{{ feature.title }}</h3>
+                <h3 class="titel2 text-left">{{ feature.title }}</h3>
                 {{ feature.content }}
             </div>
         </div>
