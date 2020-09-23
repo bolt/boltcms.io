@@ -275,7 +275,9 @@ footer {
     align-items: center;
 }
 
-
+.blue {
+    color: #0278FC;
+}
 
 /* div.row { 
     border: 1px dashed crimson;
