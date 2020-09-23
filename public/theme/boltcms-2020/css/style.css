@@ -34,6 +34,15 @@ header {
     top: 0;
 }
 
+header a:not(.btn-primary) {
+    color: #222222;
+}
+
+header a:not(.btn-primary).active {
+    color: #0278FC;
+    font-weight: bold;
+}
+
 .shadow {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }

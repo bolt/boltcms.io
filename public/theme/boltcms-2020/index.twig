@@ -38,29 +38,31 @@
 
         {# Start of "Carousel" section #}
         {% if record.carousel is not empty %}
-            <div class="slider">
-                {% for image in record.carousel %}
-                    <div><img src="{{ image|thumbnail(1200, 760) }}" alt="{{ image.alt|default }}"/></div>
-                {% endfor %}
-            </div>
-            <script>
-                var slider = tns({
-                    container: '.slider',
-                    controlsPosition: 'bottom',
-                    navPosition: 'bottom',
-                    gutter: 20,
-                    items: 1,
-                    edgePadding: 50,
-                    responsive: {
-                        "576": { // bootstrap sm breakpoint
-                            "items": 2,
+            <div class="my-5">
+                <div class="slider my-5">
+                    {% for image in record.carousel %}
+                        <div><img src="{{ image|thumbnail(1200, 760) }}" alt="{{ image.alt|default }}"/></div>
+                    {% endfor %}
+                </div>
+                <script>
+                    var slider = tns({
+                        container: '.slider',
+                        controlsPosition: 'bottom',
+                        navPosition: 'bottom',
+                        gutter: 20,
+                        items: 1,
+                        edgePadding: 50,
+                        responsive: {
+                            "576": { // bootstrap sm breakpoint
+                                "items": 2,
+                            },
+                            "1200": { // bootstrap xl breakpoint
+                                "items": 3,
+                            }
                         },
-                        "1200": { // bootstrap xl breakpoint
-                            "items": 3,
-                        }
-                    },
-                });
-            </script>
+                    });
+                </script>
+            </div>
         {% endif %}
         {# End of "Carousel" section #}
 
