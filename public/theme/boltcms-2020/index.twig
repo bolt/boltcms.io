@@ -49,9 +49,10 @@
                         container: '.slider',
                         controlsPosition: 'bottom',
                         navPosition: 'bottom',
-                        gutter: 20,
+                        gutter: 70,
                         items: 1,
                         edgePadding: 50,
+                        mouseDrag: true,
                         responsive: {
                             "576": { // bootstrap sm breakpoint
                                 "items": 2,
@@ -87,16 +88,7 @@
                             </div>
                         {% endfor %}
 
-                        <div class="col-md-4">
-                            <a href="/features-developers" class="btn btn-outline-primary wide-button">For developers</a>
-                        </div>
-
-                        <div class="col-md-4">
-                            <a href="/features-designers" class="btn btn-outline-primary wide-button">For designers</a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="/features-editors" class="btn btn-outline-primary wide-button">For content creators</a>
-                        </div>
+                        {% include "partials/_features_buttons.twig" %}
                     </div>
                 </div>
             </div>

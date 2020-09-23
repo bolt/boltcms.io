@@ -3,8 +3,6 @@
 {% block main_container %}
     <h1>{{ record.title }}</h1>
 
-    {{ record.content }}
-
     {% set current = app.request.requestUri|split('/')|last %}
 
     {% if current == 'features-developers' %}
@@ -16,7 +14,16 @@
     {% else %}
         {# Assume we want to show all #}
         {% setcontent features = 'features' %}
+        {% set all = true %}
     {% endif %}
+
+    {% if all is defined and all is true %}
+        <div class="row mb-5">
+            {% include "partials/_features_buttons.twig" %}
+        </div>
+    {% endif %}
+
+    {{ record.content }}
 
     {% for feature in features %}
         <div class="row flex align-items-center my-5 {% if loop.index % 2 == 0 %}flex-row-reverse{% endif %}">
