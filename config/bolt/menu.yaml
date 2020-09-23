@@ -24,7 +24,7 @@ main:
   - label: News
     link: /news
   - label: Try it!
-    link: https://docs.bolt.cm/
+    link: https://docs.bolt.cm/installation/installation
     class: btn btn-primary px-4 ml-md-2
 
 footer:

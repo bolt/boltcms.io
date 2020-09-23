@@ -81,7 +81,7 @@
                         </div>
 
                         {% for feature in record.features %}
-                            <div class="col-md-4 blok">
+                            <div class="col-md-4 blok px-md-4">
                                 <img class="imagedetails1" src="{{ feature.icon.path|default }}" alt="{{ feature.icon.alt|default }}"/>
                                 <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
                                 <p>{{ feature.description }}</p>
@@ -122,15 +122,13 @@
         <div class="container">
             {# Start of "CTA" section #}
             <div class="row justify-content-center">
-                <div class="col-auto">
-                    <div class="row cta px-5">
-                        <div class="col-12">
-                            <h1 class="titel1">Let's get started</h1>
+                <div class="row cta px-5">
+                    <div class="col-12">
+                        <h1 class="titel1">Let's get started</h1>
 
-                            <div class="row justify-content-center pt-5 pb-4">
-                                <div class="col-auto">
-                                    <a href="https://docs.bolt.cm/" class="btn btn-primary button">Install Bolt</a>
-                                </div>
+                        <div class="row justify-content-center pt-5 pb-4">
+                            <div class="col-auto">
+                                <a href="https://docs.bolt.cm/installation/installation" class="btn btn-primary button">Install Bolt</a>
                             </div>
                         </div>
                     </div>

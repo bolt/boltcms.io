@@ -173,6 +173,7 @@ h1 {
 .cta {
     background: #0278FC;
     margin-top: 80px;
+    width: 100%;
 }
 
 .titel1 {
@@ -318,8 +319,6 @@ footer {
 .align-center {
     text-align: center;
 }
-
-
 
 /* div.row {
     border: 1px dashed crimson;
