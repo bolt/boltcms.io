@@ -13,6 +13,7 @@ homepage:
             class: large
             group: content
             label: Title
+            allow_html: true
         teaser:
             type: html
             height: 150px
