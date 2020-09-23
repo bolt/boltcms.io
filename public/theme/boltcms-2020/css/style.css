@@ -275,10 +275,14 @@ footer {
     align-items: center;
 }
 
+/* Bolt Article */
 .blue {
     color: #0278FC;
 }
 
+.align-center {
+    text-align: center;
+}
 /* div.row { 
     border: 1px dashed crimson;
     padding: 2px;
