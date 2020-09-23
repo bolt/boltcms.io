@@ -75,7 +75,7 @@
 
                         {% for feature in record.features %}
                             <div class="col-md-4 blok">
-                                <img class="imagedetails1" src="theme/boltcms-2020/images/stekker.svg"/>
+                                <img class="imagedetails1" src="{{ feature.icon.path|default }}" alt="{{ feature.icon.alt|default }}"/>
                                 <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
                                 <p>{{ feature.description }}</p>
                             </div>
