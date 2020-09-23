@@ -39,9 +39,13 @@
         {# Start of "Carousel" section #}
         {% if record.carousel is not empty %}
             <div class="my-5">
-                <div class="slider my-5">
+                <div class="slider zoom-images my-5">
                     {% for image in record.carousel %}
-                        <div><img src="{{ image|thumbnail(1200, 760) }}" alt="{{ image.alt|default }}"/></div>
+                        <div>
+                            <a href="{{ image.path }}" data-caption="{{ image.alt }}">
+                                <img src="{{ image|thumbnail(1200, 760) }}" alt="{{ image.alt|default }}"/>
+                            </a>
+                        </div>
                     {% endfor %}
                 </div>
                 <script>
@@ -62,6 +66,10 @@
                             }
                         },
                     });
+
+                    window.addEventListener('load', function() {
+                        baguetteBox.run('.zoom-images');
+                    });
                 </script>
             </div>
         {% endif %}
@@ -71,7 +79,7 @@
         {% if record.features is not empty %}
             <div class="container">
                 <div id="features">
-                    <div class="row background pb-4">
+                    <div class="row background pb-4 px-3">
                         <div class="col-12">
                             <div class="row justify-content-center">
                                 <div class="col-auto">
