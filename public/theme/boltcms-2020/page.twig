@@ -7,5 +7,15 @@
         <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}">
     {% endif %}
 
-    {{ record.content }}
+    {# Ugly fix because right now allow_twig does not work in article. #}
+    {% if '_include_github_contributors' in record.content|raw %}
+        {% set contributors %}
+           {% include 'partials/_contributors.twig'%}
+        {% endset %}
+
+        {{ record.content|replace({'_include_github_contributors': contributors})|raw }}
+    {% else %}
+        {{ record.content }}
+    {% endif %}
+
 {% endblock main_container %}
