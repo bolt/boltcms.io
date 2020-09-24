@@ -423,16 +423,16 @@
         },
         {
             "name": "bolt/assets",
-            "version": "4.0.0-rc.44",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/assets.git",
-                "reference": "c8895a5ed48aaddb5be8dcd4d942f293fb79b25c"
+                "reference": "81fd8da5ac9d1775b4f5b1d0ef2fb255c9cc1906"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/assets/zipball/c8895a5ed48aaddb5be8dcd4d942f293fb79b25c",
-                "reference": "c8895a5ed48aaddb5be8dcd4d942f293fb79b25c",
+                "url": "https://api.github.com/repos/bolt/assets/zipball/81fd8da5ac9d1775b4f5b1d0ef2fb255c9cc1906",
+                "reference": "81fd8da5ac9d1775b4f5b1d0ef2fb255c9cc1906",
                 "shasum": ""
             },
             "require-dev": {
@@ -450,7 +450,7 @@
                 }
             ],
             "description": "🛠 Assets used in Bolt's backend. Do not use directly.",
-            "time": "2020-09-20T14:44:59+00:00"
+            "time": "2020-09-24T12:51:30+00:00"
         },
         {
             "name": "bolt/common",
@@ -506,16 +506,16 @@
         },
         {
             "name": "bolt/core",
-            "version": "4.0.0-rc.44",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/core.git",
-                "reference": "637c6f3da3f81c033c5fc7123b6ab738732255ae"
+                "reference": "6fe058556ceffd332dacda0b7b8a85cc8bb5a0cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/core/zipball/637c6f3da3f81c033c5fc7123b6ab738732255ae",
-                "reference": "637c6f3da3f81c033c5fc7123b6ab738732255ae",
+                "url": "https://api.github.com/repos/bolt/core/zipball/6fe058556ceffd332dacda0b7b8a85cc8bb5a0cb",
+                "reference": "6fe058556ceffd332dacda0b7b8a85cc8bb5a0cb",
                 "shasum": ""
             },
             "require": {
@@ -649,7 +649,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-20T14:20:08+00:00"
+            "time": "2020-09-24T12:42:34+00:00"
         },
         {
             "name": "bolt/newswidget",
@@ -1653,6 +1653,20 @@
                 "doctrine",
                 "php"
             ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-06-05T16:59:53+00:00"
         },
         {
@@ -1715,6 +1729,20 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdata-fixtures",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-09-01T07:13:28+00:00"
         },
@@ -1998,6 +2026,20 @@
             "keywords": [
                 "Fixture",
                 "persistence"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdoctrine-fixtures-bundle",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-09-01T07:06:14+00:00"
         },
@@ -2512,6 +2554,20 @@
                 "odm",
                 "orm",
                 "persistence"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-05-12T19:32:44+00:00"
         },

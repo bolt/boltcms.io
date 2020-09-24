@@ -1,0 +1,30 @@
+{% if record|default() %}
+    {% set title %}{%- if record|default -%}
+        {{- record|title ~ ' | ' -}}
+    {%- endif -%}
+        {{- config.get('general/sitename') -}}
+        {%- if record|default == null and config.has('general/payoff') -%}
+            {{- ' | ' ~ config.get('general/payoff') -}}
+        {%- endif -%}{% endset %}
+
+
+    {% set image %}{{ url('homepage') }}{{ record|image|replace({'/files': 'files'}) }}{% endset %}
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ record|excerpt(160) }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ canonical() }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ record|excerpt(160) }}">
+    <meta property="og:image" content="{{ image }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ canonical() }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:description" content="{{ record|excerpt(160) }}">
+    <meta property="twitter:image" content="{{image }}">
+{% endif %}
+
