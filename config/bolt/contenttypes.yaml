@@ -41,7 +41,6 @@ homepage:
             type: slug
             uses: title
             group: meta
-    viewless: true
     singleton: true
     default_status: published
     icon_many: "fa:home"
