@@ -2,14 +2,59 @@
 # details: https://docs.bolt.cm/configuration/menus
 
 main:
+  - label: Features
+    link: /features
+    submenu:
+      - label: For developers
+        link: /features-developers
+      - label: For designers
+        link: /features-designers
+      - label: For editors
+        link: /features-editors
   - label: Documentation
-    link: https://docs.bolt.cm/4.0
-  - label: Community <small>(Slack)</small>
-    link: /page/community
-  - label: Code on Github
-    link: https://github.com/bolt
+    link: https://docs.bolt.cm
+  - label: Community
+    link: /community
+  - label: Contribute
+    link: contribute
+  - label: Extensions
+    link: /extensions
+  - label: No costs
+    link: /no-costs
   - label: News
     link: /news
+  - label: Try it!
+    link: https://docs.bolt.cm/installation/installation
+    class: btn btn-primary px-4 ml-md-2
+
+footer:
+  - label: Features
+    link: /features
+    submenu:
+      - label: For developers
+        link: /features-developers
+      - label: For designers
+        link: /features-designers
+      - label: For editors
+        link: /features-editors
+  - label: Documentation
+    link: https://docs.bolt.cm
+  - label: Community & Contribute
+    submenu:
+      - label: Community
+        link: /community
+      - label: Contribute
+        link: /contribute
+  - label: Explore more
+    submenu:
+      - label: Extensions
+        link: /extensions
+      - label: No costs
+        link: /no-costs
+      - label: News
+        link: /news
+      - label: Try it!
+        link: https://docs.bolt.cm/installation/installation
 #  - label: Bolt 3 site
 #    link: https://bolt.cm
 #    class: bolt-site

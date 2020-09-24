@@ -4,7 +4,6 @@
 # The Homepage content type is a singleton: There can be only one record of this
 # content type.
 
-
 homepage:
     name: Homepage
     singular_name: Homepage
@@ -13,36 +12,35 @@ homepage:
             type: text
             class: large
             group: content
-            localize: true
             label: Title
-            postfix: |
-                The 'Homepage' can contain basic information about the website. This title will be
-                shown on the homepage of the website, as the name implies. To change the
-                <em><strong>name</strong></em> of the site, as is shown in the header, and the tab
-                in the webbrowser, edit <code>sitename:</code> in the configuration file.
-        image:
-            type: image
-            placeholder: https://source.unsplash.com/1920x640/?cityscape,landscape,nature/__random__
+            allow_html: true
         teaser:
             type: html
-            localize: true
             height: 150px
-        content:
-            type: html
-            height: 300px
-            localize: true
-        contentlink:
+        carousel:
+            type: imagelist
+            group: Carousel
+        features_title:
             type: text
-            label: Link
-            placeholder: 'contentType/slug or http://example.org/'
-            postfix: "Use this to add a link for this Homepage. This could either be an 'internal' link like <tt>page//about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
+            group: Features
+        features:
+            type: collection
+            fields:
+                feature:
+                    type: set
+                    fields:
+                        name:
+                            type: text
+                            variant: inline
+                        icon:
+                            type: image
+                            variant: inline
+                        description:
+                            type: redactor
         slug:
             type: slug
             uses: title
             group: meta
-    viewless: true
-    taxonomy: [ categories, tags, foobars ]
-    locales: ['en', 'nl', 'pt_BR', 'es']
     singleton: true
     default_status: published
     icon_many: "fa:home"
@@ -71,16 +69,19 @@ pages:
             uses: title
         image:
             type: image
-            label: "Eén plaatje"
-            placeholder: https://source.unsplash.com/1280x768/?business,workplace/__random__
         content:
             type: article
-    recordsperpage: 15
+        template:
+            type: templateselect
+            filter: '*.twig'
+            default: 'page.twig'
+    records_per_page: 50
+    record_route: content_seo
 
 news:
     name: News
     singular_name: Newsitem
-    recordsperpage: 5
+    records_per_page: 50
     fields:
         title:
             type: text
@@ -95,6 +96,7 @@ news:
     icon_many: "fa:newspaper"
     icon_one: "fa:newspaper"
 
+
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
 # text, an 'our address' in the footer, or similar short blurbs of text.
@@ -102,23 +104,30 @@ news:
 
 features:
     name: Features
+    title_format: "{order} - {title}"
     singular_name: Feature
     fields:
         title:
             type: text
+            class: large
         slug:
             type: slug
             uses: title
         image:
             type: image
         icon:
-            type: text
-            variant: inline
-            postfix: "<small>Include the class associated with the icon.</small>"
+            type: image
         content:
             type: redactor
+        order:
+            type: number
+            variant: inline
+    taxonomy: [ audience ]
     icon_many: "fa:bug"
     icon_one: "fa:bug"
+    viewless: true
+    sort: order
+    records_per_page: 50
 
 blocks:
     name: Blocks

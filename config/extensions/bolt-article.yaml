@@ -2,7 +2,7 @@
 
 # All options: blockcode, buttonlink, definedlinks, handle, inlineformat, icons, specialchars, reorder, print, selector, style, tags, underline, variable
 default:
-  plugins: [ blockcode, buttonlink, definedlinks, inlineformat, reorder, tags, underline ]
+  plugins: [ blockcode, buttonlink, definedlinks, inlineformat, reorder, tags, underline, selector ]
   source: true
   grid:
     classname: 'article-grid'

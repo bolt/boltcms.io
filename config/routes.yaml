@@ -5,7 +5,12 @@
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a HIGHER priority than the default routes.
 
-
+features:
+  path: /features
+  methods: [GET|POST]
+  defaults:
+    _controller: Bolt\Controller\Frontend\DetailController::record
+    slugOrId: features
 
 # ------------------------------------------------------------------------------
 # These are the routes defining the default behaviour of Bolt's frontend.
@@ -19,7 +24,11 @@ frontend:
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a LOWER priority than the default routes.
 
-
+content_seo:
+  path: /{slugOrId}
+  methods: [GET|POST]
+  defaults:
+    _controller: Bolt\Controller\Frontend\DetailController::record
 
 # Routes for the project-specific functionality
 project:
@@ -54,8 +63,4 @@ project:
 # Use this route to find content only by slug (Like, _very_ basic "SEO" routes)
 # before falling back to a 404 response
 #
-# content_seo:
-#   path: /{slugOrId}
-#   methods: [GET|POST]
-#   defaults:
-#     _controller: Bolt\Controller\Frontend\DetailController::record
+
