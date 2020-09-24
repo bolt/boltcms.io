@@ -76,13 +76,13 @@ pages:
             type: templateselect
             filter: '*.twig'
             default: 'page.twig'
-    recordsperpage: 15
+    records_per_page: 50
     record_route: content_seo
 
 news:
     name: News
     singular_name: Newsitem
-    recordsperpage: 5
+    records_per_page: 50
     fields:
         title:
             type: text
@@ -105,6 +105,7 @@ news:
 
 features:
     name: Features
+    title_format: "{order} - {title}"
     singular_name: Feature
     fields:
         title:
@@ -126,8 +127,8 @@ features:
     icon_many: "fa:bug"
     icon_one: "fa:bug"
     viewless: true
-#    sort: order
-    records_per_page: 100
+    sort: order
+    records_per_page: 50
 
 blocks:
     name: Blocks

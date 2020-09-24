@@ -6,14 +6,14 @@
     {% set current = app.request.requestUri|split('/')|last %}
 
     {% if current == 'features-developers' %}
-        {% setcontent features = 'features' where { audience: 'developers' } %}
+        {% setcontent features = 'features' where { audience: 'developers' } order "order" %}
     {% elseif current == 'features-designers'%}
-        {% setcontent features = 'features' where { audience: 'designers' } %}
+        {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
     {% elseif current == 'features-editors' %}
-        {% setcontent features = 'features' where { audience: 'editors' } %}
+        {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
     {% else %}
         {# Assume we want to show all #}
-        {% setcontent features = 'features' %}
+        {% setcontent features = 'features' where { audience: 'overview' } order "order" %}
         {% set all = true %}
     {% endif %}
 
@@ -28,17 +28,26 @@
     {% for feature in features %}
         <div class="row flex align-items-center my-5 {% if loop.index % 2 == 0 %}flex-row-reverse{% endif %}">
             {% if feature.image is not empty %}
-                <div class="col-md p-4">
-                    <img class="img-fluid" src="{{ feature.image|thumbnail(1280, 720) }}" />
+                <div class="col-md p-4 zoom-images" >
+                <a href="{{ feature.image|thumbnail(1600, 1600) }}"/>
+                    <img class="img-fluid" src="{{ feature.image|thumbnail(600, 400) }}" />
+                </a>
                 </div>
             {% endif %}
             <div class="col-md p-4">
                 <h3 class="titel2 text-left">{{ feature.title }}</h3>
                 {{ feature.content }}
-                {% if feature|edit_link() %}<a href="{{ feature|edit_link() }}" class="btn btn-info btn-sm">edit</a>{% endif %}
+                {% if feature|edit_link() %}<a href="{{ feature|edit_link() }}" class="btn btn-info btn-sm">edit <small>{{ feature.order|default('-') }}</small></a>{% endif %}
             </div>
         </div>
     {% endfor %}
 
     {% include 'partials/_cta.twig' %}
+
+<script>
+    window.addEventListener('load', function() {
+        baguetteBox.run('.zoom-images');
+    });
+</script>
+
 {% endblock main_container %}

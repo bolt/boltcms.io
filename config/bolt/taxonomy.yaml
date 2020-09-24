@@ -31,4 +31,4 @@ audience:
     singular_name: Audience
     behaves_like: categories
     multiple: true
-    options: [ developers, designers, editors ]
+    options: [ developers, designers, editors, overview ]
