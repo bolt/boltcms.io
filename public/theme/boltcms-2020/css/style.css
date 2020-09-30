@@ -58,19 +58,19 @@ a:hover {
 .btn-primary {
     background: #0278FC;
     border-radius: 30px;
-    color: #E7F2FF;
+    color: #ffff;
     text-align: center;
     font-weight: normal;
 }
 
-h1 {
+/* h1 {
     font-weight: bold;
     font-size: 3em;
     color: #222222;
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 3rem;
-}
+} */
 
 @media (min-width: 768px) {
     h1 {
@@ -149,7 +149,7 @@ h1 {
 }
 
 .background {
-    background-color: #EBF4FF;
+    background-color: #fff;
     text-align: center;
     margin-top: 50px;
 }
@@ -218,7 +218,7 @@ h1 {
 }
 
 .contributors {
-    background-color: #EBF4FF;
+    background-color: #fff;
     padding-top: 20px;
 }
 
@@ -274,6 +274,10 @@ footer {
     width: 100%;
 }
 
+footer h3 {
+    font-size: 1em;
+}
+
 .background2 {
     height: 45px;
     padding-top: 17px;
@@ -318,13 +322,3 @@ footer {
 .align-center {
     text-align: center;
 }
-
-/* div.row {
-    border: 1px dashed crimson;
-    padding: 2px;
-}
-
-div[class^=col] {
-    border: 1px dashed blue;
-    padding: 2px;
-} */
