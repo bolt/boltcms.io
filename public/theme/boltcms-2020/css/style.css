@@ -63,14 +63,14 @@ a:hover {
     font-weight: normal;
 }
 
-/* h1 {
+h1 {
     font-weight: bold;
     font-size: 3em;
     color: #222222;
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 3rem;
-} */
+}
 
 @media (min-width: 768px) {
     h1 {
