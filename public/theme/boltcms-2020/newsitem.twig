@@ -3,7 +3,7 @@
 {% block main_container %}
     <div class="detail-page">
         {{ record|allow_twig }}
-        <h 3class="mt-5">{{ record.title }}</h3>
+        <h1 class="mt-5">{{ record.title }}</h1>
 
         {% if record.image is not empty %}
             <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}" alt="{{ record.image.alt|default }}" alt="thumbnail">
