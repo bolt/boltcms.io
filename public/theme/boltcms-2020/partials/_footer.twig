@@ -2,13 +2,13 @@
     <div class="container row mx-auto">
     {% for item in menu_array('footer') %}
         <div class="col-md">
-            <h6>
+            <h3>
                 {% if item.link is not empty %}
                     <a href="{{ item.link }}">{{ item.label }}</a>
                 {% else %}
                     {{ item.label }}
                 {% endif %}
-            </h6>
+            </h3>
             {% if item.submenu is defined %}
                 <ul class="list-unstyled">
                 {% for subitem in item.submenu %}
