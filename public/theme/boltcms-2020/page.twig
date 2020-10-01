@@ -8,7 +8,7 @@
         </h1>
 
         {% if record.image is not empty %}
-            <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}" alt="Record" >
+            <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}">
         {% endif %}
 
         {# Ugly fix because right now allow_twig does not work in article. #}

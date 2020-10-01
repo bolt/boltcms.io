@@ -29,16 +29,19 @@ main:
 
 footer:
   - label: Features
-    link: /features
     submenu:
+      - label: For everyone
+        link: /features
       - label: For developers
         link: /features-developers
       - label: For designers
         link: /features-designers
       - label: For editors
         link: /features-editors
-  - label: Documentation
-    link: https://docs.bolt.cm
+  - label: Resources
+    submenu:
+      - label: Documentation
+        link: https://docs.bolt.cm
   - label: Community & Contribute
     submenu:
       - label: Community

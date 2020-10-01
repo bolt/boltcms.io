@@ -30,7 +30,7 @@
             {% if feature.image is not empty %}
                 <div class="col-md p-4 zoom-images" >
                 <a href="{{ feature.image|thumbnail(1600, 1600) }}"/>
-                    <img class="img-fluid" src="{{ feature.image|thumbnail(600, 400) }}" loading="lazy" alt="feature">
+                    <img class="img-fluid" src="{{ feature.image|thumbnail(600, 400) }}" loading="lazy" {{ feature.image.alt }}>
                 </a>
                 </div>
             {% endif %}

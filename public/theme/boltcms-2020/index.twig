@@ -45,7 +45,7 @@
                     {% for image in record.carousel|slice(0,6) %}
                         <div>
                             <a href="{{ image.path }}" data-caption="{{ image.alt }}">
-                                <img src="{{ image.path }}" alt="{{ image.alt|default }}" loading="lazy" alt="Bolt">
+                                <img src="{{ image.path }}" alt="{{ image.alt|default }}" loading="lazy">
                             </a>
                         </div>
                     {% endfor %}
@@ -92,7 +92,7 @@
 
                         {% for feature in record.features %}
                             <div class="col-md-4 blok px-md-4">
-                                <img class="imagedetails1" src="{{ feature.icon.path|default }}" alt="{{ feature.icon.alt|default }}" alt="Feature">
+                                <img class="imagedetails1" src="{{ feature.icon.path|default }}" alt="{{ feature.icon.alt|default }}">
                                 <p class="paragraph"><strong>{{ feature.value.name|raw }}</strong></p>
                                 <p>{{ feature.description }}</p>
                             </div>

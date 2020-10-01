@@ -14,7 +14,7 @@
             </div>
             {% if record|image %}
                 <div class="col col-sm-auto">
-                    <img class="rounded" src="{{ record|image|thumbnail(380, 240) }}" alt="{{ record|image.alt|default }}" alt="thumbnail" >
+                    <img class="rounded" src="{{ record|image|thumbnail(380, 240) }}" alt="{{ record|image.alt|default }}">
                 </div>
             {% endif %}
         </div>
