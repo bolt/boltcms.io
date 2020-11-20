@@ -326,3 +326,61 @@ footer h3 {
 .align-center {
     text-align: center;
 }
+
+/* Start of "blockquote" */
+
+.blockquote {
+    background: #fff;
+    border-bottom: 3px solid #deeaf9;
+    border-top: 3px solid#deeaf9;
+    margin: 1.5em 0px;
+    padding: 110px 40px 25px 40px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+.blockquote:before {
+    color: #deeaf9;
+    content: open-quote;
+    font-size: 10em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+    position: absolute;
+}
+
+.blockquote h4 {
+    color: #222222;
+    font-size: 20px;
+    margin-top: -25px;
+    text-align: center;
+    position: relative;
+}
+
+.quotepicture {
+    border: 1px solid var(--gray-lighter);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.author {
+      font-size: 13px;
+      color: #222222;  
+      margin-top: 10px;
+      text-align: center;
+      position: relative;
+}
+
+.workposition {
+    font-size: 13px;
+    color: #0278FC;
+    margin-top: -18px;
+    text-align: center;
+    position: relative;
+}
+
+/* End of "blockquote" */
