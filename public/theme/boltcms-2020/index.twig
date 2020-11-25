@@ -107,20 +107,15 @@
         {# End of "Features" section #}
         <br>
         <br>
-        
+
         {# Start of "blockquote" #}
+        {% if blockquote is defined and blockquote is not empty %}
          <div class="container">
             <div class="row">   
-            <blockquote class="blockquote">
-                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
-                <div class="quote">
-                <img class="quotepicture" src="theme/boltcms-2020/images/quote.jpeg" alt="Marjolein Pronk"/>
-                <p class="author">Marjolein Pronk</p>
-                <p class="workposition">Front-end Developer</p>
-                </div>
-            </blockquote>
+                {% include 'partials/_bolt_blockquote.twig' with { 'blockquote' : blockquote } %}
             </div>  
         </div>
+        {% endif %}
         {# End of "blockquote" #}
 
         <div class="container">

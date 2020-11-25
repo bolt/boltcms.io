@@ -14,16 +14,15 @@
     {% else %}
         {# Assume we want to show all #}
         {% setcontent features = 'features' where { audience: 'overview' } order "order" %}
-        {% set all = true %}
     {% endif %}
 
-    {% if all is defined and all is true %}
-        <div class="row my-5">
-            {% include "partials/_features_buttons.twig" %}
-        </div>
-    {% endif %}
+    <div class="row my-5">
+        {% include "partials/_features_buttons.twig" %}
+    </div>
 
     {{ record.content }}
+
+    {% include 'partials/_bolt_blockquote.twig' with { 'blockquote' : blockquote} %}
 
     {% for feature in features %}
         <div class="row flex align-items-center my-5 {% if loop.index % 2 == 0 %}flex-row-reverse{% endif %}">
@@ -41,6 +40,10 @@
             </div>
         </div>
     {% endfor %}
+
+    <div class="row my-5">
+        {% include "partials/_features_buttons.twig" %}
+    </div>
 
     {% include 'partials/_cta.twig' %}
 

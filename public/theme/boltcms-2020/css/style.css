@@ -328,17 +328,17 @@ footer h3 {
 }
 
 /* Start of "blockquote" */
-
-.blockquote {
+.bolt-blockquote {
+    width: 100%;
     background: #fff;
-    border-bottom: 3px solid #deeaf9;
-    border-top: 3px solid#deeaf9;
+    border-bottom: 3px solid #EBF4FF;
+    border-top: 3px solid #EBF4FF;
     margin: 1.5em 0px;
     padding: 110px 40px 25px 40px;
     quotes: "\201C""\201D""\2018""\2019";
 }
 
-.blockquote:before {
+.bolt-blockquote:before {
     color: #deeaf9;
     content: open-quote;
     font-size: 10em;
@@ -347,7 +347,7 @@ footer h3 {
     position: absolute;
 }
 
-.blockquote h4 {
+.bolt-blockquote h4 {
     color: #222222;
     font-size: 22px;
     margin-top: -25px;
@@ -357,11 +357,9 @@ footer h3 {
     line-height: 1.7rem;
 }
 
-.quotepicture {
+.bolt-blockquote .photo {
     border: 1px solid var(--gray-lighter);
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
     margin-top: 40px;
     display: block;
     margin-left: auto;
@@ -369,7 +367,7 @@ footer h3 {
     position: relative;
 }
 
-.author {
+.bolt-blockquote .author {
       font-size: 13px;
       color: #222222;  
       margin-top: 10px;
@@ -377,12 +375,11 @@ footer h3 {
       position: relative;
 }
 
-.workposition {
+.bolt-blockquote .workposition {
     font-size: 13px;
     color: #0278FC;
     margin-top: -18px;
     text-align: center;
     position: relative;
 }
-
 /* End of "blockquote" */
