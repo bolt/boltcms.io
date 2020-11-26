@@ -1,0 +1,12 @@
+{% if blockquote %}
+    <blockquote class="bolt-blockquote">
+        <h4>{{ blockquote.quote }}</h4>
+        <div class="quote">
+            {% if blockquote.person.value.photo is not empty %}
+                <img class="photo" src="{{ blockquote.person.value.photo|thumbnail(55,55, fit='crop-center') }}" alt="{{ blockquote.person.fullname }} photo"/>
+            {% endif %}
+            <p class="author">{{ blockquote.person.fullname }}</p>
+            <p class="workposition">{{ blockquote.person.position }}</p>
+        </div>
+    </blockquote>
+{% endif %}

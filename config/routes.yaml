@@ -11,6 +11,7 @@ features:
   defaults:
     _controller: Bolt\Controller\Frontend\DetailController::record
     slugOrId: features
+    contentTypeSlug: page
 
 # ------------------------------------------------------------------------------
 # These are the routes defining the default behaviour of Bolt's frontend.
@@ -29,6 +30,7 @@ content_seo:
   methods: [GET|POST]
   defaults:
     _controller: Bolt\Controller\Frontend\DetailController::record
+    contentTypeSlug: page
 
 # Routes for the project-specific functionality
 project:

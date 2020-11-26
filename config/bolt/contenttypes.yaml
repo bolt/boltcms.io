@@ -173,7 +173,30 @@ blocks:
     icon_one: "fa:cube"
     records_per_page: 100
 
-
+blockquotes:
+    name: Blockquotes
+    singular_name: Blockquote
+    fields:
+        quote:
+            type: textarea
+        url:
+            type: text
+            postfix: The blockquote will be used on a page that matches this canonical url. For example, / for homepage and /newsitem/one-two-three for a news.
+        person:
+            type: set
+            fields:
+                photo:
+                    type: image
+                    variant: inline
+                fullname:
+                    type: text
+                    variant: inline
+                position:
+                    type: text
+                    variant: inline
+    icon_many: "fa:quote-left"
+    icon_one: "fa:quote-left"
+    viewless: true
 # Possible field types:
 #
 # text - varchar(256) - input type text.

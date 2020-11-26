@@ -60,6 +60,10 @@
     {% include 'partials/_og_tags.twig' %}
 </head>
 <body>
+    {% set baseurl = app.request.getSchemeAndHttpHost %}
+    {% set link = canonical()|replace({ (baseurl) : ''}) %}
+    {% setcontent blockquote = 'blockquote' where { url: link } returnsingle %}
+
     <div>
         {% block body %}
             {{ include('partials/_header.twig') }}
