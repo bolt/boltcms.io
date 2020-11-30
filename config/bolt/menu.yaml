@@ -42,6 +42,8 @@ footer:
     submenu:
       - label: Documentation
         link: https://docs.bolt.cm
+      - label: Best practice tips
+        link: https://bolt.tips
   - label: Community & Contribute
     submenu:
       - label: Community

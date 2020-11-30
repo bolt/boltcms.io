@@ -128,13 +128,13 @@ htmlcleaner:
 
 # Define the file types (extensions to be exact) that are acceptable for upload
 # in either file fields or through the files screen.
-accept_file_types: [ twig, html, js, css, scss, gif, jpg, jpeg, png, ico, zip, tgz, txt, md, doc, docx, pdf, epub, xls, xlsx, ppt, pptx, mp3, ogg, wav, m4a, mp4, m4v, ogv, wmv, avi, webm, svg]
+accept_file_types: [ ics, twig, html, js, css, scss, gif, jpg, jpeg, png, ico, zip, tgz, txt, md, doc, docx, pdf, epub, xls, xlsx, ppt, pptx, mp3, ogg, wav, m4a, mp4, m4v, ogv, wmv, avi, webm, svg]
 
 # Alternatively, if you wish to limit these, uncomment the following list
 # instead. It just includes file types / extensions that are harder to exploit.
 # accept_file_types: [ gif, jpg, jpeg, png, txt, md, pdf, epub, mp3, svg ]
 
-accept_media_types: [ gif, jpg, jpeg, png, svg, pdf, mp3, tiff ]
+accept_media_types: [ ics, gif, jpg, jpeg, png, svg, pdf, mp3, tiff ]
 
 # If you want to brand the Bolt backend for a client, you can change some key
 # variables here, that determine the name of the backend, and adds a primary
