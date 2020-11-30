@@ -86,6 +86,7 @@ news:
         title:
             type: text
             class: large
+            allow_html: true
         image:
             type: image
         content:
