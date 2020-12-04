@@ -182,6 +182,22 @@ h1 {
     background: #0278FC;
     margin-top: 80px;
     width: 100%;
+    color: #EBF4FF;
+    padding: 2em;
+}
+
+.cta code {
+    color: #fcdf02;
+}
+
+.cta a:not(.btn){
+    color: #EBF4FF;
+    text-decoration: underline;
+    transition: all 0.1s ease-in;
+}
+
+.cta a:not(.btn):hover {
+    text-decoration-color: #fcdf02;
 }
 
 .cta_title {
