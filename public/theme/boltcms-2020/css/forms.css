@@ -1,0 +1,177 @@
+
+.boltforms > div {
+	margin-bottom: 40px;
+}
+
+::placeholder {
+    color: #6C757D;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+label {
+	width: 100%;
+    display: inline-table;
+    width: auto;
+	margin-bottom: 10px;
+}
+
+label[for="submit-showcase_year"],
+label[for="submit-showcase_screenshot"] {
+    display: block;
+}
+
+label.required::after {
+    content: "*";
+    color: #ffcc00;
+    padding-left: 3px;
+}
+
+input {
+    border-radius: 0;
+}
+
+input[type='date'],
+input[type='text'],
+textarea,
+input[type='email'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+	padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #000;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #000;
+}
+
+input[type='date']:focus,
+input[type='text']:focus,
+textarea:focus,
+input[type='email']:focus {
+    border: 1px solid #28a745;
+ }
+
+input[type='file'] {
+    background-color: #ccc;
+    padding: 10px 5px;
+}
+
+input#submit-showcase_year {
+    max-width: 300px;
+}
+
+input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+textarea {
+    border-radius: 0;
+}
+
+textarea:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 300;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+    outline: none;
+    border-radius: 0;
+}
+
+select:focus {
+    border: 1px solid var(--black);
+    box-shadow: none;
+    outline:none;
+}
+
+.field-select {
+    width: 100%;
+    padding: var( --space-2);
+    border: 1px solid var(--black);
+    background-color: var(--white);    
+    background-image: url(../img/icon_arrow_down.svg);
+    background-repeat: no-repeat;
+    background-position: right 25px top 50%, 0 0;
+}
+
+.field-select::-ms-expand {
+    display: none;
+}
+
+
+.field-custom-multiselect {
+    margin-top: 20px;
+}
+
+.field-custom-multiselect-checkbox {
+    width: 100%;
+    display: flex;
+    margin-bottom: var(--space-1);
+}
+
+.field-custom-multiselect-checkbox input {
+    margin-right: var( --space-1);
+    margin-bottom: 4px;
+}
+
+.field-custom-multiselect label {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+label.checkbox-label {
+     font-size: 1rem;
+}
+
+p.help-text {
+    font-size: 90%;
+    margin-top: 10px;
+    padding-left: 20px;
+    font-style: italic;
+    position: relative;
+    line-height: 1.2;
+}
+
+p.help-text::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 3px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='6' cy='6' r='5.5' stroke='%23000'/%3E%3Cpath fill='%23000' fill-rule='nonzero' d='M6.26571429,3.35142857 C6.34285714,3.35142857 6.40285714,3.29142857 6.40285714,3.21428571 L6.40285714,2.62285714 C6.40285714,2.55428571 6.34285714,2.48571429 6.26571429,2.48571429 L5.68285714,2.48571429 C5.60571429,2.48571429 5.54571429,2.55428571 5.54571429,2.62285714 L5.54571429,3.21428571 C5.54571429,3.29142857 5.60571429,3.35142857 5.68285714,3.35142857 L6.26571429,3.35142857 Z M7.54285714,8.57142857 C7.63714286,8.57142857 7.71428571,8.49428571 7.71428571,8.4 L7.71428571,8.01428571 C7.71428571,7.92 7.63714286,7.84285714 7.54285714,7.84285714 L6.45428571,7.84285714 C6.40285714,7.84285714 6.36857143,7.80857143 6.36857143,7.75714286 L6.36857143,4.45714286 C6.36857143,4.36285714 6.29142857,4.28571429 6.19714286,4.28571429 L4.45714286,4.28571429 C4.36285714,4.28571429 4.28571429,4.36285714 4.28571429,4.45714286 L4.28571429,4.84285714 C4.28571429,4.93714286 4.36285714,5.01428571 4.45714286,5.01428571 L5.49428571,5.01428571 C5.54571429,5.01428571 5.58,5.04857143 5.58,5.1 L5.58,7.75714286 C5.58,7.80857143 5.54571429,7.84285714 5.49428571,7.84285714 L4.37142857,7.84285714 C4.27714286,7.84285714 4.2,7.92 4.2,8.01428571 L4.2,8.4 C4.2,8.49428571 4.27714286,8.57142857 4.37142857,8.57142857 L7.54285714,8.57142857 Z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+}
+
+button {
+	padding: var( --space-1);
+	border: 1px solid var(--black);
+	background-color: var(--white);
+    font-weight: 300; 
+}
+
+button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+input[type="checkbox"]{
+    border: 1px solid var(--black);
+}

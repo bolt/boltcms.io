@@ -13,6 +13,9 @@ services:
     Bolt\Article\:
         resource: '../vendor/bolt/article/src/*'
         exclude: '../vendor/bolt/article/src/{Entity,Exception}'
+    Bolt\BoltForms\:
+        resource: '../vendor/bolt/forms/src/*'
+        exclude: '../vendor/bolt/forms/src/{Entity,Exception}'
     Bolt\NewsWidget\:
         resource: '../vendor/bolt/newswidget/src/*'
         exclude: '../vendor/bolt/newswidget/src/{Entity,Exception}'

@@ -37,6 +37,9 @@
     "bolt/core": {
         "version": "4.0.0-beta.1.6"
     },
+    "bolt/forms": {
+        "version": "1.0.8"
+    },
     "bolt/newswidget": {
         "version": "1.0.7"
     },

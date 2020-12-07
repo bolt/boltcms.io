@@ -15,7 +15,8 @@
         "twig/twig": "^3.0",
         "guzzlehttp/guzzle": "^7.0",
         "ext-json": "*",
-        "bolt/article": "^1.0"
+        "bolt/article": "^1.0",
+        "bolt/forms": "^1.0"
     },
     "autoload": {
         "psr-4": {
