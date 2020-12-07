@@ -23,5 +23,9 @@
         {% endif %}
 
         {{ boltform(record.slug, warn=false) }}
+
+        {% if record.slug == 'submit-showcase' and app.request.method == 'POST' %}
+            {% do redirect('/showcase-thank-you') %}
+        {% endif %}
     </div>
 {% endblock main_container %}
