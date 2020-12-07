@@ -34,7 +34,7 @@ spam-action: mark-as-spam # Either 'block', 'none' or 'mark-as-spam'
 # You can replace twig namespace @boltforms with @theme which will point to your active theme folder
 # The namespace is configured in config/packages/twig.yaml
 templates:
-    form: '@boltforms/form.html.twig'
+    form: '@theme/forms/form.html.twig'
     email: '@boltforms/email.html.twig'
     subject: '@boltforms/subject.html.twig'
     files: '@boltforms/file_browser.twig'
@@ -104,16 +104,16 @@ submit-showcase:
         debug: false
         debug_address: name@example.com # Email address used when debug mode is enabled
         debug_smtp: true
-        subject: Your message was submitted
+        subject: New showcase submitted
         subject_prefix: '[Boltforms]'
-        replyto_name: '{NAME}'                 # Email addresses and names can be either the
-        replyto_email: '{EMAIL}'                 # name of a field below or valid text.
+        replyto_name: 'No Reply'                 # Email addresses and names can be either the
+        replyto_email: 'noreply@boltcms.io'                 # name of a field below or valid text.
         to_name: 'Bolt Core team'
-        to_email: 'ivo@twokings.nl'            #
+        to_email: 'info@boltcms.io'            #
         from_name: 'Boltcms.io'                #
-        from_email: 'youremail@example.org'   #
+        from_email: 'info@boltcms.io'   #
     feedback:
-        success: Thanks for submitting your showcase. To submit more, please fill in the form agian. We'll post an announcement to the entire community once the showcases are published online.
+        success: Thanks for submitting your showcase. To submit more, please fill in the form again <a href="/submit-showcase">here</a>. We'll post an announcement to the entire community once the showcases are published online.
         error: There are errors in the form, please fix before trying to resubmit
     fields:
         website_link:
@@ -147,20 +147,21 @@ submit-showcase:
         directory_link:
             type: checkbox
             options:
-                label: Directory link (optional)
+                label: Link to my directory record (optional)
                 help: |
                     If checked, we will link the showcase to your record in the Bolt People Directory (people.boltcms.io), so that
                     potential clients and fellow Bolters can get in touch with you.
+                    <br>Note: you need to fill in your name if you check this.
+                help_html: true
         comments:
             type: textarea
             options:
                 required: false
-                attr:
-                    help: If you have any comments, let us know here.
+                help: If you have any comments, let us know here. Comments are for internal use only. They will not be published.
         submit:
             type: submit
             options:
-                label: Submit my message »
+                label: Submit my showcase »
                 attr:
                     class: btn btn-primary
 
