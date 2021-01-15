@@ -14,6 +14,7 @@ class ContributorsExtension extends AbstractExtension
     public const GH_ENDPOINT = 'https://api.github.com';
     public const GH_CONTRIBUTORS = 'repos/%s/%s/contributors';
     public const CACHE_DURATION = 14400; // 4 hours
+    public const PAGE_SIZE = 100; //the maximum per page
 
     /** @var Client */
     private $client;
@@ -48,7 +49,13 @@ class ContributorsExtension extends AbstractExtension
     private function fetchGhContributors(string $owner, string $repo): ?array
     {
         try {
-            $response = $this->client->request('GET',self::getGhContributorsEndpoint($owner, $repo));
+            $params = [
+                'query' => [
+                    'per_page' => self::PAGE_SIZE,
+                ]
+            ];
+
+            $response = $this->client->request('GET',self::getGhContributorsEndpoint($owner, $repo), $params);
             $result = json_decode($response->getBody());
         } catch (GuzzleException $e) {
             $result = null;
