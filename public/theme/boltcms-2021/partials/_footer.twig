@@ -1,0 +1,24 @@
+<footer class="p-5 mt-5">
+    <div class="container row mx-auto">
+    {% for item in menu_array('footer') %}
+        <div class="col-md">
+            <h3>
+                {% if item.link is not empty %}
+                    <a href="{{ item.link }}">{{ item.label }}</a>
+                {% else %}
+                    {{ item.label }}
+                {% endif %}
+            </h3>
+            {% if item.submenu is defined %}
+                <ul class="list-unstyled">
+                {% for subitem in item.submenu %}
+                    <li>
+                        <a href="{{ subitem.link }}">{{ subitem.label }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+</footer>
