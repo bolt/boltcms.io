@@ -6,22 +6,22 @@
     <!--<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="{{ asset('css/app.css', 'theme') }}">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
-          integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ=="
-          crossorigin="anonymous"/>
-{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"#}
-{#          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">#}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
-            integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
-            crossorigin="anonymous"></script>
+    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> #}
+    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" #}
+    {# integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" #}
+    {# crossorigin="anonymous"/> #}
+    {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" #}
+    {# integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> #}
+    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> #}
+    {# <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" #}
+    {# integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" #}
+    {# crossorigin="anonymous"></script> #}
+    {# <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" #}
+    {# integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" #}
+    {# crossorigin="anonymous"></script> #}
+    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" #}
+    {# integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" #}
+    {# crossorigin="anonymous"></script> #}
 
     {# make sure we always display a proper title: The record's title if there is one, appended with the
            sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
@@ -57,215 +57,10 @@
         {{ widgets('main_bottom') }}
     {% endblock body %}
 </div>
-{{ include('partials/_footer.twig') }}
+{#{{ include('partials/_footer.twig') }}#}
 </body>
 </html>
 
-<body>
-<header class="site-header">
-    <div class="wrapper site-header__wrapper">
-        <object class="logo">
-            <svg height="256" viewBox="0 0 1200 256" width="1200" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" fill-rule="evenodd">
-                    <g fill-rule="nonzero" transform="translate(325 39)">
-                        <path d="m32.65446 28.85319v35.705567h39.770507c7.104528 0 12.872293-1.336657 17.303467-4.01001 4.431175-2.673353 6.646729-7.415738 6.646729-14.227295 0-7.543983-2.929658-12.524402-8.789063-14.941406-5.053736-1.684579-11.498984-2.526856-19.335937-2.526856zm0 62.512207v43.17627h39.770507c7.104528 0 12.634258-.952139 16.589356-2.856446 7.17777-3.515642 10.766601-10.253856 10.766601-20.214843 0-8.422894-3.478969-14.208969-10.437011-17.358399-3.881856-1.757821-9.338344-2.673339-16.369629-2.746582zm46.362304-90.637207c19.848732.29297 33.911092 6.042425 42.1875 17.248535 4.980494 6.8848 7.470703 15.124464 7.470703 24.719239 0 9.887744-2.490209 17.834442-7.470703 23.840332-2.783217 3.369157-6.884738 6.445298-12.304687 9.228515 8.276408 3.002945 14.520242 7.763639 18.731689 14.282227 4.211447 6.518587 6.317139 14.428664 6.317139 23.730469 0 9.594774-2.416968 18.200645-7.250977 25.817871-3.076187 5.053736-6.921363 9.30174-11.535644 12.74414-5.200221 3.955098-11.334193 6.665032-18.4021 8.129883-7.067906 1.464851-14.739949 2.197266-23.016357 2.197266h-73.388672v-161.938477zm134.472657 139.855957c9.155319 0 16.186498-3.259245 21.09375-9.777832 4.907251-6.518587 7.360839-15.783631 7.360839-27.79541s-2.453588-21.258513-7.360839-27.740479c-4.907252-6.481966-11.938431-9.7229-21.09375-9.7229-9.15532 0-16.20481 3.240934-21.148682 9.7229s-7.415772 15.7287-7.415772 27.740479 2.4719 21.276823 7.415772 27.79541 11.993362 9.777832 21.148682 9.777832zm61.303711-37.573242c0 17.578213-5.053661 32.611021-15.161133 45.098877-10.107473 12.487855-25.451558 18.731689-46.032715 18.731689-20.581158 0-35.925243-6.243834-46.032715-18.731689-10.107472-12.487856-15.161133-27.520664-15.161133-45.098877 0-17.285243 5.053661-32.26312 15.161133-44.934082s25.451557-19.006348 46.032715-19.006348c20.581157 0 35.925242 6.335386 46.032715 19.006348 10.107472 12.670962 15.161133 27.648839 15.161133 44.934082zm54.382324 59.655762h-31.311035v-161.938477h31.311035zm18.237304-96.350098v-22.302246h16.699219v-33.398438h30.981445v33.398438h19.445801v22.302246h-19.445801v63.28125c0 4.907251.622553 7.965082 1.867676 9.173584 1.245124 1.208502 5.053679 1.812744 11.425782 1.812744.952153 0 1.959223-.01831 3.02124-.054932 1.062017-.036621 2.105708-.091552 3.131103-.164794v23.400878l-14.831543.549317c-14.794996.512698-24.902316-2.050753-30.322265-7.69043-3.515643-3.588885-5.273438-9.118615-5.273438-16.589355v-73.718262z"
-                              fill="#242f3c"/>
-                        <path d="m519.059245 85.872233c.366213-4.467796-.292961-8.496076-1.977539-12.084961-2.490247-4.834008-7.434045-7.250976-14.831543-7.250976-10.546928 0-18.859833 5.236764-24.938965 15.710449-3.222672 5.566434-5.822744 12.963821-7.800293 22.192383-1.831064 8.789106-2.307133 15.856906-1.428223 21.203613 1.611336 9.960987 7.580515 14.941406 17.907715 14.941406 7.324256 0 12.945537-1.977519 16.864014-5.932617 3.918476-3.955098 6.866445-9.082 8.843994-15.380859h31.970215c-2.709975 9.521532-8.056601 18.530231-16.040039 27.026367-12.744205 13.696357-28.747463 20.544433-48.010254 20.544433-19.262792 0-32.208219-5.712833-38.83667-17.138672-6.628451-11.425838-8.001728-26.257233-4.119873-44.494628 4.321311-20.581158 12.725767-36.584416 25.213623-48.010254 12.487855-11.425839 27.557285-17.138672 45.20874-17.138672 15.014724 0 26.586874 3.369107 34.716797 10.107422s11.242685 18.640051 9.338379 35.705566zm223.791504-31.750488c2.417004 4.174825 3.588867 9.301727 3.515625 15.380859-.146485 4.028341-1.025383 9.924278-2.636719 17.687988l-16.259766 75.476075h-32.080078l16.149903-76.245118c.952153-4.541038 1.025394-8.276352.219726-11.206054-1.611336-5.566434-6.152306-8.34961-13.623047-8.34961-8.642621 0-15.380835 3.588832-20.214844 10.766602-2.490246 3.808613-4.321283 8.386204-5.493164 13.73291l-15.051269 71.30127h-31.530762l15.05127-71.30127c1.538093-7.104528 1.904301-12.26805 1.098633-15.490723-1.391609-5.786161-5.932579-8.679199-13.623047-8.679199-8.935592 0-15.563944 2.893038-19.885254 8.679199-2.343762 3.295915-4.211419 8.203093-5.603028 14.72168l-15.270996 72.070313h-31.750488l25.378418-119.53125h30.432129l-3.735352 17.468261c5.200222-6.225617 9.814433-10.656725 13.842774-13.293457 7.031285-4.687523 15.380811-7.03125 25.048828-7.03125 9.155319 0 16.149878 2.01414 20.983887 6.042481 3.73537 3.73537 6.152338 8.532685 7.250976 14.39209 5.566434-7.031285 11.755337-12.194808 18.566895-15.490723 7.104527-3.295915 14.611777-4.943848 22.521972-4.943848 5.273464 0 10.253883 1.025381 14.941407 3.076172 4.687523 2.050792 8.605941 5.639623 11.755371 10.766602zm46.032715 70.3125c-.512698 5.566434.109854 9.521472 1.867675 11.865234 2.929702 4.174826 9.631296 6.262207 20.104981 6.262207 6.152374 0 11.242655-.915518 15.270996-2.746582 4.02834-1.831064 6.445308-4.577618 7.250976-8.239746.732426-3.515643-.183092-6.188956-2.746582-8.020019-2.563489-1.831064-12.780672-4.980447-30.651855-9.448243-12.817447-3.369157-21.459939-7.580541-25.927734-12.634277-4.541039-4.980494-5.786143-12.158156-3.735352-21.533203 2.343762-11.059626 8.697458-20.562705 19.061279-28.509522 10.363822-7.946817 23.419111-11.920166 39.16626-11.920166 14.941481 0 26.47701 2.98459 34.606934 8.953858 8.129923 5.969268 11.352547 16.278003 9.667968 30.926513h-31.311035c.366213-4.02834-.109856-7.214343-1.428222-9.558105-2.56349-4.248068-7.983357-6.37207-16.259766-6.37207-6.811558 0-11.883528 1.062001-15.216064 3.186035-3.332537 2.124034-5.291746 4.614243-5.877686 7.470703-.805668 3.588885.183092 6.188957 2.966309 7.800293 2.709974 1.684579 12.963778 4.577616 30.761718 8.679199 11.792051 2.929702 20.178198 7.36081 25.158692 13.293457 4.907251 6.00589 6.408701 13.513139 4.504394 22.521973-2.563489 11.865294-9.045358 21.551476-19.445801 29.058838-10.400442 7.507362-24.829009 11.260986-43.286132 11.260986-18.823337 0-31.878626-3.973349-39.16626-11.920166s-9.649671-18.072448-7.086182-30.377197z"
-                              fill="#0377fc"/>
-                    </g>
-                    <g transform="translate(3 2)">
-                        <g fill-rule="nonzero" stroke="#242f3c">
-                            <path d="m.178716 125.821284c0-69.035593 55.964406-125 125-125 69.035593 0 125 55.964407 125 125 0 69.035594-55.964407 125-125 125-69.035594 0-125-55.964406-125-125z"
-                                  fill="#0377fc" stroke-width="5"/>
-                            <path d="m65.246269 185.753731 34.827 33.762358 47.042251-11.825559 46.652556-13.279891 13.279885-46.652561 11.825564-47.042235-33.762368-34.82701-34.826992-33.76235-47.042257 11.825558-46.652551 13.279886-13.279885 46.65255-11.825569 47.042235z"
-                                  fill="#242f3c" stroke-linejoin="bevel" stroke-width="6"/>
-                            <path d="m60.020626 172.903239 27.520076 36.866722 45.83314-3.979141 45.687556-5.399726 19.470534-41.682228 18.167479-42.266443-26.36261-37.703098-27.52007-36.866714-45.833145 3.97914-45.687551 5.399722-19.470527 41.682223-18.167488 42.266436z"
-                                  fill="#fff" stroke-width="2"/>
-                        </g>
-                        <path d="m87.178716 127.821284c0-22.09139 17.90861-40 40-40s40 17.90861 40 40-17.90861 40-40 40-40-17.90861-40-40z"
-                              stroke="#242f3c" stroke-width="8"/>
-                        <path d="m85.178716 125.821284c0-22.09139 17.90861-40 40-40s40 17.90861 40 40-17.90861 40-40 40-40-17.90861-40-40z"
-                              fill="#0377fc" fill-rule="nonzero"/>
-                    </g>
-                </g>
-            </svg>
-        </object>
-        <div class="site-header__middle">
-            <nav class="nav">
-                <button class="nav__toggle" aria-expanded="false" type="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z"
-                              fill="#282828"/>
-                    </svg>
-                </button>
-                <ul class="nav__wrapper">
-                    <li class="nav__item"><a href="#">Features</a></li>
-                    <li class="nav__item has-submenu"><a href="#" aria-haspopup="true">Documentation</a>
-                        <div>
-                            <ul class="dropdown" aria-label="submenu">
-                                <li><a href="#">Sub-1</a></li>
-                                <li><a href="#">Sub-2</a></li>
-                                <li><a href="#">Sub-3</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__item"><a href="#">Community</a></li>
-                    <li class="nav__item"><a href="#">Pricing</a></li>
-                    <li class="nav__item"><a href="#">News</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="site-header__end">
-            <a transition-style="in:circle:top-right" href="https://docs.bolt.cm/installation/installation">get started
-                for free</a>
-        </div>
-    </div>
-</header>
-<main>
-
-    <div class="subheader">
-        <h1><span class="move moveScale"
-                  style="--duration: .6s; --delay: .1s; transform-origin: 50% 50%;">The starting</span>
-            <i class="move moveScale" style="--delay: .3s;--duration: .4s;">point</i>
-            <i class="move moveScale" style="--delay: .3s;--duration: .6s;">of</i>
-            <i class="move moveScale" style="--delay: .3s;--duration: .8s;">your</i>
-            <i class="move moveScale" style="--delay: .3s;--duration: 1s;">new</i>
-            <i class="move moveScale" style="--delay: .3s;--duration: 1.2s;">website</i>
-        </h1>
-    </div>
-
-    <div class="promo-header">
-        <div class="item-1">
-            <h2>Open source</h2>
-        </div>
-        <div class="item-2">
-            <h2>Easy content creation</h2>
-        </div>
-        <div class="item-3">
-            <h2>Simple development</h2>
-        </div>
-    </div>
-
-    <div class="my-slider">
-        <div>
-            <img src="/theme/boltcms-2021/img/screenshot.png" alt=""/>
-        </div>
-        <div>
-            <img src="/theme/boltcms-2021/img/screenshot.png" alt=""/>
-        </div>
-        <div>
-            <img src="/theme/boltcms-2021/img/screenshot.png" alt=""/>
-        </div>
-        <div>
-            <img src="/theme/boltcms-2021/img/screenshot.png" alt=""/>
-        </div>
-        <div>
-            <img src="/theme/boltcms-2021/img/screenshot.png" alt=""/>
-        </div>
-    </div>
-
-    <div class="detail-block">
-        <h3>It's all in the details</h3>
-        <div class="container">
-            <div>
-                <img src="/theme/boltcms-2021/img/icon-extension.svg" alt="Extension"/>
-                <h4>ExtensionBoe</h4>
-                <p>disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                    Epicuro loqui discimus.</p>
-            </div>
-            <div>
-                <img src="/theme/boltcms-2021/img/icon-extension.svg" alt="Extension"/>
-                <h4>Extension</h4>
-                <p>disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                    Epicuro loqui discimus.</p>
-            </div>
-            <div>
-                <img src="/theme/boltcms-2021/img/icon-extension.svg" alt="Extension"/>
-                <h4>Extension</h4>
-                <p>disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                    Epicuro loqui discimus.</p>
-            </div>
-            <div>
-                <img src="/theme/boltcms-2021/img/icon-extension.svg" alt="Extension"/>
-                <h4>Extension</h4>
-                <p>disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                    Epicuro loqui discimus.</p>
-            </div>
-            <div>
-                <img src="/theme/boltcms-2021/img/icon-extension.svg" alt="Extension"/>
-                <h4>Extension</h4>
-                <p>disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                    Epicuro loqui discimus.</p>
-            </div>
-            <div>
-                <img src="/theme/boltcms-2021/img/icon-extension.svg" alt="Extension"/>
-                <h4>Extension</h4>
-                <p>disputatio splendida! omnis est enim de virtutis dignitate contentio. Quoniam, si dis placet, ab
-                    Epicuro loqui discimus.</p>
-            </div>
-        </div>
-
-        <div class="button-wrapper">
-            <a class="button ghost" href="">view features for content creators</a>
-            <a class="button ghost" href="">view features for developers</a>
-        </div>
-
-    </div>
-    <div class="columns sticky-news">
-        <div>
-            <h2>Dit wordt dan maar het nieuwsbericht</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="">Read more</a>
-        </div>
-        <div>
-            <h2>en nieuwsbericht #2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet, consectetur adipiscing elit. adipiscing elit.</p>
-            <a href="">Read more</a>
-        </div>
-    </div>
-
-    <!-- oude opzet met logo's
-        <div class="columns">
-          <div>
-            <h2>Dit wordt dan maar het nieuwsbericht</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="logo-block">
-              <img src="img/logo-1.png" alt="" />
-              <img src="img/logo-2.png" alt="" />
-              <img src="img/logo-3.png" alt="" />
-            </div>
-          </div>
-          <div>
-            <h2>en nieuwsbericht #2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="logo-block">
-              <img src="img/logo-4.svg" alt="" />
-              <img src="img/logo-5.png" alt="" />
-            </div>
-          </div>
-        </div>
-    -->
-    <div class="columns">
-        <div class="bottom-block" transition-style="in:square:bottom-right">
-            <h3>Let's get started!</h3>
-            <div class="button-wrapper">
-                <a class="button" href="">Install Bolt</a>
-                <a class="button" href="">view features for developers</a>
-            </div>
-        </div>
-        <div class="bottom-block" transition-style="in:square:bottom-left">
-            <h3>Find help for your dream project</h3>
-            <div class="button-wrapper">
-                <a class="button" href="">Search for a developer</a>
-                <a class="button" href="">Add yourself as a developer</a>
-            </div>
-        </div>
-    </div>
-</main>
-<footer>
-
-</footer>
 
 <script src="js/tiny-slider.js"></script>
 <script src="js/header-9.js"></script>
@@ -289,6 +84,3 @@
         autoplay: false
     });
 </script>
-
-</body>
-</html>

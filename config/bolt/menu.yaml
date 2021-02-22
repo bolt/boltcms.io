@@ -25,7 +25,7 @@ main:
     link: /news
   - label: Try it!
     link: https://docs.bolt.cm/installation/installation
-    class: btn btn-primary px-4 ml-md-2 try-it
+    class: site-header__end
 
 footer:
   - label: Features
