@@ -64,6 +64,8 @@ pages:
             type: text
             class: large
             group: content
+        subtitle:
+            type: text
         slug:
             type: slug
             uses: title
@@ -71,6 +73,7 @@ pages:
             type: image
         content:
             type: article
+            allow_twig: true
         template:
             type: templateselect
             filter: '*.twig'

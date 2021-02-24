@@ -1,12 +1,15 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main_container %}
-    <div class="detail-page">
-        <h1>
-            {{ record.title }}
-            {% if record|edit_link() %}<a href="{{ record|edit_link() }}" class="btn btn-info btn-sm">edit</a>{% endif %}
-        </h1>
-
+    <main>
+        <div class="subheader">
+            <h1>
+                {{ record|title }}
+            </h1>
+            <p>
+                {{ record.subtitle }}
+            </p>
+        </div>
         {% if record.image is not empty %}
             <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}" alt="{{ record.image.alt|default }}">
         {% endif %}
@@ -27,5 +30,6 @@
         {% if record.slug == 'submit-showcase' and app.request.method == 'POST' %}
             {% do redirect('/showcase-thank-you') %}
         {% endif %}
-    </div>
+        {# </div> #}
+    </main>
 {% endblock main_container %}

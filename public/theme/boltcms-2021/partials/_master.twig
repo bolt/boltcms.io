@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css', 'theme') }}">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
     {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> #}
@@ -41,23 +41,20 @@
 {% set link = canonical()|replace({ (baseurl) : ''}) %}
 {% setcontent blockquote = 'blockquote' where { url: link } returnsingle %}
 
-<div>
-    {% block body %}
-        {{ include('partials/_header.twig') }}
+{% block body %}
+    {{ include('partials/_header.twig') }}
 
-        {{ widgets('main_top') }}
+    {{ widgets('main_top') }}
 
-        {% block main %}
-            <div class="container">
-                {% block main_container %}
-                {% endblock main_container %}
-            </div>
-        {% endblock main %}
+    {% block main %}
+        {% block main_container %}
+        {% endblock main_container %}
+    {% endblock main %}
 
-        {{ widgets('main_bottom') }}
-    {% endblock body %}
-</div>
-{#{{ include('partials/_footer.twig') }}#}
+    {{ widgets('main_bottom') }}
+{% endblock body %}
+
+{# {{ include('partials/_footer.twig') }} #}
 </body>
 </html>
 
@@ -83,4 +80,17 @@
         gutter: 80,
         autoplay: false
     });
+</script>
+<script type="module">
+    import { annotate } from 'https://unpkg.com/rough-notation?module';
+
+    const n1 = document.querySelector('#free');
+    const n2 = document.querySelector('#free-2');
+
+    const a1 = annotate(n1, { type: 'underline', color: 'blue' });
+    const a2 = annotate(n2, { type: 'circle', color: 'red', padding: 28 });
+
+    a1.show();
+    a2.show();
+
 </script>

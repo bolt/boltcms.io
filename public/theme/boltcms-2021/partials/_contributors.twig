@@ -6,20 +6,14 @@
     {% set repo = 'core' %}
 {% endif %}
 
-<div class="row contributors">
-    <div class="col-12 my-4">
-        <div class="row justify-content-center">
-            <div class="col-auto">
-                <h3 class="contributors1">Contributors</h3>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex flex-wrap justify-content-center">
+<div class="contributers-overview">
+    <h3>
+        Without these contributers it wouldn't be possible
+    </h3>
     {% for contributor in github_contributors(owner, repo) %}
-        <div class="contributor blok m-2">
-            <img class="avatar"  src="{{ contributor.avatar_url }}" alt="{{ contributor.login }} profile image">
+        <div class="contributor">
+            <img class="avatar" src="{{ contributor.avatar_url }}" alt="{{ contributor.login }} profile image">
             <p class="name mw-100"><a href="{{ contributor.html_url }}">{{ contributor.login }}</a></p>
         </div>
     {% endfor %}
-    </div>
 </div>

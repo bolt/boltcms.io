@@ -85,21 +85,8 @@
         {# End of "newsitems" #}
 
         {# Start of "Powered by / community" section #}
-        <div class="columns">
-            <div class="bottom-block" transition-style="in:square:bottom-right">
-                <h3>Let's get started!</h3>
-                <div class="button-wrapper">
-                    <a class="button" href="installation/installation">Install Bolt</a>
-                    <a class="button" href="/features-developers">view features for developers</a>
-                </div>
-            </div>
-            <div class="bottom-block" transition-style="in:square:bottom-left">
-                <h3>Find help for your dream project</h3>
-                <div class="button-wrapper">
-                    <a class="button" href="/community">Search for a developer</a>
-                    <a class="button" href="contribute">Add yourself as a developer</a>
-                </div>
-            </div>
-        </div>
+
+        {% include "partials/_bottom-block.twig" %}
+
     </main>
 {% endblock %}
