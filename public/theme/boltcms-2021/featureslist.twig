@@ -14,59 +14,6 @@
             {% include "partials/_features_buttons.twig" %}
         </div>
     </div>
-    {# {% set current = app.request.requestUri|split('/')|last %} #}
-
-    {# {% if current == 'features-developers' %} #}
-    {# {% setcontent developers = 'features' where { audience: 'developers' } order "order" %} #}
-    {# {% elseif current == 'features-designers' %} #}
-    {# {% setcontent features = 'features' where { audience: 'designers' } order "order" %} #}
-    {# {% elseif current == 'features-editors' %} #}
-    {# {% setcontent features = 'features' where { audience: 'editors' } order "order" %} #}
-    {# {% else %} #}
-    {# Assume we want to show all #}
-    {# {% setcontent features = 'features' where { audience: 'overview' } order "order" %} #}
-    {# {% endif %} #}
-
-    {# {{ record.content }} #}
-
-    {# {% include 'partials/_bolt_blockquote.twig' with { 'blockquote' : blockquote} %} #}
-
-    {# {% setcontent developers = 'features' where { audience: 'developers' } latest limit 2 %} #}
-
-    {# {% for developer in developers %} #}
-    {# <h3 class="titel2 text-left">{{ developer.title }}</h3> #}
-    {# {{ developer.content }} #}
-    {# {% endfor %} #}
-
-    {# {% for feature in features %} #}
-    {# <div class="row flex align-items-center my-5 {% if loop.index % 2 == 0 %}flex-row-reverse{% endif %}"> #}
-    {# {% if feature.image is not empty %} #}
-    {# <div class="col-md p-4 zoom-images"> #}
-    {# <a href="{{ feature.image|thumbnail(1600, 1600) }}"/> #}
-    {# <img class="img-fluid" src="{{ feature.image|thumbnail(600, 400) }}" loading="lazy" #}
-    {# alt="{{ feature.image.alt }}"> #}
-    {# </a> #}
-    {# </div> #}
-    {# {% endif %} #}
-    {# <div class="col-md p-4"> #}
-    {# <h3 class="titel2 text-left">{{ feature.title }}</h3> #}
-    {# {{ feature.content }} #}
-    {# {% if feature|edit_link() %}<a href="{{ feature|edit_link() }}" class="btn btn-info btn-sm">edit #}
-    {# <small>{{ feature.order|default('-') }}</small></a>{% endif %} #}
-    {# </div> #}
-    {# </div> #}
-    {# {% endfor %} #}
-
-    {# <div class="row my-5"> #}
-    {# {% include "partials/_features_buttons.twig" %} #}
-    {# </div> #}
-
-    {# {% include 'partials/_cta.twig' %} #}
-    {# <script> #}
-    {# window.addEventListener('load', function () { #}
-    {# baguetteBox.run('.zoom-images'); #}
-    {# }); #}
-    {# </script> #}
     <div class="content-wrapper">
         <div class="content-block">
             <a id="developer"></a>
@@ -74,7 +21,7 @@
                 <h2>For developers</h2>
             </div>
             <div class="features">
-                {% setcontent developers = 'features' where { audience: 'developers' } limit 2 %}
+                {% setcontent developers = 'features' where { audience: 'developers' } %}
                 {% for developer in developers %}
                     <div class="detail">
                         <h3>{{ developer.title }}</h3>
@@ -91,7 +38,7 @@
                 <h2>For designers</h2>
             </div>
             <div class="features">
-                {% setcontent designers = 'features' where { audience: 'designers' } limit 2 %}
+                {% setcontent designers = 'features' where { audience: 'designers' } %}
                 {% for designer in designers %}
                     <div class="detail">
                         <h3>{{ designer.title }}</h3>
