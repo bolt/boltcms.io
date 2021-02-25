@@ -15,10 +15,10 @@ main:
     link: https://docs.bolt.cm
   - label: Community
     link: /community
-  - label: Contribute
-    link: contribute
-  - label: Extensions
-    link: /extensions
+#  - label: Contribute
+#    link: contribute
+#  - label: Extensions
+#    link: /extensions
   - label: No costs
     link: /no-costs
   - label: News
