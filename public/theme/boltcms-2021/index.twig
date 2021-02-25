@@ -77,7 +77,7 @@
             {% for newsitem in news %}
                 <div>
                     <h2>{{ newsitem.title }}</h2>
-                    <p>{{ newsitem.content|excerpt(100) }}</p>
+                    <p>{{ newsitem.content|excerpt }}</p>
                     <a href="{{ newsitem|link }}">Read more</a>
                 </div>
             {% endfor %}
