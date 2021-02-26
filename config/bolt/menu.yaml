@@ -28,6 +28,12 @@ main:
     class: site-header__end
 
 footer:
+  - label: AboutBoltcms
+    submenu:
+      - label: News
+        link: /news
+      - label: Donwload latest version
+        link: https://github.com/bolt/core/releases/latest
   - label: Features
     submenu:
       - label: For everyone
