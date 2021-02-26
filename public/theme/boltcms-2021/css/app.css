@@ -316,7 +316,7 @@ main img {
 
 .nav__wrapper {
     list-style: none;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
     margin-top: 0;
 }
 
