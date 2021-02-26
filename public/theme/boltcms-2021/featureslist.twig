@@ -3,20 +3,20 @@
 {% block main_container %}
 
     {% set current = app.request.requestUri|split('/')|last %}
-        {% if current == 'features-developers' %}
-            {% setcontent features = 'features' where { audience: 'developers' } order "order" %}
-            <div class="subheader">
-                <h1 class="drop-left">Features for
-                    <div class="slidingVertical">
-                        <span>developers</span>
-                        <span>you</span>
-                    </div>
-                </h1>
-                <div class="button-row">
-                    {% include "partials/_features_buttons.twig" %}
+    {% if current == 'features-developers' %}
+        {% setcontent features = 'features' where { audience: 'developers' } order "order" %}
+        <div class="subheader">
+            <h1 class="drop-left">Features for
+                <div class="slidingVertical">
+                    <span>developers</span>
+                    <span>you</span>
                 </div>
+            </h1>
+            <div class="button-row">
+                {% include "partials/_features_buttons.twig" %}
             </div>
-            <div class="content-wrapper">
+        </div>
+        <div class="content-wrapper">
             <div class="content-block">
                 <a id="developer"></a>
                 <div class="title">
@@ -32,21 +32,21 @@
                     {% endfor %}
                 </div>
             </div>
-            </div>
-        {% elseif current == 'features-designers' %}
-            {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
-            <div class="subheader">
-                <h1 class="drop-left">Features for
-                    <div class="slidingVertical">
-                        <span>designers</span>
-                        <span>you</span>
-                    </div>
-                </h1>
-                <div class="button-row">
-                    {% include "partials/_features_buttons.twig" %}
+        </div>
+    {% elseif current == 'features-designers' %}
+        {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
+        <div class="subheader">
+            <h1 class="drop-left">Features for
+                <div class="slidingVertical">
+                    <span>designers</span>
+                    <span>you</span>
                 </div>
+            </h1>
+            <div class="button-row">
+                {% include "partials/_features_buttons.twig" %}
             </div>
-            <div class="content-wrapper">
+        </div>
+        <div class="content-wrapper">
             <div class="content-block">
                 <a id="designer"></a>
                 <div class="title">
@@ -62,21 +62,21 @@
                     {% endfor %}
                 </div>
             </div>
-            </div>
-        {% elseif current == 'features-editors' %}
-            {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
-            <div class="subheader">
-                <h1 class="drop-left">Features for
-                    <div class="slidingVertical">
-                        <span>editors</span>
-                        <span>you</span>
-                    </div>
-                </h1>
-                <div class="button-row">
-                    {% include "partials/_features_buttons.twig" %}
+        </div>
+    {% elseif current == 'features-editors' %}
+        {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
+        <div class="subheader">
+            <h1 class="drop-left">Features for
+                <div class="slidingVertical">
+                    <span>editors</span>
+                    <span>you</span>
                 </div>
+            </h1>
+            <div class="button-row">
+                {% include "partials/_features_buttons.twig" %}
             </div>
-            <div class="content-wrapper">
+        </div>
+        <div class="content-wrapper">
             <div class="content-block">
                 <a id="editor"></a>
                 <div class="title">
@@ -92,23 +92,23 @@
                     {% endfor %}
                 </div>
             </div>
-            </div>
-        {% else %}
-            {# Assume we want to show all #}
-            <div class="subheader">
-                <h1 class="drop-left">Features for
-                    <div class="slidingVertical">
-                        <span>developers</span>
-                        <span>designers</span>
-                        <span>editors</span>
-                        <span>you</span>
-                    </div>
-                </h1>
-                <div class="button-row">
-                    {% include "partials/_features_buttons.twig" %}
+        </div>
+    {% else %}
+        {# Assume we want to show all #}
+        <div class="subheader">
+            <h1 class="drop-left">Features for
+                <div class="slidingVertical">
+                    <span>developers</span>
+                    <span>designers</span>
+                    <span>editors</span>
+                    <span>you</span>
                 </div>
+            </h1>
+            <div class="button-row">
+                {% include "partials/_features_buttons.twig" %}
             </div>
-            <div class="content-wrapper">
+        </div>
+        <div class="content-wrapper">
             <div class="content-block">
                 <a id="designer"></a>
                 <div class="title">
@@ -125,7 +125,6 @@
                     {% endfor %}
                 </div>
             </div>
-
             <div class="content-block">
                 <a id="designer"></a>
                 <div class="title">
@@ -142,8 +141,24 @@
                     {% endfor %}
                 </div>
             </div>
+            <div class="content-block">
+                <a id="editor"></a>
+                <div class="title">
+                    <h2>For editors</h2>
+                </div>
+                <div class="features">
+                    {% setcontent editors = 'features' where { audience: 'editors' } order "order" limit 2 %}
+                    {% for editor in editors %}
+                        <div class="detail">
+                            <h3>{{ editor.title }}</h3>
+
+                            <p>{{ editor.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
     {% include "partials/_bottom-block.twig" %}
 
