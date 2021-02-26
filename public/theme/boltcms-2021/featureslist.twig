@@ -1,54 +1,149 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main_container %}
-    <div class="subheader">
-        <h1 class="drop-left">Features for
-            <div class="slidingVertical">
-                <span>developers</span>
-                <span>designers</span>
-                <span>content creators</span>
-                <span>you</span>
-            </div>
-        </h1>
-        <div class="button-row">
-            {% include "partials/_features_buttons.twig" %}
-        </div>
-    </div>
-    <div class="content-wrapper">
-        <div class="content-block">
-            <a id="developer"></a>
-            <div class="title">
-                <h2>For developers</h2>
-            </div>
-            <div class="features">
-                {% setcontent developers = 'features' where { audience: 'developers' } %}
-                {% for developer in developers %}
-                    <div class="detail">
-                        <h3>{{ developer.title }}</h3>
 
-                        <p>{{ developer.content }}</p>
+    {% set current = app.request.requestUri|split('/')|last %}
+        {% if current == 'features-developers' %}
+            {% setcontent features = 'features' where { audience: 'developers' } order "order" %}
+            <div class="subheader">
+                <h1 class="drop-left">Features for
+                    <div class="slidingVertical">
+                        <span>developers</span>
+                        <span>you</span>
                     </div>
-                {% endfor %}
+                </h1>
+                <div class="button-row">
+                    {% include "partials/_features_buttons.twig" %}
+                </div>
             </div>
-        </div>
+            <div class="content-wrapper">
+            <div class="content-block">
+                <a id="developer"></a>
+                <div class="title">
+                    <h2>For developers</h2>
+                </div>
+                <div class="features">
+                    {% for feature in features %}
+                        <div class="detail">
+                            <h3>{{ feature.title }}</h3>
 
-        <div class="content-block">
-            <a id="designer"></a>
-            <div class="title">
-                <h2>For designers</h2>
+                            <p>{{ feature.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="features">
-                {% setcontent designers = 'features' where { audience: 'designers' } %}
-                {% for designer in designers %}
-                    <div class="detail">
-                        <h3>{{ designer.title }}</h3>
-
-                        <p>{{ designer.content }}</p>
+            </div>
+        {% elseif current == 'features-designers' %}
+            {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
+            <div class="subheader">
+                <h1 class="drop-left">Features for
+                    <div class="slidingVertical">
+                        <span>designers</span>
+                        <span>you</span>
                     </div>
-                {% endfor %}
+                </h1>
+                <div class="button-row">
+                    {% include "partials/_features_buttons.twig" %}
+                </div>
             </div>
-        </div>
-    </div>
+            <div class="content-wrapper">
+            <div class="content-block">
+                <a id="designer"></a>
+                <div class="title">
+                    <h2>For designers</h2>
+                </div>
+                <div class="features">
+                    {% for feature in features %}
+                        <div class="detail">
+                            <h3>{{ feature.title }}</h3>
+
+                            <p>{{ feature.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+        {% elseif current == 'features-editors' %}
+            {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
+            <div class="subheader">
+                <h1 class="drop-left">Features for
+                    <div class="slidingVertical">
+                        <span>editors</span>
+                        <span>you</span>
+                    </div>
+                </h1>
+                <div class="button-row">
+                    {% include "partials/_features_buttons.twig" %}
+                </div>
+            </div>
+            <div class="content-wrapper">
+            <div class="content-block">
+                <a id="editor"></a>
+                <div class="title">
+                    <h2>For editors</h2>
+                </div>
+                <div class="features">
+                    {% for feature in features %}
+                        <div class="detail">
+                            <h3>{{ feature.title }}</h3>
+
+                            <p>{{ feature.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+        {% else %}
+            {# Assume we want to show all #}
+            <div class="subheader">
+                <h1 class="drop-left">Features for
+                    <div class="slidingVertical">
+                        <span>developers</span>
+                        <span>designers</span>
+                        <span>editors</span>
+                        <span>you</span>
+                    </div>
+                </h1>
+                <div class="button-row">
+                    {% include "partials/_features_buttons.twig" %}
+                </div>
+            </div>
+            <div class="content-wrapper">
+            <div class="content-block">
+                <a id="designer"></a>
+                <div class="title">
+                    <h2>For developers</h2>
+                </div>
+                <div class="features">
+                    {% setcontent developers = 'features' where { audience: 'developers' } order "order" limit 2 %}
+                    {% for developer in developers %}
+                        <div class="detail">
+                            <h3>{{ developer.title }}</h3>
+
+                            <p>{{ developer.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="content-block">
+                <a id="designer"></a>
+                <div class="title">
+                    <h2>For designers</h2>
+                </div>
+                <div class="features">
+                    {% setcontent designers = 'features' where { audience: 'designers' } order "order" limit 2 %}
+                    {% for designer in designers %}
+                        <div class="detail">
+                            <h3>{{ designer.title }}</h3>
+
+                            <p>{{ designer.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+        {% endif %}
 
     {% include "partials/_bottom-block.twig" %}
 
