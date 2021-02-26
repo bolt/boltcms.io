@@ -266,6 +266,10 @@ main img {
     z-index: 100000001;
 }
 
+.imagedetails1 {
+    width: 35px;
+}
+
 /** header + nav */
 
 .site-header {
