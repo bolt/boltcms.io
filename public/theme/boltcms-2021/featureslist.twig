@@ -1,8 +1,10 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main_container %}
+    {# <h1>{{ record.title }}</h1> #}
 
     {% set current = app.request.requestUri|split('/')|last %}
+
     {% if current == 'features-developers' %}
         {% setcontent features = 'features' where { audience: 'developers' } order "order" %}
         <div class="subheader">
@@ -16,23 +18,7 @@
                 {% include "partials/_features_buttons.twig" %}
             </div>
         </div>
-        <div class="content-wrapper">
-            <div class="content-block">
-                <a id="developer"></a>
-                <div class="title">
-                    <h2>For developers</h2>
-                </div>
-                <div class="features">
-                    {% for feature in features %}
-                        <div class="detail">
-                            <h3>{{ feature.title }}</h3>
-
-                            <p>{{ feature.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        {% set title = 'For developers' %}
     {% elseif current == 'features-designers' %}
         {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
         <div class="subheader">
@@ -46,23 +32,7 @@
                 {% include "partials/_features_buttons.twig" %}
             </div>
         </div>
-        <div class="content-wrapper">
-            <div class="content-block">
-                <a id="designer"></a>
-                <div class="title">
-                    <h2>For designers</h2>
-                </div>
-                <div class="features">
-                    {% for feature in features %}
-                        <div class="detail">
-                            <h3>{{ feature.title }}</h3>
-
-                            <p>{{ feature.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        {% set title = 'For designers' %}
     {% elseif current == 'features-editors' %}
         {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
         <div class="subheader">
@@ -76,25 +46,10 @@
                 {% include "partials/_features_buttons.twig" %}
             </div>
         </div>
-        <div class="content-wrapper">
-            <div class="content-block">
-                <a id="editor"></a>
-                <div class="title">
-                    <h2>For editors</h2>
-                </div>
-                <div class="features">
-                    {% for feature in features %}
-                        <div class="detail">
-                            <h3>{{ feature.title }}</h3>
-
-                            <p>{{ feature.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        {% set title = 'For editors' %}
     {% else %}
         {# Assume we want to show all #}
+        {% setcontent features = 'features' where { audience: 'overview' } order "order" %}
         <div class="subheader">
             <h1 class="drop-left">Features for
                 <div class="slidingVertical">
@@ -108,58 +63,33 @@
                 {% include "partials/_features_buttons.twig" %}
             </div>
         </div>
-        <div class="content-wrapper">
-            <div class="content-block">
-                <a id="designer"></a>
-                <div class="title">
-                    <h2>For developers</h2>
-                </div>
-                <div class="features">
-                    {% setcontent developers = 'features' where { audience: 'developers' } order "order" limit 2 %}
-                    {% for developer in developers %}
-                        <div class="detail">
-                            <h3>{{ developer.title }}</h3>
-
-                            <p>{{ developer.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="content-block">
-                <a id="designer"></a>
-                <div class="title">
-                    <h2>For designers</h2>
-                </div>
-                <div class="features">
-                    {% setcontent designers = 'features' where { audience: 'designers' } order "order" limit 2 %}
-                    {% for designer in designers %}
-                        <div class="detail">
-                            <h3>{{ designer.title }}</h3>
-
-                            <p>{{ designer.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="content-block">
-                <a id="editor"></a>
-                <div class="title">
-                    <h2>For editors</h2>
-                </div>
-                <div class="features">
-                    {% setcontent editors = 'features' where { audience: 'editors' } order "order" limit 2 %}
-                    {% for editor in editors %}
-                        <div class="detail">
-                            <h3>{{ editor.title }}</h3>
-
-                            <p>{{ editor.content }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+        {% set title = 'For developers, designers and editors' %}
     {% endif %}
 
+    <div class="content-wrapper">
+        <div class="content-block">
+            <a id="developer"></a>
+            <div class="title">
+                <h2>{{ title }}</h2>
+            </div>
+            <div class="features">
+                {% for feature in features %}
+                    <div class="detail">
+                        <h3>{{ feature.title }}</h3>
+
+                        <p>{{ feature.content }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     {% include "partials/_bottom-block.twig" %}
+
+    <script>
+        window.addEventListener('load', function () {
+            baguetteBox.run('.zoom-images');
+        });
+    </script>
 
 {% endblock main_container %}
