@@ -1,3 +1,4 @@
+{# @var version \App\VersionControl #}
 {% extends 'partials/_master.twig' %}
 
 {% block main_container %}
@@ -7,6 +8,7 @@
             <p>Latest version of Bolt CMS: 4.1.13 <a href="https://github.com/bolt/core/releases/latest">Download this
                     version</a></p>
         </div>
+        {{ show_version() }}
         <div class="important-message">
             <div class="header-block">
                 <h2>Bolt 4.1.13 released</h2>

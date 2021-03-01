@@ -16,7 +16,8 @@
         "guzzlehttp/guzzle": "^7.0",
         "ext-json": "*",
         "bolt/article": "^1.0",
-        "bolt/forms": "^1.0"
+        "bolt/forms": "^1.0",
+      "ext-curl": "*"
     },
     "autoload": {
         "psr-4": {
