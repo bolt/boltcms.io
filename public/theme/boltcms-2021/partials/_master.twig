@@ -6,22 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css', 'theme') }}">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
-    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> #}
-    {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" #}
-    {# integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" #}
-    {# crossorigin="anonymous"/> #}
-    {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" #}
-    {# integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> #}
-    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> #}
-    {# <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" #}
-    {# integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" #}
-    {# crossorigin="anonymous"></script> #}
-    {# <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" #}
-    {# integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" #}
-    {# crossorigin="anonymous"></script> #}
-    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" #}
-    {# integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" #}
-    {# crossorigin="anonymous"></script> #}
 
     {# make sure we always display a proper title: The record's title if there is one, appended with the
            sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
@@ -54,10 +38,7 @@
     {{ widgets('main_bottom') }}
 {% endblock body %}
 
- {{ include('partials/_footer.twig') }}
-</body>
-</html>
-
+{{ include('partials/_footer.twig') }}
 
 <script src="js/vendor/tiny-slider.js"></script>
 <script src="js/vendor/header-9.js"></script>
@@ -82,15 +63,18 @@
     });
 </script>
 <script type="module">
-    import { annotate } from 'https://unpkg.com/rough-notation?module';
+    import {annotate} from 'https://unpkg.com/rough-notation?module';
 
     const n1 = document.querySelector('#free');
     const n2 = document.querySelector('#free-2');
 
-    const a1 = annotate(n1, { type: 'underline', color: 'blue' });
-    const a2 = annotate(n2, { type: 'circle', color: 'red', padding: 28 });
+    const a1 = annotate(n1, {type: 'underline', color: 'blue'});
+    const a2 = annotate(n2, {type: 'circle', color: 'red', padding: 28});
 
     a1.show();
     a2.show();
 
 </script>
+
+</body>
+</html>

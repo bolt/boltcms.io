@@ -15,7 +15,7 @@
             </div>
             <p>Bolt 4.1.13 brings a slew of accessibility, usability, and DX improvements.</p>
         </div>
-        {% setcontent record = 'news' limit 3 %}
+        {% setcontent record = 'news' %}
         {% for recordlist in record %}
             <div class="news-wrapper">
                 <article>
@@ -29,3 +29,4 @@
     </div>
 
 {% endblock main_container %}
+
