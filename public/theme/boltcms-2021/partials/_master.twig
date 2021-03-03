@@ -31,8 +31,6 @@
     {{ widgets('main_top') }}
 
     {% block main %}
-        {% block main_container %}
-        {% endblock main_container %}
     {% endblock main %}
 
     {{ widgets('main_bottom') }}
@@ -40,41 +38,7 @@
 
 {{ include('partials/_footer.twig') }}
 
-<script src="js/vendor/tiny-slider.js"></script>
-<script src="js/vendor/header-9.js"></script>
-
-<script type="module">
-    var slider = tns({
-        container: '.my-slider',
-        "responsive": {
-            "350": {
-                "items": 1,
-            },
-            "500": {
-                "items": 3
-            }
-        },
-        controls: false,
-        navPosition: 'bottom',
-        autoWidth: true,
-        center: true,
-        gutter: 80,
-        autoplay: false
-    });
-</script>
-<script type="module">
-    import {annotate} from 'https://unpkg.com/rough-notation?module';
-
-    const n1 = document.querySelector('#free');
-    const n2 = document.querySelector('#free-2');
-
-    const a1 = annotate(n1, {type: 'underline', color: 'blue'});
-    const a2 = annotate(n2, {type: 'circle', color: 'red', padding: 28});
-
-    a1.show();
-    a2.show();
-
-</script>
-
+{% block javascripts %}
+{% endblock javascripts %}
 </body>
 </html>
