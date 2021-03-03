@@ -1,0 +1,22 @@
+<script src="js/vendor/tiny-slider.js"></script>
+<script src="js/vendor/header-9.js"></script>
+
+<script type="module">
+    let slider = tns({
+        container: '.my-slider',
+        "responsive": {
+            "350": {
+                "items": 1,
+            },
+            "500": {
+                "items": 3
+            }
+        },
+        controls: false,
+        navPosition: 'bottom',
+        autoWidth: true,
+        center: true,
+        gutter: 80,
+        autoplay: false
+    });
+</script>
