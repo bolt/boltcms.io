@@ -15,7 +15,8 @@
                 <ul class="nav__wrapper">
                     {% for item in menu_array() %}
                         <li class="nav__item {{ item.class }} {% if item.submenu|default %}has-submenu{% endif %}">
-                            <a href="{{ item.link }}" {% if item.submenu|default %} aria-haspopup="true"{% endif %}>{{ item.label }}</a>
+                            <a {% if item == menu_array()|last %} transition-style="in:circle:top-right" {% endif %} href="{{ item.link }}" {% if item.submenu|default %} aria-haspopup="true" {% endif %}
+                                    {% if item.target is defined %}target="{{ item.target|escape }}"{% endif %}>{{ item.label }}</a>
                             {% if item.submenu|default %}
                                 <div>
                                     <ul class="dropdown" aria-label="submenu">
