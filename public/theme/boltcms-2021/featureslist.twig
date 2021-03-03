@@ -1,6 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
-{% block main_container %}
+{% block main %}
     {# <h1>{{ record.title }}</h1> #}
 
     {% set current = app.request.requestUri|split('/')|last %}
@@ -10,6 +10,8 @@
         <div class="subheader">
             <h1 class="drop-left">Features for
                 <div class="slidingVertical">
+                    <span>developers</span>
+                    <span>you</span>
                     <span>developers</span>
                     <span>you</span>
                 </div>
@@ -26,6 +28,8 @@
                 <div class="slidingVertical">
                     <span>designers</span>
                     <span>you</span>
+                    <span>designers</span>
+                    <span>you</span>
                 </div>
             </h1>
             <div class="button-row">
@@ -38,7 +42,9 @@
         <div class="subheader">
             <h1 class="drop-left">Features for
                 <div class="slidingVertical">
-                    <span>editors</span>
+                    <span>content creators</span>
+                    <span>you</span>
+                    <span>content creators</span>
                     <span>you</span>
                 </div>
             </h1>
@@ -55,7 +61,7 @@
                 <div class="slidingVertical">
                     <span>developers</span>
                     <span>designers</span>
-                    <span>editors</span>
+                    <span>content creators</span>
                     <span>you</span>
                 </div>
             </h1>
@@ -63,7 +69,7 @@
                 {% include "partials/_features_buttons.twig" %}
             </div>
         </div>
-        {% set title = 'For developers, designers and editors' %}
+        {% set title = 'For developers, designers and content creators' %}
     {% endif %}
 
     <div class="content-wrapper">
@@ -86,10 +92,4 @@
 
     {% include "partials/_bottom-block.twig" %}
 
-    <script>
-        window.addEventListener('load', function () {
-            baguetteBox.run('.zoom-images');
-        });
-    </script>
-
-{% endblock main_container %}
+{% endblock main %}
