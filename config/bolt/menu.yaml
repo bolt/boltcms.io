@@ -13,6 +13,7 @@ main:
         link: /features-editors
   - label: Documentation
     link: https://docs.bolt.cm
+    target: _blank
   - label: Community
     link: /community
 #  - label: Contribute
@@ -23,7 +24,7 @@ main:
     link: /no-costs
   - label: News
     link: /news
-  - label: Try it!
+  - label: Try it now!
     link: https://docs.bolt.cm/installation/installation
     class: site-header__end
 
