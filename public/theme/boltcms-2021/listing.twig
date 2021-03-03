@@ -1,8 +1,11 @@
 {# @var version \App\VersionControl #}
 {% extends 'partials/_master.twig' %}
 
-{% block main_container %}
-
+{% block main %}
+    <div class="subheader">
+        <h1>{{ contenttype.name }}</h1>
+        <p>What we're up to</p>
+    </div>
     <div class="content-wrapper">
         <div class="current-version">
             <p>Latest version of Bolt CMS: {{ get_version() }} <a href="https://github.com/bolt/core/releases/tag/{{ get_version() }}">Download this
@@ -28,5 +31,4 @@
         {% endfor %}
     </div>
 
-{% endblock main_container %}
-
+{% endblock main %}
