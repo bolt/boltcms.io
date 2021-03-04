@@ -4,6 +4,7 @@
 namespace App\Twig;
 
 
+use Github\Client;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
@@ -18,15 +19,24 @@ class VersionRequest extends AbstractExtension
     /* @var string */
     private $projectDir;
 
-    public function __construct(string $projectDir)
+    /* @var Client */
+    private $client;
+
+    private $githubApi;
+
+
+    public function __construct(string $projectDir, Client $client)
     {
         $this->projectDir = $projectDir;
+        $this->client = $client;
+        $this->githubApi = $this->client->api('repo')->releases()->latest('bolt', 'core');
     }
 
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('get_version', [$this, 'getVersion']),
+            new TwigFunction('get_Version', [$this, 'getVersion']),
+            new TwigFunction('get_VersionDescription', [$this, 'getVersionDescription']),
         ];
     }
 
@@ -61,6 +71,11 @@ class VersionRequest extends AbstractExtension
 
     public function getVersion()
     {
-        return file_get_contents($this->projectDir . '/config/extensions/version.text');
+        return $this->githubApi['tag_name'];
+    }
+
+    public function getVersionDescription()
+    {
+        return $this->githubApi['body'];
     }
 }

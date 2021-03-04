@@ -8,15 +8,16 @@
     </div>
     <div class="content-wrapper">
         <div class="current-version">
-            <p>Latest version of Bolt CMS: {{ get_version() }} <a href="https://github.com/bolt/core/releases/tag/{{ get_version() }}">Download this
+            <p>Latest version of Bolt CMS: {{ get_Version() }} <a
+                        href="https://github.com/bolt/core/releases/tag/{{ get_Version() }}">Download this
                     version</a></p>
         </div>
         <div class="important-message">
             <div class="header-block">
-                <h2>Bolt 4.1.13 released</h2>
+                <h2>Bolt {{ get_Version() }} released</h2>
                 <span transition-style="in:circle:top-left">#Announcement</span>
             </div>
-            <p>Bolt 4.1.13 brings a slew of accessibility, usability, and DX improvements.</p>
+            <p>B{{ get_VersionDescription() }}</p>
         </div>
         {% setcontent record = 'news' %}
         {% for recordlist in record %}
