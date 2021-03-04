@@ -164,7 +164,7 @@ summary {
     --text-vspace-multiplier: 1;
 }
 
-/* Kleur setup, zowel licht als donker thema met naamgeving variabelen op basis van contrast */
+/* Kleur setup, met naamgeving variabelen op basis van contrast */
 :root, [data-theme="default"] {
     --color-primary: hsl(212, 98%, 50%);
     --color-primary-light: hsl(213, 100%, 96%);
@@ -196,6 +196,8 @@ summary {
     --color-error: hsl(349, 75%, 51%);
     --color-error-light: hsl(349, 75%, 61%);
     --color-error-lighter: hsl(349, 75%, 71%);
+
+    --brighten: brightness(120%) hue-rotate(2deg);
 }
 
 /** Font */
@@ -250,7 +252,7 @@ main {
 }
 
 main img {
-
+    /*content-visibility: auto;*/
 }
 
 [id] {
@@ -266,8 +268,8 @@ main img {
     z-index: 100000001;
 }
 
-.imagedetails1 {
-    width: 35px;
+.button:hover {
+    filter: var(--brighten);
 }
 
 /** header + nav */
@@ -358,6 +360,7 @@ main img {
 .site-header__end a:hover,
 .site-header__end a:focus {
     color: var(--color-bg);
+    filter: var(--brighten);
 }
 
 @media (max-width: 505px) {
@@ -736,7 +739,6 @@ a {
 a:hover {
     text-decoration-color: var(--color-primary);
     color: black;
-
 }
 
 .subheader h1 + p {
@@ -1306,9 +1308,53 @@ footer {
     font-size: var(--text-sm);
 }
 
+/** News detail */
+
+.news-article {
+    width: min(72ch, calc(70% + 100px));
+    margin: 0 auto 4rem;
+}
+
+article > .subheader h1 {
+    max-width: 80vw;
+}
+
+article > .subheader h1 + p {
+    max-width: 70vw;
+}
+
+blockquote {
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: 4px solid var(--color-primary-light);
+    border-bottom: 4px solid var(--color-primary-light);
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
+}
+
+.news-article ul,
+.news-article ol {
+    padding-left: 1.4rem;
+}
+
+::marker {
+    color: var(--color-primary);
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+.meta {
+    font-size: 80%;
+}
+
 /** Showcase */
 
-a {
+.showcase a {
     text-decoration: none;
     color: var(--color-primary);
     outline: none;

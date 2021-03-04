@@ -33,7 +33,7 @@ footer:
     submenu:
       - label: News
         link: /news
-      - label: Donwload latest version
+      - label: Download latest version
         link: https://github.com/bolt/core/releases/latest
   - label: Features
     submenu:
