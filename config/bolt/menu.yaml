@@ -29,7 +29,7 @@ main:
     class: site-header__end
 
 footer:
-  - label: About Boltcms
+  - label: About Bolt
     submenu:
       - label: News
         link: /news
