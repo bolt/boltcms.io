@@ -1,19 +1,29 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-    <div class="subheader">
-        <h1>{{ record.title }}</h1>
-    </div>
-    {% if record.image is not empty %}
-        <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}"
-             alt="{{ record.image.alt|default }}">
-    {% endif %}
-    <div class="news-wrapper">
-        <article>
-            <p class="meta">Published by {{ record.author }} on {{ record.publishedAt|date }}</p>
+    <article>
+        <div class="subheader">
+            <h1>{{ record.title }}</h1>
+            {# TODO maybe a subtitle #}
+{#             <p>A short subtitle or intro ... A short subtitle or intro ... A short subtitle or intro ... A short subtitle or#}
+{#             intro ... A short subtitle or intro ... A short subtitle or intro ... A short subtitle or intro ... A short#}
+{#             subtitle or intro ...</p>#}
+        </div>
 
+        <div class="news-article">
+            {# TODO allow pictures #}
+            {# {% if record.image is not empty %} #}
+            {# <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}" #}
+            {# alt="{{ record.image.alt|default }}"> #}
+            {# {% endif %} #}
             <p>{{ record.content }}</p>
-        </article>
-    </div>
+            {# TODO make a quote #}
+            {# <blockquote>This is a quote in the text</blockquote> #}
+
+            <p class="meta">Published on {{ record.publishedAt|date }}</p>
+
+        </div>
+    </article>
 {% endblock main %}
+
 
