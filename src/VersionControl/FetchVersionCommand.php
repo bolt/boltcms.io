@@ -29,6 +29,7 @@ class FetchVersionCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+
         $this->version->saveVersion();
         $this->version->saveDescription();
         return Command::SUCCESS;

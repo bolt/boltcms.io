@@ -29,7 +29,6 @@ class VersionRequest extends AbstractExtension
     {
         $this->projectDir = $projectDir;
         $this->client = $client;
-        $this->githubApi = $this->client->api('repo')->releases()->latest('bolt', 'core');
     }
 
     public function getFunctions(): array
@@ -40,14 +39,21 @@ class VersionRequest extends AbstractExtension
         ];
     }
 
+    private function getGithubApi()
+    {
+        $this->githubApi = $this->client->api('repo')->releases()->latest('bolt', 'core');
+    }
+
     public function saveVersion()
     {
-       $version = $this->githubApi['tag_name'];
+        $this->getGithubApi();
+        $version = $this->githubApi['tag_name'];
         file_put_contents($this->projectDir . '/config/extensions/version' . '.text', $version);
     }
 
     public function saveDescription()
     {
+        $this->getGithubApi();
         $description = $this->githubApi['body'];
         file_put_contents($this->projectDir . '/config/extensions/description' . '.text', $description);
     }
