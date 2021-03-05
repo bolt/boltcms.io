@@ -52,7 +52,7 @@
                 {% include "partials/_features_buttons.twig" %}
             </div>
         </div>
-        {% set title = 'For editors' %}
+        {% set title = 'For content creators' %}
     {% else %}
         {# Assume we want to show all #}
         {% setcontent features = 'features' where { audience: 'overview' } order "order" %}
