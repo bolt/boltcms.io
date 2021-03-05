@@ -2,6 +2,7 @@ Released: 2021-02-26
 
 You can update from previous Bolt 4 installs by running `composer update`.
 
+
 ### 🐛 Bug fixes
 
 - `|order` filter by negative number sorts correctly (I-Valchev, [#2428](https://github.com/bolt/core/pull/2428))
