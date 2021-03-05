@@ -17,7 +17,7 @@
                 <h2>Bolt {{ get_Version() }} released</h2>
                 <span transition-style="in:circle:top-left">#Announcement</span>
             </div>
-            <p>{{ get_VersionDescription()|slice(0,90) }}</p>
+            <p>{{ get_VersionDescription()|slice(0,95) }}</p>
         </div>
         {% setcontent record = 'news' %}
         {% for recordlist in record %}
