@@ -272,6 +272,11 @@ main img {
     filter: var(--brighten);
 }
 
+.imagedetails1 {
+    width: 35px;
+}
+
+
 /** header + nav */
 
 .site-header {
