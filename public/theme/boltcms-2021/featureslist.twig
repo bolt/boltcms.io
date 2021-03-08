@@ -4,120 +4,70 @@
     {# <h1>{{ record.title }}</h1> #}
 
     {% set current = app.request.requestUri|split('/')|last %}
+    {% set featuresByAudience = [] %}
 
     {% if current == 'features-developers' %}
         {% setcontent features = 'features' where { audience: 'developers' } order "order" %}
-        <div class="subheader">
-            <h1 class="drop-left">Features for
-                <div class="slidingVertical">
-                    <span>developers</span>
-                    <span>you</span>
-                    <span>developers</span>
-                    <span>you</span>
-                </div>
-            </h1>
-            <div class="button-row">
-                {% include "partials/_features_buttons.twig" %}
-            </div>
-        </div>
-        {% set title = 'For developers' %}
+        {% set featuresByAudience = featuresByAudience|merge({'developers': features}) %}
     {% elseif current == 'features-designers' %}
         {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
-        <div class="subheader">
-            <h1 class="drop-left">Features for
-                <div class="slidingVertical">
-                    <span>designers</span>
-                    <span>you</span>
-                    <span>designers</span>
-                    <span>you</span>
-                </div>
-            </h1>
-            <div class="button-row">
-                {% include "partials/_features_buttons.twig" %}
-            </div>
-        </div>
-        {% set title = 'For designers' %}
+        {% set featuresByAudience = featuresByAudience|merge({'designers': features}) %}
     {% elseif current == 'features-editors' %}
         {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
-        <div class="subheader">
-            <h1 class="drop-left">Features for
-                <div class="slidingVertical">
-                    <span>content creators</span>
-                    <span>you</span>
-                    <span>content creators</span>
-                    <span>you</span>
-                </div>
-            </h1>
-            <div class="button-row">
-                {% include "partials/_features_buttons.twig" %}
-            </div>
-        </div>
-        {% set title = 'For content creators' %}
+        {% set featuresByAudience = featuresByAudience|merge({'content editors': features}) %}
     {% else %}
         {# Assume we want to show all #}
-       {% setcontent features_developers = 'features' where { audience: 'developers' } order "order" %}
-        {% setcontent features_designers = 'features' where { audience: 'designers' } order "order" %}
-        {% setcontent features_editors = 'features' where { audience: 'editors' } order "order" %}
-        <div class="subheader">
-            <h1 class="drop-left">Features for
-                <div class="slidingVertical">
-                    <span>developers</span>
-                    <span>designers</span>
-                    <span>content creators</span>
-                    <span>you</span>
-                </div>
-            </h1>
-            <div class="button-row">
-                <a href="#developer" class="button ghost">For developers</a>
-                <a href="#designer" class="button ghost">For designers</a>
-                <a href="#editors" class="button ghost">For content creatures</a>
-            </div>
-        </div>
+        {% setcontent features = 'features' where { audience: 'developers' } order "order" limit 2 %}
+        {% set featuresByAudience = featuresByAudience|merge({'developers': features}) %}
+
+        {% setcontent features = 'features' where { audience: 'designers' } order "order" limit 2 %}
+        {% set featuresByAudience = featuresByAudience|merge({'designers': features}) %}
+
+        {% setcontent features = 'features' where { audience: 'editors' } order "order" limit 2 %}
+        {% set featuresByAudience = featuresByAudience|merge({'content creators': features}) %}
     {% endif %}
-    <div class="content-wrapper">
-        <div class="content-block">
-            <a id="developer"></a>
-            <div class="title">
-                <h2>developers</h2>
-            </div>
-            <div class="features">
-                {% for feature in features_developers %}
-                    <div class="detail">
-                        <h3>{{ feature.title }}</h3>
-                        <p>{{ feature.content }}</p>
-                    </div>
+
+    <div class="subheader">
+        <h1 class="drop-left">Features for
+            <div class="slidingVertical">
+                {% for audience in featuresByAudience|keys %}
+                    <span>{{ audience }}</span>
                 {% endfor %}
+                {% if featuresByAudience|keys|length == 1 %}
+                    <span>you</span>
+                    <span>{{ featuresByAudience|keys|first }}</span>
+                    <span>you</span>
+                {% endif %}
             </div>
-        </div>
-        <div class="content-block">
-            <a id="designer"></a>
-            <div class="title">
-                <h2>designers</h2>
-            </div>
-            <div class="features">
-                {% for feature in features_designers %}
-                    <div class="detail">
-                        <h3>{{ feature.title }}</h3>
-                        <p>{{ feature.content }}</p>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="content-block">
-            <a id="editors"></a>
-            <div class="title">
-                <h2>content creators</h2>
-            </div>
-            <div class="features">
-                {% for feature in features_editors %}
-                    <div class="detail">
-                        <h3>{{ feature.title }}</h3>
-                        <p>{{ feature.content }}</p>
-                    </div>
-                {% endfor %}
-            </div>
+        </h1>
+        <div class="button-row">
+            <a href="#developers" class="button ghost">For developers</a>
+            <a href="#designers" class="button ghost">For designers</a>
+            <a href="#content creators" class="button ghost">For content creators</a>
         </div>
     </div>
+
+    {% for audience, features in featuresByAudience %}
+        <div class="content-wrapper">
+            <div class="content-block">
+                <a id="{{ audience }}"></a>
+                <div class="title">
+                    <h2>{{ audience }}</h2>
+                </div>
+                <div class="features">
+                    {% for feature in features %}
+                        <div class="detail">
+                            <h3>{{ feature.title }}</h3>
+                            <p>{{ feature.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="button-wrapper">
+                <a href="/features-{{ audience }}" class="button ghost">All {{ audience }} features</a>
+        </div>
+    {% endfor %}
 
     {% include "partials/_bottom-block.twig" %}
 
