@@ -6,18 +6,22 @@
         <h1>{{ contenttype.name }}</h1>
         <p>What we're up to</p>
     </div>
+
+    {# 24*60*60 = 24 hours, or 84,000 seconds #}
+    {% cache 'bolt_version_announcement' ttl(24*60*60) %}
+    {% set version = get_version() %}
     <div class="content-wrapper">
         <div class="current-version">
-            <p>Latest version of Bolt CMS: {{ get_Version() }} <a
-                        href="https://github.com/bolt/core/releases/tag/{{ get_Version() }}">Download this
+            <p>Latest version of Bolt CMS: {{ version }} <a
+                        href="https://github.com/bolt/core/releases/tag/{{ version }}">Download this
                     version</a></p>
         </div>
         <div class="important-message">
             <div class="header-block">
-                <h2>Bolt {{ get_Version() }} released</h2>
+                <h2>Bolt {{ version }} released</h2>
                 <span transition-style="in:circle:top-left">#Announcement</span>
             </div>
-            <p>{{ get_VersionDescription()|slice(0,95) }}</p>
+                <p>{{ get_version_description()|markdown_to_html|slice(0,110)|markdown_to_html }}</p>
         </div>
         {% setcontent record = 'news' %}
         {% for recordlist in record %}
@@ -31,5 +35,8 @@
             </div>
         {% endfor %}
     </div>
+    {% endcache %}
+
+    {{ pager() }}
 
 {% endblock main %}

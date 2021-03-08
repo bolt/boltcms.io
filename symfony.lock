@@ -761,6 +761,12 @@
     "tightenco/collect": {
         "version": "v5.8.2"
     },
+    "twig/extra-bundle": {
+        "version": "v3.3.0"
+    },
+    "twig/markdown-extra": {
+        "version": "v3.3.0"
+    },
     "twig/twig": {
         "version": "v2.6.2"
     },

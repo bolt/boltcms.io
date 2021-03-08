@@ -3,14 +3,7 @@
 
 namespace App\Twig;
 
-
 use Github\Client;
-use Symfony\Component\HttpClient\HttpClient;
-use Symfony\Component\Yaml\Yaml;
-use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
-use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
@@ -34,37 +27,25 @@ class VersionRequest extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('get_Version', [$this, 'getVersion']),
-            new TwigFunction('get_VersionDescription', [$this, 'getVersionDescription']),
+            new TwigFunction('get_version', [$this, 'getVersion']),
+            new TwigFunction('get_version_description', [$this, 'getVersionDescription']),
         ];
     }
 
-    private function getGithubApi()
+    private function initGithubApi(): void
     {
-        $this->githubApi = $this->client->api('repo')->releases()->latest('bolt', 'core');
+        $this->githubApi = $this->client->repository()->releases()->latest('bolt', 'core');
     }
 
-    public function saveVersion()
+    public function getVersion(): string
     {
-        $this->getGithubApi();
-        $version = $this->githubApi['tag_name'];
-        file_put_contents($this->projectDir . '/config/extensions/version' . '.text', $version);
+        $this->initGithubApi();
+        return $this->githubApi['tag_name'];
     }
 
-    public function saveDescription()
+    public function getVersionDescription(): string
     {
-        $this->getGithubApi();
-        $description = $this->githubApi['body'];
-        file_put_contents($this->projectDir . '/config/extensions/description' . '.text', $description);
-    }
-
-    public function getVersion()
-    {
-        return file_get_contents($this->projectDir . '/config/extensions/version.text');
-    }
-
-    public function getVersionDescription()
-    {
-        return file_get_contents($this->projectDir . '/config/extensions/description.text');
+        $this->initGithubApi();
+        return $this->githubApi['body'];
     }
 }

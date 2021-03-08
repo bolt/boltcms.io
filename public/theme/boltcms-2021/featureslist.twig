@@ -55,7 +55,9 @@
         {% set title = 'For content creators' %}
     {% else %}
         {# Assume we want to show all #}
-        {% setcontent features = 'features' where { audience: 'overview' } order "order" %}
+       {% setcontent features_developers = 'features' where { audience: 'developers' } order "order" %}
+        {% setcontent features_designers = 'features' where { audience: 'designers' } order "order" %}
+        {% setcontent features_editors = 'features' where { audience: 'editors' } order "order" %}
         <div class="subheader">
             <h1 class="drop-left">Features for
                 <div class="slidingVertical">
@@ -66,23 +68,50 @@
                 </div>
             </h1>
             <div class="button-row">
-                {% include "partials/_features_buttons.twig" %}
+                <a href="#developer" class="button ghost">For developers</a>
+                <a href="#designer" class="button ghost">For designers</a>
+                <a href="#editors" class="button ghost">For content creatures</a>
             </div>
         </div>
-        {% set title = 'For developers, designers and content creators' %}
     {% endif %}
-
     <div class="content-wrapper">
         <div class="content-block">
             <a id="developer"></a>
             <div class="title">
-                <h2>{{ title }}</h2>
+                <h2>developers</h2>
             </div>
             <div class="features">
-                {% for feature in features %}
+                {% for feature in features_developers %}
                     <div class="detail">
                         <h3>{{ feature.title }}</h3>
-
+                        <p>{{ feature.content }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="content-block">
+            <a id="designer"></a>
+            <div class="title">
+                <h2>designers</h2>
+            </div>
+            <div class="features">
+                {% for feature in features_designers %}
+                    <div class="detail">
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.content }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="content-block">
+            <a id="editors"></a>
+            <div class="title">
+                <h2>content creators</h2>
+            </div>
+            <div class="features">
+                {% for feature in features_editors %}
+                    <div class="detail">
+                        <h3>{{ feature.title }}</h3>
                         <p>{{ feature.content }}</p>
                     </div>
                 {% endfor %}
