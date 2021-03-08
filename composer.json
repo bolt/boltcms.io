@@ -19,7 +19,8 @@
         "bolt/forms": "^1.0",
         "knplabs/github-api": "3.0",
         "twig/markdown-extra": "^3.3",
-        "twig/extra-bundle": "^3.3"
+        "twig/extra-bundle": "^3.3",
+        "twig/cache-extra": "^3.3"
     },
     "autoload": {
         "psr-4": {
