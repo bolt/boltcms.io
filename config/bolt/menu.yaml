@@ -9,7 +9,7 @@ main:
         link: /features-developers
       - label: For designers
         link: /features-designers
-      - label: For editors
+      - label: For content creators
         link: /features-editors
   - label: Documentation
     link: https://docs.bolt.cm
@@ -43,7 +43,7 @@ footer:
         link: /features-developers
       - label: For designers
         link: /features-designers
-      - label: For editors
+      - label: For content creators
         link: /features-editors
   - label: Resources
     submenu:
