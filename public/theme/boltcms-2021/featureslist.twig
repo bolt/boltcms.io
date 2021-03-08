@@ -24,7 +24,7 @@
         {% set featuresByAudience = featuresByAudience|merge({'designers': features}) %}
 
         {% setcontent features = 'features' where { audience: 'editors' } order "order" limit 2 %}
-        {% set featuresByAudience = featuresByAudience|merge({'content-creators': features}) %}
+        {% set featuresByAudience = featuresByAudience|merge({'content creators': features}) %}
     {% endif %}
 
     <div class="subheader">
@@ -69,7 +69,9 @@
             </div>
         </div>
         <div class="button-wrapper">
-            <a href="/features-{{ audience }}" class="button ghost">All {{ audience }} features</a>
+            {% if featuresByAudience|keys|length > 1 %}
+                <a href="/features-{{ audience|slug }}" class="button ghost">All {{ audience }} features</a>
+            {% endif %}
         </div>
     {% endfor %}
 
