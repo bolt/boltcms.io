@@ -8,7 +8,7 @@
     </div>
 
     {# 24*60*60 = 24 hours, or 84,000 seconds #}
-    {# {% cache 'bolt_version_announcement6' ttl(24*60*60) %} #}
+     {% cache 'bolt_version_announcement' ttl(24*60*60) %}
     {% set version = get_version() %}
     <div class="content-wrapper">
         <div class="current-version">
@@ -35,15 +35,8 @@
             </div>
         {% endfor %}
     </div>
-    {# {% endcache %} #}
+     {% endcache %}
 
-    <div>
-        <ul class="pagination">
-            <li class="pagination"><a href="/news?page=1">Previous</a></li>
-            <li class=""><a href="/news?page=1">1</a></li>
-            <li class=" active"><a href="/news?page=2">2</a></li>
-            <li class=" active"><a href="/news?page=2">Next</a></li>
-        </ul>
-    </div>
+    {{ pager() }}
 
 {% endblock main %}
