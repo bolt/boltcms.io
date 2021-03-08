@@ -23,8 +23,7 @@
             </div>
                 <p>{{ get_version_description()|markdown_to_html|slice(0,110)|markdown_to_html }}</p>
         </div>
-        {% setcontent record = 'news' %}
-        {% for recordlist in record %}
+        {% for recordlist in records %}
             <div class="news-wrapper">
                 <article>
                     <h3>{{ recordlist|title }}</h3>
