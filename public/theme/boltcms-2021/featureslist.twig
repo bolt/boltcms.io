@@ -33,6 +33,7 @@
                 {% for audience in featuresByAudience|keys %}
                     <span>{{ audience }}</span>
                 {% endfor %}
+                <span>you</span>
                 {% if featuresByAudience|keys|length == 1 %}
                     <span>you</span>
                     <span>{{ featuresByAudience|keys|first }}</span>
@@ -65,7 +66,7 @@
             </div>
         </div>
         <div class="button-wrapper">
-                <a href="/features-{{ audience }}" class="button ghost">All {{ audience }} features</a>
+            <a href="/features-{{ audience }}" class="button ghost">All {{ audience }} features</a>
         </div>
     {% endfor %}
 
