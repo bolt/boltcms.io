@@ -33,10 +33,11 @@
                 {% for audience in featuresByAudience|keys %}
                     <span>{{ audience }}</span>
                 {% endfor %}
-                <span>you</span>
                 {% if featuresByAudience|keys|length == 1 %}
                     <span>you</span>
                     <span>{{ featuresByAudience|keys|first }}</span>
+                    <span>you</span>
+                {% else %}
                     <span>you</span>
                 {% endif %}
             </div>
