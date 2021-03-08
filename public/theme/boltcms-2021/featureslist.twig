@@ -42,19 +42,19 @@
                 {% endif %}
             </div>
         </h1>
-        {% if featuresByAudience|keys|length > 1 %}
-            <div class="button-row">
-                <a href="#developers" class="button ghost">For developers</a>
-                <a href="#designers" class="button ghost">For designers</a>
-                <a href="#content-creators" class="button ghost">For content creators</a>
-            </div>
-        {% endif %}
+        <div class="button-row">
+            {% for audience in featuresByAudience|keys %}
+                {% if featuresByAudience|keys|length > 1 %}
+                    <a href="#{{ audience|slug }}" class="button ghost">For {{ audience }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 
     {% for audience, features in featuresByAudience %}
         <div class="content-wrapper">
             <div class="content-block">
-                <a id="{{ audience }}"></a>
+                <a id="{{ audience|slug }}"></a>
                 <div class="title">
                     <h2>{{ audience }}</h2>
                 </div>

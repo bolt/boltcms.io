@@ -1361,6 +1361,37 @@ blockquote::after {
 
 /** Showcase */
 
+.boltforms > div {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+label {
+    display: inline-table;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+input[type='date'], input[type='text'], textarea, input[type='email'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #000;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-left-color: #000;
+}
+
+label.required::after {
+    content: "*";
+    color: #ffcc00;
+    padding-left: 3px;
+}
+
 .showcase a {
     text-decoration: none;
     color: var(--color-primary);
