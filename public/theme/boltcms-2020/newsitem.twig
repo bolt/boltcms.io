@@ -1,10 +1,16 @@
-<h1>
+{% extends 'partials/_master.twig' %}
 
-    <span class="move moveScale" style="--delay: 2s; --duration: 0.4s;  transform-origin: 50% 50%; ">The</span>
-    <span class="move moveScale" style="--delay: 2s; --duration: 0.6s; ">starting</span>
-    <span class="move moveScale" style="--delay: 2s; --duration: 0.8s; ">point</span>
-    <span class="move moveScale" style="--delay: 2s; --duration: 1s; ">of</span>
-    <span class="move moveScale" style="--delay: 2s; --duration: 1.2s; ">your</span>
-    <span class="move moveScale" style="--delay: 2s; --duration: 1.4s; ">new</span>
-    <span class="move moveScale" style="--delay: 2s; --duration: 1.6s; ">website</span>
-</h1>
+{% block main_container %}
+    <div class="detail-page">
+        {{ record|allow_twig }}
+        <h1 class="mt-5">{{ record.title }}</h1>
+
+        {% if record.image is not empty %}
+            <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}" alt="{{ record.image.alt|default }}">
+        {% endif %}
+
+        <p>Published by {{ record.author }} on {{ record.publishedAt|date }}</p>
+
+        {{ record.content }}
+    </div>
+{% endblock main_container %}
