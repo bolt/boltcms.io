@@ -42,11 +42,13 @@
                 {% endif %}
             </div>
         </h1>
-        <div class="button-row">
-            <a href="#developers" class="button ghost">For developers</a>
-            <a href="#designers" class="button ghost">For designers</a>
-            <a href="#content-creators" class="button ghost">For content creators</a>
-        </div>
+        {% if featuresByAudience|keys|length > 1 %}
+            <div class="button-row">
+                <a href="#developers" class="button ghost">For developers</a>
+                <a href="#designers" class="button ghost">For designers</a>
+                <a href="#content-creators" class="button ghost">For content creators</a>
+            </div>
+        {% endif %}
     </div>
 
     {% for audience, features in featuresByAudience %}
