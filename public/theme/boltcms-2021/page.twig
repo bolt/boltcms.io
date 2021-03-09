@@ -1,0 +1,43 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+    <main>
+        <div class="subheader">
+            <h1>
+                {{ record|title }}
+            </h1>
+            <p>
+                {{ record.subtitle }}
+            </p>
+        </div>
+
+        {% block page_content %}
+        <div class="content-wrapper">
+            <div class="detail-page">
+                {% block page_detail %}
+                    {% if record.image is not empty %}
+                        <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}"
+                             alt="{{ record.image.alt|default }}">
+                    {% endif %}
+
+                    {{ record.content }}
+
+                    {{ boltform(record.slug, warn=false) }}
+
+                    {% if record.slug == 'submit-showcase' and app.request.method == 'POST' %}
+                        {% do redirect('/showcase-thank-you') %}
+                    {% endif %}
+                {% endblock page_detail %}
+            </div>
+        </div>
+
+            {% if record.slug in ['community', 'contribute'] %}
+                {% include 'partials/_contributors.twig' %}
+            {% endif %}
+        {% endblock %}
+    </main>
+{% endblock main %}
+
+{% block javascripts %}
+    {% include 'partials/_javascripts.twig' %}
+{% endblock javascripts %}

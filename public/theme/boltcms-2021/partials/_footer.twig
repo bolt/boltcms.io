@@ -1,0 +1,23 @@
+<footer>
+    <nav class="footer-nav">
+        {% for item in menu_array('footer') %}
+            <span>
+            <h4>
+                {% if item.link is not empty %}
+                    <a href="{{ item.link }}">{{ item.label }}</a>
+                {% else %}
+                    {{ item.label }}
+                {% endif %}
+            </h4>
+            {% if item.submenu is defined %}
+                <ul>
+              {% for subitem in item.submenu %}
+                  <li><a href="{{ subitem.link }}" target="_blank"
+                         rel="noopener noreferrer">{{ subitem.label }}</a></li>
+              {% endfor %}
+                </ul>
+            {% endif %}
+            </span>
+        {% endfor %}
+    </nav>
+</footer>

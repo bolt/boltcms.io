@@ -52,6 +52,9 @@
     "brick/math": {
         "version": "0.8.15"
     },
+    "clue/stream-filter": {
+        "version": "v1.5.0"
+    },
     "cocur/slugify": {
         "version": "v3.2"
     },
@@ -158,9 +161,6 @@
     "doctrine/persistence": {
         "version": "v1.1.0"
     },
-    "doctrine/reflection": {
-        "version": "v1.0.0"
-    },
     "doctrine/sql-formatter": {
         "version": "1.1.0"
     },
@@ -185,9 +185,6 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
-    "fzaninotto/faker": {
-        "version": "v1.8.0"
-    },
     "guzzlehttp/guzzle": {
         "version": "7.0.1"
     },
@@ -197,6 +194,9 @@
     "guzzlehttp/psr7": {
         "version": "1.5.2"
     },
+    "http-interop/http-factory-guzzle": {
+        "version": "1.0.0"
+    },
     "intervention/image": {
         "version": "2.4.2"
     },
@@ -205,6 +205,18 @@
     },
     "knplabs/doctrine-behaviors": {
         "version": "v2.0.1"
+    },
+    "knplabs/github-api": {
+        "version": "2.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.6",
+            "ref": "a7d5781e4a8e84f1c238c43e4c9bb806f01d8a3f"
+        },
+        "files": [
+            "./config/packages/github_api.yaml"
+        ]
     },
     "knplabs/knp-menu": {
         "version": "2.3.0"
@@ -248,9 +260,6 @@
     "nesbot/carbon": {
         "version": "1.36.2"
     },
-    "nette/finder": {
-        "version": "v2.5.2"
-    },
     "nette/utils": {
         "version": "v3.1.0"
     },
@@ -269,14 +278,32 @@
     "pagerfanta/pagerfanta": {
         "version": "v2.0.1"
     },
-    "paragonie/random_compat": {
-        "version": "v9.99.99"
-    },
-    "peterkahl/country-code-to-emoji-flag": {
-        "version": "v0.9.1"
-    },
     "php": {
-        "version": "7.2"
+        "version": "7.3"
+    },
+    "php-http/cache-plugin": {
+        "version": "1.7.1"
+    },
+    "php-http/client-common": {
+        "version": "2.3.0"
+    },
+    "php-http/discovery": {
+        "version": "1.13.0"
+    },
+    "php-http/httplug": {
+        "version": "2.2.0"
+    },
+    "php-http/message": {
+        "version": "1.11.0"
+    },
+    "php-http/message-factory": {
+        "version": "v1.0.2"
+    },
+    "php-http/multipart-stream-builder": {
+        "version": "1.1.2"
+    },
+    "php-http/promise": {
+        "version": "1.1.0"
     },
     "php-translation/common": {
         "version": "1.0.0"
@@ -321,6 +348,9 @@
         "version": "1.0.0"
     },
     "psr/http-client": {
+        "version": "1.0.1"
+    },
+    "psr/http-factory": {
         "version": "1.0.1"
     },
     "psr/http-message": {
@@ -567,9 +597,6 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"
     },
-    "symfony/polyfill-php70": {
-        "version": "v1.18.1"
-    },
     "symfony/polyfill-php72": {
         "version": "v1.10.0"
     },
@@ -731,11 +758,17 @@
     "symfony/yaml": {
         "version": "v4.2.3"
     },
-    "symplify/package-builder": {
-        "version": "v7.2.2"
-    },
     "tightenco/collect": {
         "version": "v5.8.2"
+    },
+    "twig/cache-extra": {
+        "version": "v3.3.0"
+    },
+    "twig/extra-bundle": {
+        "version": "v3.3.0"
+    },
+    "twig/markdown-extra": {
+        "version": "v3.3.0"
     },
     "twig/twig": {
         "version": "v2.6.2"

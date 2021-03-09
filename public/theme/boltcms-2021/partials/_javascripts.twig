@@ -1,0 +1,41 @@
+<script src="{{ asset('js/vendor/carousel-slider.js', 'theme') }}"></script>
+<script src="{{ asset('js/vendor/header-dropdown.js', 'theme') }}"></script>
+<script src="{{ asset('js/vendor/baguetteBox.min.js', 'theme') }}"></script>
+
+<script type="module">
+    let slider = tns({
+        container: '.my-slider',
+        "responsive": {
+            "350": {
+                "items": 1,
+            },
+            "500": {
+                "items": 3
+            }
+        },
+        controls: false,
+        navPosition: 'bottom',
+        autoWidth: true,
+        center: true,
+        gutter: 80,
+        autoplay: false
+    });
+
+    window.addEventListener('load', function() {
+        baguetteBox.run('.zoom-images');
+    });
+</script>
+
+<script type="module">
+    import { annotate } from 'https://unpkg.com/rough-notation?module';
+
+    const n1 = document.querySelector('#free');
+    const n2 = document.querySelector('#free-2');
+
+    const a1 = annotate(n1, { type: 'underline', color: 'blue' });
+    const a2 = annotate(n2, { type: 'circle', color: 'red', padding: 28 });
+
+    a1.show();
+    a2.show();
+
+</script>

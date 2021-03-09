@@ -1,0 +1,109 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+    <main>
+        <div class="subheader">
+            <h1>
+                {% set titleWords = record.title|split(' ') %}
+
+                {% set duration = 0.2 %}
+                {% set delay = 1.1 %}
+                {% for word in titleWords %}
+                    {% if loop.first %}
+                        <span class="move moveScale" style="--delay: {{ delay }}s; --duration:
+                        {% if loop.first %}
+                                0.6s
+                        {% else %}
+                                {{ duration }}s
+                    {% endif %};
+                        {% if loop.first %} transform-origin: 50% 50%;{% endif %}">{{ word }}</span>
+                    {% else %}
+                        <i class="move moveScale" style="--delay: {{ delay }}s; --duration:
+                        {% if loop.first %}
+                                0.6s
+                        {% else %}
+                                {{ duration }}s
+                    {% endif %};
+                        {% if loop.first %} transform-origin: 50% 50%;{% endif %}">{{ word }}</i>
+                    {% endif %}
+                    {% set delay = 1.3 %}
+                    {% set duration = duration + 0.2 %}
+                {% endfor %}
+            </h1>
+        </div>
+
+        <div class="promo-header">
+            <div class="item-1">
+                <h2>Open source</h2>
+            </div>
+            <div class="item-2">
+                <h2>Easy content creation</h2>
+            </div>
+            <div class="item-3">
+                <h2>Simple development</h2>
+            </div>
+        </div>
+
+        {# Start of "Carousel" section #}
+        {% if record.carousel is not empty %}
+            <div class="my-slider zoom-images">
+                {% for image in record.carousel|slice(0,6) %}
+                    <div>
+                        <a href="{{ image.path }}" data-caption="{{ image.alt }}">
+                            <img src="{{ image|thumbnail(700, 400) }}" alt="{{ image.alt|default }}" loading="lazy">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {# End of "Carousel" section #}
+
+        {# Start of "Features" section #}
+        {% if record.features is not empty %}
+            <div class="detail-block">
+                <h3>{{ record.features_title }}</h3>
+                <div class="container">
+                    {% for feature in record.features %}
+                        <div>
+                            <img class="imagedetails1" src="{{ feature.icon.path|default }}"
+                                 alt="{{ feature.icon.alt|default }}">
+                            <h4>{{ feature.value.name|raw }}</h4>
+                            <p>{{ feature.description }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="button-wrapper">
+                    {% include "partials/_features_buttons.twig" %}
+                </div>
+            </div>
+        {% endif %}
+        {# End of "Features" section #}
+        <br>
+        <br>
+
+        {# Start of "newsitems" #}
+        {% setcontent news = 'news' latest limit 2 %}
+        <div class="columns sticky-news">
+            {% for newsitem in news %}
+                <div>
+                    <h2>{{ newsitem.title }}</h2>
+                    <p>{{ newsitem.content|excerpt }}</p>
+                    <a href="{{ newsitem|link }}">Read more</a>
+                </div>
+            {% endfor %}
+        </div>
+        {# End of "newsitems" #}
+
+        {# Start of "Powered by / community" section #}
+
+        {% include "partials/_bottom-block.twig" %}
+
+        {# End of "Powered by / community" section #}
+
+    </main>
+
+{% endblock %}
+
+{% block javascripts %}
+    {% include 'partials/_javascripts.twig' %}
+{% endblock javascripts %}

@@ -64,6 +64,8 @@ pages:
             type: text
             class: large
             group: content
+        subtitle:
+            type: text
         slug:
             type: slug
             uses: title
@@ -120,6 +122,10 @@ features:
             type: image
         content:
             type: redactor
+        highlight:
+            type: select
+            values: [ developers, designers, 'content-editors']
+            multiple: true
         order:
             type: number
             variant: inline

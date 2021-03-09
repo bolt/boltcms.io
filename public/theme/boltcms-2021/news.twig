@@ -1,0 +1,42 @@
+{# @var version \App\VersionControl #}
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+    <div class="subheader">
+        <h1>{{ contenttype.name }}</h1>
+        <p>What we're up to</p>
+    </div>
+
+    {# 24*60*60 = 24 hours, or 84,000 seconds #}
+    {% cache 'bolt_version_announcement' ttl(24*60*60) %}
+        {% set version = get_version() %}
+        <div class="content-wrapper">
+            <div class="current-version">
+                <p>Latest version of Bolt CMS: {{ version }} <a
+                            href="https://github.com/bolt/core/releases/tag/{{ version }}">Download this
+                        version</a></p>
+            </div>
+            <div class="important-message">
+                <div class="header-block">
+                    <h2>Bolt {{ version }} released</h2>
+                    <span transition-style="in:circle:top-left">#Announcement</span>
+                </div>
+
+                {{ get_version_description()|split('\n')[2]|default|markdown_to_html }}
+            </div>
+            {% for recordlist in records %}
+                <div class="news-wrapper">
+                    <article>
+                        <h3>{{ recordlist|title }}</h3>
+                        <p class="meta">Written by {{ recordlist.author }} on {{ recordlist.publishedAt|date }}</p>
+                        <p>{{ recordlist|excerpt }}</p>
+                        <a href="{{ recordlist|link }}">Read more</a>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+    {% endcache %}
+
+    {{ pager() }}
+
+{% endblock main %}

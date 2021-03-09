@@ -1,0 +1,12 @@
+{% set current = record.slug|default %}
+
+
+<a href="/features-developers" class="button ghost {% if current == 'features-developers' %}btn-primary{% else %}btn-outline-primary{% endif %} wide-button">For
+    developers</a>
+
+
+<a href="/features-designers" class="button ghost {% if current == 'features-designers' %}btn-primary{% else %}btn-outline-primary{% endif %} wide-button">For
+    designers</a>
+
+<a href="/features-content-editors" class="button ghost {% if current == 'features-content-editors' %}btn-primary{% else %}btn-outline-primary{% endif %} wide-button">For
+    content editors</a>

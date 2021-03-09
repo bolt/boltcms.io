@@ -22,6 +22,8 @@ DirectoryIndex index.php
 
     Redirect 301 /survey https://docs.google.com/forms/d/e/1FAIpQLSffUXEa1PUKC7ZsT9VjeVI5IryZiahJ_l-xMGsYWfSTys52GA/viewform?usp=sf_link
 
+    Redirect 301 /features-editors /features-content-editors
+
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
     # project in a subdirectory, the base path will be prepended to allow proper
