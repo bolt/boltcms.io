@@ -1,5 +1,6 @@
 <script src="{{ asset('js/vendor/carousel-slider.js', 'theme') }}"></script>
 <script src="{{ asset('js/vendor/header-dropdown.js', 'theme') }}"></script>
+<script src="{{ asset('js/vendor/baguetteBox.min.js', 'theme') }}"></script>
 
 <script type="module">
     let slider = tns({
@@ -18,5 +19,9 @@
         center: true,
         gutter: 80,
         autoplay: false
+    });
+
+    window.addEventListener('load', function() {
+        baguetteBox.run('.zoom-images');
     });
 </script>

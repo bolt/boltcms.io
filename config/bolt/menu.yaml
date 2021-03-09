@@ -14,12 +14,14 @@ main:
   - label: Documentation
     link: https://docs.bolt.cm
     target: _blank
-  - label: Community
-    link: /community
-#  - label: Contribute
-#    link: contribute
-#  - label: Extensions
-#    link: /extensions
+  - label: Resources
+    submenu:
+      - label: Community
+        link: /community
+      - label: Contribute
+        link: /contribute
+      - label: Extensions
+        link: /extensions
   - label: No costs
     link: /no-costs
   - label: News
@@ -29,12 +31,12 @@ main:
     class: site-header__end
 
 footer:
-  - label: About Bolt
-    submenu:
-      - label: News
-        link: /news
-      - label: Download latest version
-        link: https://github.com/bolt/core/releases/latest
+#  - label: About Bolt
+#    submenu:
+#      - label: News
+#        link: /news
+#      - label: Download latest version
+#        link: https://github.com/bolt/core/releases/latest
   - label: Features
     submenu:
       - label: For everyone
@@ -47,20 +49,20 @@ footer:
         link: /features-editors
   - label: Resources
     submenu:
-      - label: Documentation
-        link: https://docs.bolt.cm
-      - label: Best practice tips
-        link: https://bolt.tips
-  - label: Community & Contribute
-    submenu:
       - label: Community
         link: /community
       - label: Contribute
         link: /contribute
-  - label: Explore more
-    submenu:
       - label: Extensions
         link: /extensions
+  - label: Learn more
+    submenu:
+      - label: Documentation
+        link: https://docs.bolt.cm
+      - label: Best practice tips
+        link: https://bolt.tips
+  - label: Explore more
+    submenu:
       - label: No costs
         link: /no-costs
       - label: News

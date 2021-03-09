@@ -46,11 +46,11 @@
 
         {# Start of "Carousel" section #}
         {% if record.carousel is not empty %}
-            <div class="my-slider">
+            <div class="my-slider zoom-images">
                 {% for image in record.carousel|slice(0,6) %}
                     <div>
                         <a href="{{ image.path }}" data-caption="{{ image.alt }}">
-                            <img src="{{ image.path }}" alt="{{ image.alt|default }}" loading="lazy">
+                            <img src="{{ image|thumbnail(700, 400) }}" alt="{{ image.alt|default }}" loading="lazy">
                         </a>
                     </div>
                 {% endfor %}
