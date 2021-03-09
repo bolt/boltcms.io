@@ -122,6 +122,10 @@ features:
             type: image
         content:
             type: redactor
+        highlight:
+            type: select
+            values: [ developers, designers, 'content-editors']
+            multiple: true
         order:
             type: number
             variant: inline

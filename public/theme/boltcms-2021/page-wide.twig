@@ -4,4 +4,8 @@
     {% block page_detail %}
         {{ parent() }}
     {% endblock %}
+
+    {% if record.slug in ['community', 'contribute'] %}
+        {% include 'partials/_contributors.twig' %}
+    {% endif %}
 {% endblock %}

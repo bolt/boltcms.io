@@ -45,8 +45,8 @@ footer:
         link: /features-developers
       - label: For designers
         link: /features-designers
-      - label: For content creators
-        link: /features-editors
+      - label: For content editors
+        link: /features-content-editors
   - label: Resources
     submenu:
       - label: Community

@@ -13,23 +13,14 @@
 
         {% block page_content %}
         <div class="content-wrapper">
-{#            <div class="detail-page">#}
+            <div class="detail-page">
                 {% block page_detail %}
                     {% if record.image is not empty %}
                         <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}"
                              alt="{{ record.image.alt|default }}">
                     {% endif %}
 
-                    {# Ugly fix because right now allow_twig does not work in article. #}
-                    {% if '_include_github_contributors' in record.content|raw %}
-                        {% set contributors %}
-                            {% include 'partials/_contributors.twig' %}
-                        {% endset %}
-
-                        {{ record.content|replace({'_include_github_contributors': contributors})|raw }}
-                    {% else %}
-                        {{ record.content }}
-                    {% endif %}
+                    {{ record.content }}
 
                     {{ boltform(record.slug, warn=false) }}
 
@@ -37,9 +28,16 @@
                         {% do redirect('/showcase-thank-you') %}
                     {% endif %}
                 {% endblock page_detail %}
-{#            </div>#}
+            </div>
         </div>
 
+            {% if record.slug in ['community', 'contribute'] %}
+                {% include 'partials/_contributors.twig' %}
+            {% endif %}
         {% endblock %}
     </main>
 {% endblock main %}
+
+{% block javascripts %}
+    {% include 'partials/_javascripts.twig' %}
+{% endblock javascripts %}

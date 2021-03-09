@@ -12,19 +12,19 @@
     {% elseif current == 'features-designers' %}
         {% setcontent features = 'features' where { audience: 'designers' } order "order" %}
         {% set featuresByAudience = featuresByAudience|merge({'designers': features}) %}
-    {% elseif current == 'features-editors' %}
+    {% elseif current == 'features-content-editors' %}
         {% setcontent features = 'features' where { audience: 'editors' } order "order" %}
         {% set featuresByAudience = featuresByAudience|merge({'content editors': features}) %}
     {% else %}
-        {# Assume we want to show all #}
-        {% setcontent features = 'features' where { audience: 'developers' } order "order" limit 2 %}
+        {# Show the highlighted features for each group #}
+        {% setcontent features = 'features' where { audience: 'developers', highlight: 'developers' } order "order" limit 2 %}
         {% set featuresByAudience = featuresByAudience|merge({'developers': features}) %}
 
-        {% setcontent features = 'features' where { audience: 'designers' } order "order" limit 2 %}
+        {% setcontent features = 'features' where { audience: 'designers', highlight: 'designers' } order "order" limit 2 %}
         {% set featuresByAudience = featuresByAudience|merge({'designers': features}) %}
 
-        {% setcontent features = 'features' where { audience: 'editors' } order "order" limit 2 %}
-        {% set featuresByAudience = featuresByAudience|merge({'content creators': features}) %}
+        {% setcontent features = 'features' where { audience: 'editors', highlight: 'content-editors' } order "order" limit 2 %}
+        {% set featuresByAudience = featuresByAudience|merge({'content editors': features}) %}
     {% endif %}
 
     <div class="subheader">
