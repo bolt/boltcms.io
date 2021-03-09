@@ -13,14 +13,15 @@
         "bobdenotter/configuration-notices": "^1.0",
         "bolt/redactor": "^1.0",
         "twig/twig": "^3.0",
-        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/guzzle": "^7.0.1",
         "ext-json": "*",
         "bolt/article": "^1.0",
         "bolt/forms": "^1.0",
-        "knplabs/github-api": "3.0",
         "twig/markdown-extra": "^3.3",
         "twig/extra-bundle": "^3.3",
-        "twig/cache-extra": "^3.3"
+        "twig/cache-extra": "^3.3",
+        "knplabs/github-api": "^3.0",
+        "http-interop/http-factory-guzzle": "^1.0"
     },
     "autoload": {
         "psr-4": {
