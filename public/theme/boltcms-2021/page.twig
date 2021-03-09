@@ -13,7 +13,7 @@
 
         {% block page_content %}
         <div class="content-wrapper">
-            <div class="detail-page">
+{#            <div class="detail-page">#}
                 {% block page_detail %}
                     {% if record.image is not empty %}
                         <img class="fluid" src="{{ record.image|thumbnail(800, 600) }}"
@@ -37,7 +37,7 @@
                         {% do redirect('/showcase-thank-you') %}
                     {% endif %}
                 {% endblock page_detail %}
-            </div>
+{#            </div>#}
         </div>
 
         {% endblock %}
