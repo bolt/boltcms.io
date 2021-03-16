@@ -367,6 +367,7 @@ main {
 .site-header__end a:focus {
     color: var(--color-bg);
     filter: var(--brighten);
+    transition: all 3s ease-in-out;
 }
 
 @media (max-width: 505px) {
