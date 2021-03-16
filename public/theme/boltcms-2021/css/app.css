@@ -931,6 +931,10 @@ footer {
     font-size: clamp(.9rem, 1vw, 1.2rem);
 }
 
+footer a {
+    text-decoration-color: var(--color-primary-light);
+}
+
 .footer-nav h4 {
     display: inline-block;
     margin: 0;
