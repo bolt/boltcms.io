@@ -28,7 +28,7 @@
                 <div class="news-wrapper">
                     <article>
                         <h3>{{ recordlist|title }}</h3>
-                        <p class="meta">Written by {{ recordlist.author }} on {{ recordlist.publishedAt|date }}</p>
+                        <p class="meta">Written by {{ recordlist.author }} on {{ recordlist.publishedAt|date('F d, Y') }}</p>
                         <p>{{ recordlist|excerpt }}</p>
                         <a href="{{ recordlist|link }}">Read more</a>
                     </article>

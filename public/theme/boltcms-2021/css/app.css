@@ -1328,6 +1328,7 @@ footer {
 
 article > .subheader h1 {
     max-width: 80vw;
+    text-align: center;
 }
 
 article > .subheader h1 + p {

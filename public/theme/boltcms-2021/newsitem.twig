@@ -17,10 +17,8 @@
             {# alt="{{ record.image.alt|default }}"> #}
             {# {% endif %} #}
             <p>{{ record.content }}</p>
-            {# TODO make a quote #}
-            {# <blockquote>This is a quote in the text</blockquote> #}
 
-            <p class="meta">Published on {{ record.publishedAt|date }}</p>
+            <p class="meta">Published on {{ record.publishedAt|date('F d, Y') }}</p>
 
         </div>
     </article>

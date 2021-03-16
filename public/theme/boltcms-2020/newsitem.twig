@@ -9,7 +9,7 @@
             <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}" alt="{{ record.image.alt|default }}">
         {% endif %}
 
-        <p>Published by {{ record.author }} on {{ record.publishedAt|date }}</p>
+        <p>Published by {{ record.author }} on {{ record.publishedAt|date('d-m-Y') }}</p>
 
         {{ record.content }}
     </div>
