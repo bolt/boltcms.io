@@ -345,6 +345,11 @@ main {
     margin-right: clamp(.5rem, 1rem, 1.3rem);
 }
 
+.nav__item a {
+    display: block;
+    padding: 1rem .5rem;
+}
+
 .site-header__end a {
     background-color: var(--color-primary);
     color: var(--color-bg);
@@ -395,12 +400,6 @@ main {
         0 6px 8px rgba(0, 0, 0, 0.11),
         0 8px 16px rgba(0, 0, 0, 0.11);
     }
-}
-
-
-.nav__item a {
-    display: block;
-    padding: 1rem .5rem;
 }
 
 @media (min-width: 970px) {
