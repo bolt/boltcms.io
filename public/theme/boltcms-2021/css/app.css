@@ -1,5 +1,7 @@
 html {
-    box-sizing: border-box
+    box-sizing: border-box;
+    line-height: 1.15;
+    scroll-behavior: smooth;
 }
 
 *, ::after, ::before {
@@ -11,16 +13,8 @@ html {
     tab-size: 4
 }
 
-html {
-    line-height: 1.15
-}
-
 body {
-    margin: 0
-}
-
-body {
-    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+    margin: 0,font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
 }
 
 h1 {
