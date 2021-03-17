@@ -37,10 +37,3 @@
         {% endblock %}
     </main>
 {% endblock main %}
-
-{% block javascripts %}
-    {% if record.slug in 'no-costs' %}
-        {% include 'partials/_javascripts_pricing.twig' %}
-    {% endif %}
-{% endblock javascripts %}
-
