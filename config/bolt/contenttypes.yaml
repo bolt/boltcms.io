@@ -153,11 +153,11 @@ blocks:
         content:
             type: markdown
             sanitise: false
-#        contentlink:
-#            type: text
-#            label: Link
-#            placeholder: 'contenttype/slug or http://example.org/'
-#            postfix: "Use this to add a link for this Block. This could either be an 'internal' link like <tt>page/about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
+        #        contentlink:
+        #            type: text
+        #            label: Link
+        #            placeholder: 'contenttype/slug or http://example.org/'
+        #            postfix: "Use this to add a link for this Block. This could either be an 'internal' link like <tt>page/about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
         image:
             type: image
             attrib: title

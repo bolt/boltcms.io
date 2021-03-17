@@ -1,7 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-    {# <h1>{{ record.title }}</h1> #}
 
     {% set current = app.request.requestUri|split('/')|last %}
     {% set featuresByAudience = [] %}
