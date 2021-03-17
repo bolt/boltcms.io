@@ -153,11 +153,11 @@ blocks:
         content:
             type: markdown
             sanitise: false
-#        contentlink:
-#            type: text
-#            label: Link
-#            placeholder: 'contenttype/slug or http://example.org/'
-#            postfix: "Use this to add a link for this Block. This could either be an 'internal' link like <tt>page/about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
+        #        contentlink:
+        #            type: text
+        #            label: Link
+        #            placeholder: 'contenttype/slug or http://example.org/'
+        #            postfix: "Use this to add a link for this Block. This could either be an 'internal' link like <tt>page/about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `http://example.org`."
         image:
             type: image
             attrib: title
@@ -204,24 +204,6 @@ blockquotes:
     icon_many: "fa:quote-left"
     icon_one: "fa:quote-left"
     viewless: true
-
-showcases:
-    name: Showcases
-    singular_name: Showcase
-    fields:
-        title:
-            type: text
-            class: large
-        slug:
-            type: slug
-            uses: title
-        image:
-            type: image
-        icon:
-            type: image
-        content:
-            type: redactor
-
 # Possible field types:
 #
 # text - varchar(256) - input type text.
