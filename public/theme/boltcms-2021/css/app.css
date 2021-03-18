@@ -1377,7 +1377,7 @@ blockquote::after {
 
 .showcase a {
     text-decoration: none;
-    color: var(--color-primary);
+    /*color: var(--color-primary);*/
     outline: none;
 }
 
@@ -1695,7 +1695,7 @@ ul.pagination {
 @keyframes present-yourself {
     to {
         opacity: 1;
-        transform: translate(1, 1, 1);
+        transform: translate(1, 1);
     }
 }
 
