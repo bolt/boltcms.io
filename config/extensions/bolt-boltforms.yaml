@@ -124,7 +124,7 @@ submit-showcase:
                 attr:
                     placeholder: Link to the website...
         website_name:
-            type: tetx
+            type: text
             options:
                 required: false
                 label: Website name
