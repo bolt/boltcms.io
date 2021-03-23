@@ -6,11 +6,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://unpkg.com/">
 
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/baguetteBox.min.css', 'theme') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor/baguetteBox.min.css', 'theme') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css', 'theme') }}">
-    <link rel="stylesheet" href="{{ asset('css/forms.css', 'theme') }}">
-    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet" href="{{ asset('css/vendor/unpkg.css') }}">
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico', 'theme') }}">
 
     <!-- Matomo -->
@@ -19,12 +19,16 @@
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
-        (function() {
-            var u="//stats.bolt.cm/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
+        (function () {
+            var u = "//stats.bolt.cm/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
             _paq.push(['setSiteId', '6']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'matomo.js';
+            s.parentNode.insertBefore(g, s);
         })();
     </script>
     <noscript><p><img src="//stats.bolt.cm/matomo.php?idsite=6&amp;rec=1" alt="Bolt" style="border:0;"></p></noscript>
