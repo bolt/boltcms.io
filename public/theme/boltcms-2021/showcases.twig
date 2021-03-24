@@ -2,14 +2,12 @@
 
 {% block main %}
     <body class="loading showcase">
-
     <main>
         <div data-scroll>
             <div class="subheader">
                 <h1>{{ contenttype.name }}</h1>
                 <p>A fine selection of websites made with Bolt</p>
             </div>
-
             <div class="content">
                 {% for showcase in showcases %}
                     <div class="item">
@@ -25,36 +23,24 @@
                                                             rel="noopener noreferrer">{{ showcase.website_link }}</a>
                             </p>
                             <p class="item__caption-copy">{{ showcase.website_name }}</p>
-                            <p class="item__caption-url">Build by: <a href="" target="_blank"
-                                                                      rel="noopener noreferrer">{{ showcase.contributor }}</a>
+                            <p class="item__caption-url">Build by: <a href="" target="_blank" rel="noopener noreferrer">{{ showcase.contributor }}</a>
                             </p>
                         </div>
-
                     </div>
                 {% endfor %}
             </div>
 
             <div class="url-list">
                 <h3>Honorary mentions</h3>
-                <a href="">www.test.nl</a>
-                <a href="">www.megalangetest.nl</a>
-                <a href="">www.megalangetest.nl</a>
-                <a href="">www.megalangetest.nl</a>
-                <a href="">www.megatest.nl</a>
-                <a href="">www.megatestdertestentest.nl</a>
-                <a href="">www.test.nl</a>
-                <a href="">www.megalangetest.nl</a>
-                <a href="">www.megalangetest.nl</a>
-                <a href="">www.megalangetest.nl</a>
-                <a href="">www.megatest.nl</a>
-                <a href="">www.megatestdertestentest.nl</a>
+                {% for showcase in showcases| slice(0,20) %}
+                    {{ showcase.website_link }}
+                {% endfor %}
             </div>
-
         </div>
-
     </main>
     </body>
 {% endblock main %}
+
 {% block javascripts %}
     {% include 'partials/_javascripts_showcase.twig' %}
 {% endblock javascripts %}
