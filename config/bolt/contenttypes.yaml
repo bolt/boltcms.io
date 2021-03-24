@@ -215,12 +215,22 @@ showcases:
         slug:
             type: slug
             uses: title
-        image:
+        website_name:
+            type: text
+        website_link:
+            type: text
+            label: Link
+            placeholder: 'http://example.org/'
+        screenshot:
             type: image
-        icon:
-            type: image
-        content:
+        publication_date:
+            type: date
+            mode: datetime
+        contributor:
+            type: text
+        comment:
             type: redactor
+    sort: -id
 
 # Possible field types:
 #
