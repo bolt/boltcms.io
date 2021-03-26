@@ -295,23 +295,19 @@ main {
     .site-header__wrapper {
         justify-content: initial;
     }
-}
 
-@media (min-width: 970px) {
     .site-header__middle {
         margin-left: auto;
+    }
+
+    .nav__wrapper {
+        display: flex;
     }
 }
 
 @media (max-width: 969px) {
     .site-header__end {
         padding-right: 4rem;
-    }
-}
-
-@media (min-width: 970px) {
-    .nav__wrapper {
-        display: flex;
     }
 }
 
