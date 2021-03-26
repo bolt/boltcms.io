@@ -50,7 +50,7 @@
                 {% for image in record.carousel|slice(0,6) %}
                     <div>
                         <a href="{{ image.path }}" data-caption="{{ image.alt }}">
-                            <img src="{{ image|thumbnail(700, 400) }}" alt="{{ image.alt|default }}">
+                            <img src="{{ image|thumbnail(700, 400) }}" width="700" height="400" alt="{{ image.alt|default }}">
                         </a>
                     </div>
                 {% endfor %}
