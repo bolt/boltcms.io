@@ -160,7 +160,7 @@ summary {
 
 /* Kleur setup, met naamgeving variabelen op basis van contrast */
 :root, [data-theme="default"] {
-    --color-primary: hsl(212, 98%, 50%);
+    --color-primary: hsl(218, 98%, 50%);
     --color-primary-light: hsl(213, 100%, 96%);
     /* color contrasts */
     --color-bg: white;
