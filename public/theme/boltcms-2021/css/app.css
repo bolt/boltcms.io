@@ -1946,3 +1946,15 @@ header > nav > ul > li > a {
     color: white;
     filter: var(--brighten);
 }
+
+/** Skip link */
+
+.skip-link {
+        position: absolute;
+        top: 1rem;
+        left: -9999rem;
+}
+
+.skip-link:focus {
+        left: 1rem;
+}

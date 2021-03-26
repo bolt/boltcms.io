@@ -1,6 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
+<main id="content" tabindex="-1">
     <article>
         <div class="subheader">
             <h1>{{ record.title|raw }}</h1>
@@ -22,6 +23,7 @@
 
         </div>
     </article>
+</main>
 {% endblock main %}
 
 

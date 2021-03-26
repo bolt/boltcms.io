@@ -49,6 +49,9 @@
     {% include 'partials/_og_tags.twig' %}
 </head>
 <body>
+<a href="#content" class="skip-link">
+    Skip to main content
+</a>
 {% set baseurl = app.request.getSchemeAndHttpHost %}
 {% set link = canonical()|replace({ (baseurl) : ''}) %}
 {% setcontent blockquote = 'blockquote' where { url: link } returnsingle %}
