@@ -9,12 +9,12 @@
                 <p>A fine selection of websites made with Bolt</p>
             </div>
             <div class="content">
-                {% for showcase in showcases %}
+                {% for showcase in showcases|slice(0, 9) %}
                     <div class="item">
                         {% if showcase.screenshot is not empty %}
                             <div class="item__img-wrap"
                                  style="--image: url({{ showcase.screenshot|thumbnail(700, 400) }});">
-                                <div class="item__img item__img--t1"></div>
+                                <div class="item__img item__img--t{{ random(1, 3) }}"></div>
                             </div>
                         {% endif %}
                         <div class="item__caption">
@@ -23,7 +23,8 @@
                                                             rel="noopener noreferrer">{{ showcase.website_link }}</a>
                             </p>
                             <p class="item__caption-copy">{{ showcase.website_name }}</p>
-                            <p class="item__caption-url">Build by: <a href="" target="_blank" rel="noopener noreferrer">{{ showcase.contributor }}</a>
+                            <p class="item__caption-url">Build by: <a href="" target="_blank"
+                                                                      rel="noopener noreferrer">{{ showcase.contributor }}</a>
                             </p>
                         </div>
                     </div>
@@ -32,8 +33,8 @@
 
             <div class="url-list">
                 <h3>Honorary mentions</h3>
-                {% for showcase in showcases| slice(0,20) %}
-                    {{ showcase.website_link }}
+                {% for showcase in showcases|slice(9, 1000) %}
+                    <a href="{{ showcase.website_link }}"> {{ showcase.website_link }}</a>
                 {% endfor %}
             </div>
         </div>
