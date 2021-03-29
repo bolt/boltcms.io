@@ -230,6 +230,9 @@ showcases:
             type: text
         comment:
             type: redactor
+        order:
+            type: number
+    listing_records: 1000
     sort: -id
 
 # Possible field types:
