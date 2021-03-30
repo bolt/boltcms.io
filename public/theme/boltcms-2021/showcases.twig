@@ -19,11 +19,11 @@
                         {% endif %}
                         <div class="item__caption">
                             <h2 class="item__caption-title">{{ showcase.title }}</h2>
-                            <p class="item__caption-url"><a target="_blank"
+                            <p class="item__caption-url"><a href="{{ showcase.website_link }}" target="_blank"
                                                             rel="noopener noreferrer">{{ showcase.website_link }}</a>
                             </p>
                             <p class="item__caption-copy">{{ showcase.website_name }}</p>
-                            <p class="item__caption-url">Build by: <a target="_blank"
+                            <p class="item__caption-url">Build by: <a href="{{ showcase.contributor }}" target="_blank"
                                                                       rel="noopener noreferrer">{{ showcase.contributor }}</a>
                             </p>
                         </div>
