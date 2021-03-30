@@ -228,12 +228,10 @@ showcases:
             mode: datetime
         contributor:
             type: redactor
-        comment:
-            type: redactor
         order:
             type: number
     listing_records: 1000
-    sort: -id
+    sort: order
 
 # Possible field types:
 #
