@@ -1974,7 +1974,6 @@ header > nav > ul > li > a {
        keyboard-focus on browsers that do support
        :focus-visible */
     outline: 4px dashed darkorange;
-    background: transparent;
   }
 
   #content:focus {
