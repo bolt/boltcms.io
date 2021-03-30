@@ -1960,7 +1960,6 @@ header > nav > ul > li > a {
     /* Provide a fallback style for browsers
        that don't support :focus-visible */
     outline: 2px solid red;
-    background: lightgrey;
   }
   
 *:focus:not(:focus-visible) {
