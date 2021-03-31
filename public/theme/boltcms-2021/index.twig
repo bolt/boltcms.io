@@ -46,11 +46,16 @@
 
         {# Start of "Carousel" section #}
         {% if record.carousel is not empty %}
+
+        <a href="#content-2" class="skip-link">
+            Skip the carousel
+        </a>
+
             <div class="my-slider zoom-images">
                 {% for image in record.carousel|slice(0,6) %}
                     <div>
                         <a href="{{ image.path }}" data-caption="{{ image.alt }}">
-                            <img src="{{ image|thumbnail(700, 400) }}" width="579" height="400" alt="{{ image.alt|default }}">
+                            <img src="{{ image|thumbnail(700, 400) }}" width="668" height="400" alt="{{ image.alt|default }}">
                         </a>
                     </div>
                 {% endfor %}
@@ -60,7 +65,7 @@
 
         {# Start of "Features" section #}
         {% if record.features is not empty %}
-            <div class="detail-block">
+            <div class="detail-block" id="content-2" tabindex="-1">
                 <h3>{{ record.features_title }}</h3>
                 <div class="container">
                     {% for feature in record.features %}
