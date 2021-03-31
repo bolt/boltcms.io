@@ -1,7 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-
+<main id="content" tabindex="-1">
     {% set current = app.request.requestUri|split('/')|last %}
     {% set featuresByAudience = [] %}
 
@@ -75,5 +75,5 @@
     {% endfor %}
 
     {% include "partials/_bottom-block.twig" %}
-
+</main>
 {% endblock main %}
