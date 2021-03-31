@@ -1516,10 +1516,6 @@ blockquote::after {
     margin: 0;
 }
 
-.item__caption-url {
-    color: var(--color-primary)
-}
-
 .item__caption-copy::before {
     content: '__';
     line-height: 1;
