@@ -32,7 +32,7 @@ homepage:
                         name:
                             type: text
                             variant: inline
-                        icon:
+                        image:
                             type: image
                             variant: inline
                         description:
@@ -118,8 +118,6 @@ features:
             uses: title
         image:
             type: image
-        icon:
-            type: image
         content:
             type: redactor
         highlight:
@@ -184,6 +182,9 @@ blockquotes:
     name: Blockquotes
     singular_name: Blockquote
     fields:
+        slug:
+            type: slug
+            uses: quote
         quote:
             type: textarea
         url:
