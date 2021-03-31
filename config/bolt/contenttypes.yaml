@@ -32,7 +32,7 @@ homepage:
                         name:
                             type: text
                             variant: inline
-                        icon:
+                        image:
                             type: image
                             variant: inline
                         description:
@@ -118,8 +118,6 @@ features:
             uses: title
         image:
             type: image
-        icon:
-            type: image
         content:
             type: redactor
         highlight:
@@ -184,6 +182,9 @@ blockquotes:
     name: Blockquotes
     singular_name: Blockquote
     fields:
+        slug:
+            type: slug
+            uses: quote
         quote:
             type: textarea
         url:
@@ -204,6 +205,35 @@ blockquotes:
     icon_many: "fa:quote-left"
     icon_one: "fa:quote-left"
     viewless: true
+
+showcases:
+    name: Showcases
+    singular_name: Showcase
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        website_name:
+            type: text
+        website_link:
+            type: text
+            label: Link
+            placeholder: 'http://example.org/'
+        screenshot:
+            type: image
+        publication_date:
+            type: date
+            mode: datetime
+        contributor:
+            type: redactor
+        order:
+            type: number
+    listing_records: 100
+    sort: order
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.
