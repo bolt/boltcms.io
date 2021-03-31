@@ -228,7 +228,7 @@ showcases:
             type: date
             mode: datetime
         contributor:
-            type: text
+            type: redactor
         order:
             type: number
     listing_records: 100
