@@ -1954,18 +1954,11 @@ header > nav > ul > li > a {
 .skip-link:focus {
         left: 1rem;
 }
-
-
-*:focus {
-    /* Provide a fallback style for browsers
-       that don't support :focus-visible */
-    outline: 2px solid red;
-  }
   
 *:focus:not(:focus-visible) {
     /* Remove the focus indicator on mouse-focus for browsers
        that do support :focus-visible */
-    background: transparent;
+       outline: none;
   }
   
 *:focus-visible {
@@ -1978,3 +1971,6 @@ header > nav > ul > li > a {
   #content:focus {
       outline: none;
   }
+
+
+  
