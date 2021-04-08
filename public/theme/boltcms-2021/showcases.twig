@@ -13,7 +13,7 @@
                     <div class="item">
                         {% if showcase.screenshot is not empty %}
                             <div class="item__img-wrap"
-                                 style="--image: url({{ showcase.screenshot|thumbnail(1920, 1080) }});">
+                                 style="--image: url({{ showcase.screenshot }});">
                                 <div class="item__img item__img--t{{ random(1, 3) }}"></div>
                             </div>
                         {% endif %}
