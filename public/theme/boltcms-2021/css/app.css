@@ -1485,17 +1485,17 @@ blockquote::after {
     will-change: transform;
 }
 
-.item__img--t1 {
-    --overflow: 60px;
-}
+/*.item__img--t1 {*/
+/*    --overflow: 60px;*/
+/*}*/
 
-.item__img--t2 {
-    --overflow: 80px;
-}
+/*.item__img--t2 {*/
+/*    --overflow: 80px;*/
+/*}*/
 
-.item__img--t3 {
-    --overflow: 120px;
-}
+/*.item__img--t3 {*/
+/*    --overflow: 120px;*/
+/*}*/
 
 .item__caption {
     padding: 2rem 1rem;
