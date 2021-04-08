@@ -232,7 +232,7 @@ showcases:
         order:
             type: number
     listing_records: 100
-    sort: -order
+    sort: order
 
 # Possible field types:
 #
