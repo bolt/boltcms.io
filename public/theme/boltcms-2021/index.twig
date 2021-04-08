@@ -91,7 +91,7 @@
         <div class="columns sticky-news">
             {% for newsitem in news %}
                 <div>
-                    <h2>{{ newsitem.title }}</h2>
+                    <h2>{{ newsitem|title }}</h2>
                     <p>{{ newsitem.content|excerpt }}</p>
                     <a href="{{ newsitem|link }}">Read the announcement</a>
                 </div>
