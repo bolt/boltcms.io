@@ -232,6 +232,7 @@ showcases:
         order:
             type: number
     listing_records: 100
+    records_per_page: 9
     sort: order
 
 # Possible field types:
