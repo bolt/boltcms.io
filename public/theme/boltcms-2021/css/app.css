@@ -1320,8 +1320,6 @@ footer a {
 .news-article {
     width: min(72ch, calc(100% - 2*(var(--space-md))));
     margin: 0 auto 4rem;
-
-    padding: ;
 }
 
 article > .subheader h1 {
