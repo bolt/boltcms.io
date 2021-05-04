@@ -265,6 +265,7 @@ main {
 
 .imagedetails1 {
     width: 35px;
+    height: 45px;
 }
 
 /** header + nav */
@@ -566,16 +567,16 @@ i:last-child {
 .container div h4,
 .container div p {
     font-size: clamp(1rem, 1.2vw, 1.5rem);
-    margin: 0;
 }
 
 .container div h4 {
     font-weight: var(--semi-bold);
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .container div p {
     font-weight: var(--thin);
+    margin: 0;
 }
 
 .button-wrapper {
@@ -618,7 +619,8 @@ i:last-child {
 
 /** Columns */
 
-.columns {
+.columns,
+.tweet {
     display: grid;
     width: 80vw;
     margin: 2vw auto;
@@ -687,6 +689,59 @@ i:last-child {
     text-decoration-color: var(--color-primary);
     color: black;
 
+}
+
+/** Tweets at homepage */
+
+.tweet {
+    margin: var(--space-xxxl) auto;
+}
+
+.tweet div {
+    flex-direction: column;
+    padding: var(--space-xl);
+}
+
+.tweet span {
+    display: flex;
+}
+
+span.wrapper img {
+    border-radius: 35px;
+}
+
+span.text {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--space-md);
+}
+
+span.text h3,
+span.text p {
+    margin: 0;
+    font-weight: var(--normal);
+}
+
+span.text p {
+    font-weight: var(--semi-bold);
+    font-size: .8rem;
+    color: var(--color-contrast-medium);
+}
+
+.twitter-link {
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.twitter-link svg {
+    stroke: var(--color-contrast-high);
+    transition: all .2 ease-in-out;
+}
+
+.twitter-link:hover svg {
+    stroke: var(--color-primary);
 }
 
 
