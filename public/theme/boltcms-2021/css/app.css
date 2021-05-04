@@ -956,6 +956,7 @@ footer {
     background-color: var(--color-primary-light);
     padding: var(--space-md);
     grid-row-start: 3;
+    z-index: 1000000001;
 }
 
 .footer-nav {
@@ -1373,7 +1374,7 @@ footer a {
 /** News detail */
 
 .news-article {
-    width: min(72ch, calc(70% + 100px));
+    width: min(72ch, calc(100% - 2*(var(--space-md))));
     margin: 0 auto 4rem;
 }
 
@@ -1435,7 +1436,7 @@ blockquote::after {
 [data-scroll] {
     will-change: transform;
     margin-top: 200px;
-    padding-bottom: 300px;
+    padding-bottom: 400px;
 }
 
 [data-scroll ] .subheader {
@@ -1531,13 +1532,18 @@ blockquote::after {
 .item__img {
     --overflow: 40px;
     height: calc(100% + (2 * var(--overflow)));
-    top: calc(-1 * var(--overflow));
     width: 100%;
     position: absolute;
     background-image: var(--image);
     background-size: cover;
     background-position: 50% 0%;
     will-change: transform;
+    filter: grayscale(100%);
+}
+
+.item:hover .item__img{
+    filter: unset;
+    transition: all .2s ease-in-out;
 }
 
 .item__caption {
@@ -2007,13 +2013,13 @@ header > nav > ul > li > a {
        that don't support :focus-visible */
     outline: 2px solid red;
   }
-  
+
 *:focus:not(:focus-visible) {
     /* Remove the focus indicator on mouse-focus for browsers
        that do support :focus-visible */
     background: transparent;
   }
-  
+
 *:focus-visible {
     /* Draw a very noticeable focus style for
        keyboard-focus on browsers that do support

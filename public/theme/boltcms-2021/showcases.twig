@@ -1,7 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
+{% block body_class %}loading showcase{% endblock %}
+
 {% block main %}
-    <body class="loading showcase">
     <main>
         <div data-scroll>
             <div class="subheader">
@@ -38,9 +39,10 @@
                     <a href="{{ showcase.website_link }}"> {{ showcase.website_link }}</a>
                 {% endfor %}
             </div>
+
+            {% include "partials/_bottom-block.twig" with {'blocks': ['do-you-build-bolt-websites', 'find-help-for-your-dream-project']} %}
         </div>
     </main>
-    </body>
 {% endblock main %}
 
 {% block javascripts %}
