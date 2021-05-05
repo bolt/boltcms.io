@@ -7,6 +7,9 @@ services:
     BobdenOtter\ConfigurationNotices\:
         resource: '../vendor/bobdenotter/configuration-notices/src/*'
         exclude: '../vendor/bobdenotter/configuration-notices/src/{Entity,Exception}'
+    BobdenOtter\Conimex\:
+        resource: '../vendor/bobdenotter/conimex/src/*'
+        exclude: '../vendor/bobdenotter/conimex/src/{Entity,Exception}'
     BobdenOtter\WeatherWidget\:
         resource: '../vendor/bobdenotter/weatherwidget/src/*'
         exclude: '../vendor/bobdenotter/weatherwidget/src/{Entity,Exception}'
