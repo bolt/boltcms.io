@@ -235,6 +235,26 @@ showcases:
     records_per_page: 9
     sort: order
 
+twitterposts:
+    name: Twitter Posts
+    singular_name: Twitter Post
+    fields:
+        name:
+            type: text
+        account_name:
+            type: text
+            postfix: Make sure to include the @
+        photo:
+            type: text
+            postfix: Link to the photo
+        date:
+            type: date
+        content:
+            type: redactor
+        link:
+            type: text
+    viewless: true
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.
