@@ -428,7 +428,15 @@ main {
 .subheader {
     display: grid;
     place-items: center;
-    padding: clamp(2rem, 8vw, 10rem) 0;
+    padding: clamp(2rem, 8vw, 10rem) 1rem;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .subheader {
+        padding: clamp(2rem, 8vw, 10rem) 0;
+        text-align: left;
+    }
 }
 
 h1 {
@@ -500,12 +508,29 @@ i:last-child {
 .promo-header h2 {
     font-size: clamp(1.1rem, 2.2vw, 2.5rem);
     font-weight: 350;
-    margin: auto 0;
-    padding-left: 5rem;
+    margin: 0 auto;
+    
 }
 
 [class^="item-"] {
     background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: center;
+    padding-top: 3.5rem;
+}
+
+@media (min-width: 600px) {
+
+    .promo-header h2 {
+        padding-left: 5rem;
+        margin: auto 0;
+    }
+
+    [class^="item-"] {
+        background-size: unset;
+        background-position: unset;
+        padding-top: 0;
+    }
 }
 
 .item-1 {
@@ -619,8 +644,7 @@ i:last-child {
 
 /** Columns */
 
-.columns,
-.tweet {
+.columns {
     display: grid;
     width: 80vw;
     margin: 2vw auto;
@@ -637,10 +661,28 @@ i:last-child {
     );
 }
 
+.tweet {
+    display: grid;
+    width: 80vw;
+    margin: 2vw auto;
+    gap: 2rem;
+    grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+              clamp(
+                      48%,
+                      (40rem - 100%) * 999,
+                      100%),
+              1fr
+      )
+    );
+}
+
 .columns div {
     display: flex;
     flex-direction: column;
-    padding: var(--space-xl);
+    padding: var(--space-md);
     align-items: center;
 }
 
@@ -649,6 +691,11 @@ i:last-child {
 }
 
 @media screen and (min-width: 800px) {
+
+    .columns div {
+        padding: var(--space-xl); 
+    }
+
     .columns div:first-child {
         border-right: 1px solid var(--color-contrast-lower);
         border-bottom: 0;
@@ -699,8 +746,18 @@ i:last-child {
 
 .tweet div {
     flex-direction: column;
-    padding: var(--space-xl);
+    padding: var(--space-md);
+    border: 1px solid var(--color-contrast-lower);
 }
+
+@media screen and (min-width: 800px) {
+    .tweet div {
+        flex-direction: column;
+        padding: var(--space-xl);
+        border: 1px solid var(--color-contrast-lower);
+    }
+}
+
 
 .tweet span {
     display: flex;
@@ -723,7 +780,7 @@ span.text p {
 }
 
 span.text p {
-    font-weight: var(--semi-bold);
+    font-weight: var(--thin);
     font-size: .8rem;
     color: var(--color-contrast-medium);
 }
