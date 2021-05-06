@@ -693,7 +693,7 @@ i:last-child {
 @media screen and (min-width: 800px) {
 
     .columns div {
-        padding: var(--space-xl); 
+        padding: var(--space-xl);  
     }
 
     .columns div:first-child {
