@@ -863,7 +863,7 @@ a:hover {
 }
 
 
-.content-block--3-column {
+.content-block--3-column, .article-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(100px, auto);
@@ -873,7 +873,7 @@ a:hover {
     margin-bottom: var(--space-lg);
 }
 
-.detail {
+.detail, .col-6 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -892,7 +892,7 @@ a:hover {
 
 @media (min-width: 780px) {
 
-    .content-block--3-column {
+    .content-block--3-column, .article-grid {
         display: grid;
         grid-auto-columns: minmax(10vw, 1fr);
         grid-auto-rows: minmax(100px, auto);
@@ -2087,3 +2087,8 @@ header > nav > ul > li > a {
   #content:focus {
       outline: none;
   }
+
+.align-center {
+    text-align: center;
+}
+
