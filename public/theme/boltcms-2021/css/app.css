@@ -2068,7 +2068,7 @@ header > nav > ul > li > a {
 *:focus {
     /* Provide a fallback style for browsers
        that don't support :focus-visible */
-    outline: 2px solid red;
+    outline: 2px solid var(--color-primary);
   }
 
 *:focus:not(:focus-visible) {
@@ -2082,6 +2082,8 @@ header > nav > ul > li > a {
        keyboard-focus on browsers that do support
        :focus-visible */
     outline: 4px dashed darkorange;
+    transition: outline-offset .25s ease;
+    outline-offset: 4px;
   }
 
   #content:focus {
