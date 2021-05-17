@@ -294,7 +294,7 @@
         "version": "v2.0.1"
     },
     "php": {
-        "version": "7.3"
+        "version": "7.2"
     },
     "php-http/cache-plugin": {
         "version": "1.7.1"
