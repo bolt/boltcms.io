@@ -5,7 +5,7 @@ default:
   plugins: [ blockcode, buttonlink, definedlinks, inlineformat, reorder, tags, underline, selector ]
   source: true
   grid:
-    classname: 'article-grid'
+    classname: 'article-grid content-block--3-column'
     columns: 12
     patterns:
       '4|4|4': 'col-4|col-4|col-4'

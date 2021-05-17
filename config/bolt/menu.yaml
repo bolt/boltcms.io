@@ -24,6 +24,8 @@ main:
         link: /extensions
       - label: Showcases
         link: /showcases
+      - label: Services and Support
+        link: /services-and-support
   - label: No costs
     link: /no-costs
   - label: News
@@ -57,6 +59,8 @@ footer:
         link: /contribute
       - label: Extensions
         link: /extensions
+      - label: Services and Support
+        link: /services-and-support
   - label: Learn more
     submenu:
       - label: Documentation
