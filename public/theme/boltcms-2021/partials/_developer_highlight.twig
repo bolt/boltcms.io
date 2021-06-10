@@ -1,0 +1,37 @@
+<div class="dev-spot">
+    <span>#InTheSpotlight</span>
+
+    <div class="person">
+        <img width="120" height="120" src="{{ record.photo }}" alt="Photo"/>
+        <span class="details">
+                        <h3>{{ record.contributor }}</h3>
+                        <p>Contributor since {{ record.contribution_start }}</p>
+                        <ul>
+                            {% if record.github_link %}
+                                <li><a href="{{ record.github_link }}">Github</a></li>
+                            {% endif %}
+                            {% if record.twitter_link %}
+                                <li><a href="{{ record.twitter_link }}">Twitter</a></li>
+                            {% endif %}
+                            {% if record.linkedin_link %}
+                                <li><a href="{{ record.linkedin_link }}">LinkedIn</a></li>
+                            {% endif %}
+                            {% if record.website_link %}
+                                <li><a href="{{ record.website_link }}">Website</a></li>
+                            {% endif %}
+                        </ul>
+                    </span>
+    </div>
+
+
+    <div class="interview">
+        <p>Tell us a little bit about yourself</p>
+        <p></p>
+        <p>How long have you used Bolt for, what do you like about it?</p>
+        <p></p>
+        <p>With the new release, Bolt is coming out with your new feature. Tell us about it</p>
+        <p></p>
+        <p>And how does X feature help you and your clients?</p>
+        <p></p>
+    </div>
+</div>

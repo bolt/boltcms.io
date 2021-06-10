@@ -96,6 +96,34 @@ news:
         slug:
             type: slug
             uses: title
+        developer_highlight:
+            type: checkbox
+        photo:
+            type: image
+            group: developer_highlight
+        contributor:
+            type: text
+        contribution_start:
+            type: text
+            postfix: The year of the first contribution to Boltcms
+        github_link:
+            type: text
+        twiiter_link:
+            type: text
+        linkedin_link:
+            type: text
+        website_link:
+            type: text
+        interview:
+            type: redactor
+            default: "<p>Tell us a little bit about yourself</p>
+                      <p></p>
+                      <p>How long have you used Bolt for, what do you like about it?</p>
+                      <p></p>
+                      <p>With the new release, Bolt is coming out with your new feature. Tell us about it</p>
+                      <p></p>
+                      <p>And how does X feature help you and your clients?</p>
+                      <p></p>"
     icon_many: "fa:newspaper"
     icon_one: "fa:newspaper"
 
@@ -221,7 +249,7 @@ showcases:
         website_link:
             type: text
             label: Link
-            placeholder: 'http://example.org/'
+            placeholder: 'https://example.org/'
         screenshot:
             type: image
         publication_date:
