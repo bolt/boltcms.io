@@ -1,29 +1,32 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-<main id="content" tabindex="-1">
-    <article>
-        <div class="subheader">
-            <h1>{{ record.title|raw }}</h1>
-            {# TODO maybe a subtitle #}
-{#             <p>A short subtitle or intro ... A short subtitle or intro ... A short subtitle or intro ... A short subtitle or#}
-{#             intro ... A short subtitle or intro ... A short subtitle or intro ... A short subtitle or intro ... A short#}
-{#             subtitle or intro ...</p>#}
-        </div>
+    <main id="content" tabindex="-1">
+        <article>
+            <div class="subheader">
+                <h1>{{ record.title|raw }}</h1>
+                {# TODO maybe a subtitle #}
+                {# <p>A short subtitle or intro ... A short subtitle or intro ... A short subtitle or intro ... A short subtitle or #}
+                {# intro ... A short subtitle or intro ... A short subtitle or intro ... A short subtitle or intro ... A short #}
+                {# subtitle or intro ...</p> #}
+            </div>
 
-        <div class="news-article">
-            {# TODO allow pictures #}
-            {# {% if record.image is not empty %} #}
-            {# <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}" #}
-            {# alt="{{ record.image.alt|default }}"> #}
-            {# {% endif %} #}
-            <p>{{ record.content }}</p>
+            <div class="news-article">
+                {# TODO allow pictures #}
+                {# {% if record.image is not empty %} #}
+                {# <img class="newsimage w-100 rounded" src="{{ record.image|thumbnail(1280, 720) }}" #}
+                {# alt="{{ record.image.alt|default }}"> #}
+                {# {% endif %} #}
+                <p>{{ record.content }}</p>
 
-            <p class="meta">Published on {{ record.publishedAt|date('F d, Y') }}</p>
+                {% if record.developer_highlight %}
+                    {% include 'partials/_developer_highlight.twig' %}
+                {% endif %}
 
-        </div>
-    </article>
-</main>
+                <p class="meta">Published on {{ record.publishedAt|date('F d, Y') }}</p>
+            </div>
+        </article>
+    </main>
 {% endblock main %}
 
 
