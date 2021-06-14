@@ -108,7 +108,7 @@ news:
             postfix: The year of the first contribution to Boltcms
         github_link:
             type: text
-        twiiter_link:
+        twitter_link:
             type: text
         linkedin_link:
             type: text
