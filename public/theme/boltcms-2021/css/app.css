@@ -233,7 +233,7 @@ h3 {
     margin-bottom: 0;
 }
 
-p, a, ol, ul {
+p, ol, ul {
     font-size: var(--text-md);
     margin-bottom: 0;
 }
