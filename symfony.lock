@@ -28,6 +28,9 @@
     "bobdenotter/weatherwidget": {
         "version": "1.0.0"
     },
+    "bobdenotter/yaml-migrations": {
+        "version": "1.0.3"
+    },
     "bolt/article": {
         "version": "1.0.9"
     },
@@ -48,6 +51,9 @@
     },
     "bolt/redactor": {
         "version": "1.0.10"
+    },
+    "bolt/redirector": {
+        "version": "1.0.0"
     },
     "bolt/themes": {
         "version": "3.0.0"
@@ -215,6 +221,9 @@
     "justinrainbow/json-schema": {
         "version": "5.2.8"
     },
+    "kevinlebrun/colors.php": {
+        "version": "0.4.1"
+    },
     "knplabs/doctrine-behaviors": {
         "version": "v2.0.1"
     },
@@ -260,6 +269,12 @@
     "monolog/monolog": {
         "version": "1.24.0"
     },
+    "nategood/commando": {
+        "version": "0.4.0"
+    },
+    "nelexa/zip": {
+        "version": "3.3.3"
+    },
     "nelmio/cors-bundle": {
         "version": "1.5",
         "recipe": {
@@ -274,6 +289,9 @@
     },
     "nesbot/carbon": {
         "version": "1.36.2"
+    },
+    "nette/finder": {
+        "version": "v2.5.2"
     },
     "nette/utils": {
         "version": "v3.1.0"
@@ -292,6 +310,9 @@
     },
     "pagerfanta/pagerfanta": {
         "version": "v2.0.1"
+    },
+    "paragonie/random_compat": {
+        "version": "v9.99.100"
     },
     "php": {
         "version": "7.2"
@@ -594,6 +615,9 @@
     "symfony/options-resolver": {
         "version": "v4.2.3"
     },
+    "symfony/password-hasher": {
+        "version": "v5.3.4"
+    },
     "symfony/polyfill-ctype": {
         "version": "v1.10.0"
     },
@@ -620,6 +644,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "v1.17.1"
+    },
+    "symfony/polyfill-php81": {
+        "version": "v1.23.0"
     },
     "symfony/process": {
         "version": "v4.2.2"
@@ -772,6 +799,18 @@
     },
     "symfony/yaml": {
         "version": "v4.2.3"
+    },
+    "symplify/autowire-array-parameter": {
+        "version": "8.3.48"
+    },
+    "symplify/package-builder": {
+        "version": "8.3.48"
+    },
+    "symplify/smart-file-system": {
+        "version": "8.3.48"
+    },
+    "symplify/symplify-kernel": {
+        "version": "8.3.48"
     },
     "tightenco/collect": {
         "version": "v5.8.2"

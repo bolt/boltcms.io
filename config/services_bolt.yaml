@@ -13,6 +13,9 @@ services:
     BobdenOtter\WeatherWidget\:
         resource: '../vendor/bobdenotter/weatherwidget/src/*'
         exclude: '../vendor/bobdenotter/weatherwidget/src/{Entity,Exception}'
+    BoltRedirector\:
+        resource: '../vendor/bolt/redirector/src/*'
+        exclude: '../vendor/bolt/redirector/src/{Entity,Exception}'
     Bolt\Article\:
         resource: '../vendor/bolt/article/src/*'
         exclude: '../vendor/bolt/article/src/{Entity,Exception}'
