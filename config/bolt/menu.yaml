@@ -12,7 +12,7 @@ main:
       - label: For content creators
         link: /features-editors
   - label: Documentation
-    link: https://docs.bolt.cm
+    link: https://docs.boltcms.io
     target: _blank
   - label: Resources
     submenu:
@@ -31,7 +31,7 @@ main:
   - label: News
     link: /news
   - label: Try it now!
-    link: https://docs.bolt.cm/installation/installation
+    link: https://docs.boltcms.io/installation/installation
     class: site-header__end
 
 footer:
@@ -64,7 +64,7 @@ footer:
   - label: Learn more
     submenu:
       - label: Documentation
-        link: https://docs.bolt.cm
+        link: https://docs.boltcms.io
       - label: Best practice tips
         link: https://bolt.tips
       - label: Release Roadmap
@@ -78,7 +78,7 @@ footer:
       - label: News
         link: /news
       - label: Try it!
-        link: https://docs.bolt.cm/installation/installation
+        link: https://docs.boltcms.io/installation/installation
 #  - label: Bolt 3 site
 #    link: https://bolt.cm
 #    class: bolt-site
