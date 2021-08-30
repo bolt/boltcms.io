@@ -1536,6 +1536,7 @@ blockquote::after {
     -moz-border-radius: 90px;
     -ms-border-radius: 90px;
     -o-border-radius: 90px;
+    max-width: 120px;
 }
 
 .person li:not(:last-child):after {
