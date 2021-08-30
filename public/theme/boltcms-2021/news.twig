@@ -31,7 +31,7 @@
                         <h3>{{ record|title }}</h3>
                         <p class="meta">Written by {{ record.author }}
                             on {{ record.publishedAt|date('F d, Y') }}</p>
-                        <p>{{ record|excerpt }}</p>
+                        <p>{{ record.content|excerpt }}</p>
                         <a href="{{ record|link }}">Read more</a>
                     </article>
                 </div>
