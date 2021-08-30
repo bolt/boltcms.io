@@ -83,7 +83,8 @@ pages:
 news:
     name: News
     singular_name: Newsitem
-    records_per_page: 50
+    records_per_page: 50    
+    sort: -publishedAt
     fields:
         title:
             type: text
