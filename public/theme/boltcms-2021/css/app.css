@@ -928,7 +928,7 @@ a:hover {
     margin: 0 auto;
 }
 
-.contributers-overview {
+.contributors-overview {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -939,7 +939,7 @@ a:hover {
     margin-bottom: var(--space-md);
 }
 
-.contributers-overview h3 {
+.contributors-overview h3 {
     display: block;
     width: 100%;
     text-align: center;
