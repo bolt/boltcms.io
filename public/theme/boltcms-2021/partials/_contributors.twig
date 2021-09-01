@@ -6,10 +6,10 @@
     {% set repo = 'core' %}
 {% endif %}
 
-<div class="contributers-overview">
+<div class="contributors-overview">
     <h3>
         {# TODO: update text #}
-        Without these contributers it wouldn't be possible
+        Without these contributors it wouldn't be possible
     </h3>
     {% for contributor in github_contributors(owner, repo) %}
         <div class="contributor">
