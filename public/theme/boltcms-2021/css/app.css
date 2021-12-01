@@ -36,7 +36,12 @@ b, strong {
 
 code, kbd, pre, samp {
     font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-    font-size: 1em
+    font-size: 1em;
+    color: #e83e8c;
+    background: rgba(175, 184, 133, 0.2);
+    padding: 0.1rem;
+    border-radius: 0.3rem;
+}
 }
 
 small {
