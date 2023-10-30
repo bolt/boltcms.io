@@ -1,0 +1,3 @@
+doctrine_migrations:
+    migrations_paths:
+        Bolt\DoctrineMigrations: '%kernel.project_dir%/vendor/bolt/core/migrations'
