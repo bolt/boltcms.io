@@ -1,66 +1,94 @@
 {
     "name": "bolt/project",
     "type": "project",
-    "description": "Bolt 4 standard project skeleton",
+    "description": "Bolt 5 standard project skeleton",
     "license": "MIT",
     "require": {
+        "php": "^8.2",
         "bobdenotter/weatherwidget": "^1.0",
-        "bolt/assets": "^4.0",
-        "bolt/core": "^4.0",
+        "bolt/assets": "^5.2",
+        "bolt/core": "^5.2",
         "bolt/newswidget": "^1.1",
         "bolt/themes": "^3.1",
-        "symfony/flex": "^1.6",
+        "symfony/flex": "^2",
         "bobdenotter/configuration-notices": "^1.0",
-        "bolt/redactor": "^1.0",
+        "bolt/redactor": "^2.0",
         "twig/twig": "^3.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "ext-json": "*",
-        "bolt/article": "^1.0",
+        "bolt/article": "^2.0",
         "bolt/forms": "^1.0",
         "twig/markdown-extra": "^3.3",
         "twig/extra-bundle": "^3.3",
         "twig/cache-extra": "^3.3",
         "knplabs/github-api": "^3.0",
         "http-interop/http-factory-guzzle": "^1.0",
-        "bobdenotter/conimex": "^1.3",
+        "bobdenotter/conimex": "^2",
         "bolt/redirector": "^1.0"
     },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "replace": {
+        "paragonie/random_compat": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.48",
+        "phpstan/phpstan-doctrine": "^0.12.20",
+        "phpstan/phpstan-symfony": "^0.12.8",
+        "symplify/easy-coding-standard": "^9.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "drupol/composer-packages": true,
+            "symfony/flex": true,
+            "php-http/discovery": true
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear --no-warmup": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd",
-            "bolt:copy-assets": "symfony-cmd"
-        },
-        "post-create-project-cmd": [
-            "php bin/post-create-project.php",
-            "php bin/console bolt:copy-themes"
-        ],
-        "post-install-cmd": [
-            "@auto-scripts",
-            "php bin/console extensions:configure --with-config",
-            "php bin/console bolt:info"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts",
-            "php bin/console extensions:configure",
-            "php bin/console bolt:info"
-        ],
-        "periodical-tasks": [
-            "security-checker security:check"
-        ]
-    },
     "extra": {
+        "public-dir": "public",
         "symfony": {
             "allow-contrib": true,
             "require": "^5.1"
-        },
-        "public-dir": "public"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Bolt\\ComposerScripts\\": "vendor/bolt/core/bin/composer-script/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "Bolt\\ComposerScripts\\ProjectEventHandler::preInstall"
+        ],
+        "post-install-cmd": [
+            "Bolt\\ComposerScripts\\ProjectEventHandler::postInstall"
+        ],
+        "pre-update-cmd": [
+            "Bolt\\ComposerScripts\\ProjectEventHandler::preUpdate"
+        ],
+        "post-update-cmd": [
+            "Bolt\\ComposerScripts\\ProjectEventHandler::postUpdate"
+        ],
+        "post-create-project-cmd": [
+            "Bolt\\ComposerScripts\\ProjectEventHandler::postCreateProject"
+        ],
+        "pre-package-uninstall": [
+            "Bolt\\ComposerScripts\\ProjectEventHandler::prePackageUninstall"
+        ],
+        "lint": "@php vendor/bin/ecs check --no-progress-bar --no-interaction",
+        "lint:fix": "@php vendor/bin/ecs check --no-progress-bar --no-interaction --fix",
+        "phpstan": "@php vendor/bin/phpstan --memory-limit=1G analyse -c phpstan.neon src"
     }
 }
