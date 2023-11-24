@@ -10,7 +10,7 @@ main:
       - label: For designers
         link: /features-designers
       - label: For content creators
-        link: /features-editors
+        link: /features-content-editors
   - label: Documentation
     link: https://docs.boltcms.io
     target: _blank
